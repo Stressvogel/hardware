@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="Custom_qsys" kind="Custom_qsys" version="1.0" fabric="QSYS">
  <!-- Format version 18.1 646 (Future versions may contain additional information.) -->
- <!-- 2021.12.17.10:09:28 -->
+ <!-- 2021.12.17.12:09:38 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1639732168</value>
+  <value>1639739378</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -120,7 +120,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.LOAD_VALUE</name>
-   <value>6249999</value>
+   <value>1649999</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.MULT</name>
@@ -128,7 +128,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.PERIOD</name>
-   <value>125</value>
+   <value>33</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.PERIOD_UNITS</name>
@@ -144,7 +144,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TICKS_PER_SEC</name>
-   <value>8</value>
+   <value>30</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TIMEOUT_PULSE_OUTPUT</name>
@@ -180,7 +180,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="period">
    <type>java.lang.String</type>
-   <value>125</value>
+   <value>33</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -262,7 +262,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="loadValue">
    <type>java.lang.String</type>
-   <value>6249999</value>
+   <value>1649999</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -278,7 +278,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="ticksPerSec">
    <type>double</type>
-   <value>8.0</value>
+   <value>30.0</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -11083,7 +11083,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TIMESTAMP</name>
-   <value>1639732168</value>
+   <value>1639739378</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.compatible</name>
@@ -11103,7 +11103,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.timestamp</name>
-   <value>1639732168</value>
+   <value>1639739378</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.vendor</name>
@@ -11119,7 +11119,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="timestamp">
    <type>int</type>
-   <value>1639732168</value>
+   <value>1639739378</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -11585,7 +11585,7 @@ parameters are a RESULT of the module parameters. -->
 the requested settings for a module instance. -->
   <parameter name="AUTO_GENERATION_ID">
    <type>java.lang.Integer</type>
-   <value>1639732168</value>
+   <value>1639739378</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -14217,7 +14217,7 @@ parameters are a RESULT of the module parameters. -->
 the requested settings for a module instance. -->
   <parameter name="AUTO_GENERATION_ID">
    <type>java.lang.Integer</type>
-   <value>1639732168</value>
+   <value>1639739378</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>

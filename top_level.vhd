@@ -123,7 +123,7 @@ begin
             spi_MOSI            => mosi,           --            .MOSI
             spi_SCLK            => sclk,           --            .SCLK
             spi_SS_n            => ss_n,           --            .SS_n
-            pushbuttons_export  => KEY,  -- pushbuttons.export
+            pushbuttons_export  => KEY,             -- pushbuttons.export
             ps2_CLK             => PS2_KBCLK,            --         ps2.CLK
             ps2_DAT             => PS2_KBDAT             --            .DAT
         );
