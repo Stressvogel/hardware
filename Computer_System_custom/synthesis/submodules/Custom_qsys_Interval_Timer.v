@@ -44,8 +44,9 @@ module Custom_qsys_Interval_Timer (
 
 
 wire             clk_en;
+wire             control_continuous;
 wire             control_interrupt_enable;
-reg              control_register;
+reg     [  3: 0] control_register;
 wire             control_wr_strobe;
 reg              counter_is_running;
 wire             counter_is_zero;
@@ -67,7 +68,9 @@ wire             snap_h_wr_strobe;
 wire             snap_l_wr_strobe;
 wire    [ 31: 0] snap_read_value;
 wire             snap_strobe;
+wire             start_strobe;
 wire             status_wr_strobe;
+wire             stop_strobe;
 wire             timeout_event;
 reg              timeout_occurred;
   assign clk_en = 1;
@@ -96,8 +99,11 @@ reg              timeout_occurred;
     end
 
 
-  assign do_start_counter = 1;
-  assign do_stop_counter = 0;
+  assign do_start_counter = start_strobe;
+  assign do_stop_counter = (stop_strobe                            ) ||
+    (force_reload                           ) ||
+    (counter_is_zero && ~control_continuous );
+
   always @(posedge clk or negedge reset_n)
     begin
       if (reset_n == 0)
@@ -191,11 +197,14 @@ reg              timeout_occurred;
       if (reset_n == 0)
           control_register <= 0;
       else if (control_wr_strobe)
-          control_register <= writedata[0];
+          control_register <= writedata[3 : 0];
     end
 
 
-  assign control_interrupt_enable = control_register;
+  assign stop_strobe = writedata[3] && control_wr_strobe;
+  assign start_strobe = writedata[2] && control_wr_strobe;
+  assign control_continuous = control_register[1];
+  assign control_interrupt_enable = control_register[0];
   assign status_wr_strobe = chipselect && ~write_n && (address == 0);
 
 endmodule

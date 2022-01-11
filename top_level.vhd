@@ -7,6 +7,9 @@ use ieee.math_real.all;                 -- for the ceiling and log constant calc
 entity top_level is
     port (
         CLOCK_50, CLOCK2_50, CLOCK3_50 : in std_logic;
+        LEDR : out std_logic_vector(15 downto 0);
+        LEDG : out std_logic_vector(0 downto 0);
+        HEX0, HEX1, HEX2 : out std_logic_vector (6 downto 0);
         VGA_R, VGA_G, VGA_B: out std_logic_vector(7 downto 0);
         VGA_CLK: inout std_logic;
         VGA_BLANK_N: inout std_logic;
@@ -78,7 +81,13 @@ architecture top_level_arc of top_level is
             spi_SS_n           : out   std_logic;                                        -- SS_n
             pushbuttons_export : in    std_logic_vector(3 downto 0)  := (others => 'X');  -- export
             ps2_CLK            : inout std_logic                     := 'X';             -- CLK
-            ps2_DAT            : inout std_logic                     := 'X'              -- DAT
+            ps2_DAT            : inout std_logic                     := 'X';              -- DAT
+            hrv_i2c_export                : inout std_logic_vector(1 downto 0)  := (others => 'X'); -- export
+            hrv_hex0_readdata             : out   std_logic_vector(6 downto 0);                     -- readdata
+            hrv_hex1_readdata             : out   std_logic_vector(6 downto 0);                     -- readdata
+            hrv_hex2_readdata             : out   std_logic_vector(6 downto 0);                     -- readdata
+            hrv_ledg_writeresponsevalid_n : out   std_logic;                                        -- writeresponsevalid_n
+            hrv_ledr_readdata             : out   std_logic_vector(15 downto 0)                     -- readdata
         );
     end component Custom_qsys;
     signal reset, miso, mosi, sclk, ss_n: std_logic;
@@ -125,7 +134,13 @@ begin
             spi_SS_n            => ss_n,           --            .SS_n
             pushbuttons_export  => KEY,             -- pushbuttons.export
             ps2_CLK             => PS2_KBCLK,            --         ps2.CLK
-            ps2_DAT             => PS2_KBDAT             --            .DAT
+            ps2_DAT             => PS2_KBDAT,             --            .DAT
+            hrv_i2c_export                => GPIO(1 downto 0),                --     hrv_i2c.export
+            hrv_hex0_readdata             => HEX0,             --    hrv_hex0.readdata
+            hrv_hex1_readdata             => HEX1,             --    hrv_hex1.readdata
+            hrv_hex2_readdata             => HEX2,             --    hrv_hex2.readdata
+            hrv_ledg_writeresponsevalid_n => LEDG(0), --    hrv_ledg.writeresponsevalid_n
+            hrv_ledr_readdata             => LEDR              --    hrv_ledr.readdata
         );
 
 end top_level_arc;

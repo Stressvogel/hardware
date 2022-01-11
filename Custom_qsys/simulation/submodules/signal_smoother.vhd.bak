@@ -1,0 +1,8 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity signal_smoother is
+	port(	clk, reset_n : std_logic;
+			input : std_logic_vector(15 downto 0);
+			smoothed_input, baseline : std_logic_vector(15 downto 0);
+end entity;

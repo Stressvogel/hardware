@@ -60,19 +60,6 @@ architecture rtl of Custom_qsys is
 		);
 	end component Custom_qsys_Interval_Timer;
 
-	component Custom_qsys_Interval_Timer_2 is
-		port (
-			clk        : in  std_logic                     := 'X';             -- clk
-			reset_n    : in  std_logic                     := 'X';             -- reset_n
-			address    : in  std_logic_vector(2 downto 0)  := (others => 'X'); -- address
-			writedata  : in  std_logic_vector(15 downto 0) := (others => 'X'); -- writedata
-			readdata   : out std_logic_vector(15 downto 0);                    -- readdata
-			chipselect : in  std_logic                     := 'X';             -- chipselect
-			write_n    : in  std_logic                     := 'X';             -- write_n
-			irq        : out std_logic                                         -- irq
-		);
-	end component Custom_qsys_Interval_Timer_2;
-
 	component Custom_qsys_jtag_uart_0 is
 		port (
 			clk            : in  std_logic                     := 'X';             -- clk
@@ -712,7 +699,7 @@ begin
 			irq        => irq_mapper_receiver4_irq                             --   irq.irq
 		);
 
-	interval_timer_2 : component Custom_qsys_Interval_Timer_2
+	interval_timer_2 : component Custom_qsys_Interval_Timer
 		port map (
 			clk        => sys_sdram_pll_0_sys_clk_clk,                           --   clk.clk
 			reset_n    => rst_controller_001_reset_out_reset_ports_inv,          -- reset.reset_n

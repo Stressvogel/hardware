@@ -1,0 +1,38 @@
+
+--library IEEE;
+--use IEEE.std_logic_1164.all;
+--use IEEE.numeric_std.all;
+--
+--entity signal_filter is
+--	generic(data_size : integer := 101);
+--	port (clock : in std_logic;
+--			reset_n : in std_logic;
+--			data_in : in std_logic_vector(15 downto 0);
+--			data_out : out std_logic_vector(15 downto 0)
+--		   );
+--end entity;
+
+architecture behavioural of moving_average_calculator is
+
+begin
+	process (clock, reset_n)
+		variable data : std_logic_vector(16*data_size-1 downto 0) := (others => '0');
+		variable sum : integer range 0 to (2**16)*data_size-1;
+	begin
+		if reset_n = '0' then 
+			data := (others => '0');
+		elsif rising_edge(clock) then
+			data := data(data'LEFT-16 downto 0) & data_in;
+			sum := 0;
+			
+			if to_integer(unsigned(data(data'LEFT downto data'LEFT-15))) /= 0 then
+				for i in 0 to data_size-1 loop
+					sum := sum + to_integer(unsigned(data(i*16+15 downto i*16)));
+				end loop;
+			end if;
+			
+			data_out <= std_logic_vector(to_unsigned(sum / data_size, 16));
+		end if;
+	end process;
+
+end architecture;

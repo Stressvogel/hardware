@@ -1,0 +1,82 @@
+--library IEEE;
+--use IEEE.std_logic_1164.all;
+--
+--entity peak_detector is
+--	port(	clk, reset_n : in std_logic;
+--			in_1, in_2 : in std_logic_vector(15 downto 0);
+--			peak_detected : out std_logic
+--		 );
+--end entity;
+
+architecture behavioural of peak_detector is
+
+begin
+
+	process (clk, reset_n)
+		variable in_1_buffer : std_logic_vector(201*16-1 downto 0);
+		variable in_2_buffer : std_logic_vector(101*16-1 downto 0);
+		
+		variable b_local_past : integer range 0 to (2**16)*100-1;
+		variable b_local_future : integer range 0 to (2**16)*100-1;
+		
+		variable s_local_past : integer range 0 to (2**16)*10-1;
+		variable s_local_future : integer range 0 to (2**16)*10-1;
+		
+		variable peak_detected_temp : std_logic;
+		
+		variable bigger_neighbour : std_logic;
+		
+	begin
+		if reset_n = '0' then
+			in_1_buffer := (others => '0');
+			
+			in_2_buffer := (others => '0');
+			
+		elsif rising_edge(clk) then
+			peak_detected_temp := '0';
+			bigger_neighbour := '0';
+			
+			if unsigned(in_1) /= 0 and unsigned(in_2) /= 0 then
+				in_1_buffer := in_1_buffer(in_1_buffer'LEFT-16 downto 0) & in_1;
+				in_2_buffer := in_2_buffer(in_2_buffer'LEFT-16 downto 0) & in_2;
+				
+				if unsigned(in_1_buffer(in_1_buffer'LEFT downto in_1_buffer'LEFT-15)) /= 0 then
+					b_local_past := 0;
+					b_local_future := 0;
+					
+					s_local_past := 0;
+					s_local_future := 0;
+				
+					for i in 0 to 99 loop
+						b_local_past := b_local_past + to_integer(unsigned(in_1_buffer(i*16+15 downto i*16)));
+						b_local_future := b_local_future + to_integer(unsigned(in_1_buffer(in_1_buffer'LEFT-i*16 downto in_1_buffer'LEFT-i*16-15)));
+					
+						if i >= 80 then
+							if 	to_integer(unsigned(in_1_buffer(i*16+15 downto i*16))) > to_integer(unsigned(in_1_buffer(100*16+15 downto 100*16))) or
+								to_integer(unsigned(in_1_buffer(in_1_buffer'LEFT-i*16 downto in_1_buffer'LEFT-i*16-15))) > to_integer(unsigned(in_1_buffer(100*16+15 downto 100*16))) then
+									bigger_neighbour := '1';
+							end if;
+						end if;
+					end loop;
+					
+					b_local_past := b_local_past / 100;
+					b_local_future := b_local_future / 100;
+					s_local_past := s_local_past / 10;
+					s_local_future := s_local_future / 10;
+					
+					if unsigned(in_1_buffer(100*16+15 downto 100*16)) > b_local_past and
+						unsigned(in_1_buffer(100*16+15 downto 100*16)) > b_local_future and
+						unsigned(in_1_buffer(100*16+15 downto 100*16)) > s_local_past and
+						unsigned(in_1_buffer(100*16+15 downto 100*16)) > s_local_future and
+						unsigned(in_1_buffer(100*16+15 downto 100*16)) > unsigned(in_2_buffer(in_2_buffer'LEFT downto in_2_buffer'LEFT-15)) and
+						bigger_neighbour = '0' then
+							peak_detected_temp := '1';
+					end if;
+				end if;
+			end if;
+			test_out <= in_1_buffer(100*16+15 downto 100*16);
+			peak_detected <= peak_detected_temp;
+		end if;
+	end process;
+
+end architecture;

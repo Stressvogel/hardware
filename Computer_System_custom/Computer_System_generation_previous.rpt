@@ -1,0 +1,328 @@
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\Aran\GoogleDrive\School\Windesheim\KBS\SimpleNiosVGA\qyss\Computer_System_custom\Computer_System.qsys --synthesis=VHDL --output-directory=C:\Users\Aran\GoogleDrive\School\Windesheim\KBS\SimpleNiosVGA\qyss\Computer_System_custom\Computer_System_custom\synthesis --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading Computer_System_custom/Computer_System.qsys
+Progress: Reading input file
+Progress: Adding Flash [Altera_UP_Flash_Memory_IP_Core_Avalon_Interface 18.0]
+Progress: Parameterizing module Flash
+Progress: Adding Interval_Timer [altera_avalon_timer 18.1]
+Progress: Parameterizing module Interval_Timer
+Progress: Adding Interval_Timer_2 [altera_avalon_timer 18.1]
+Progress: Parameterizing module Interval_Timer_2
+Progress: Adding Interval_Timer_2nd_Core [altera_avalon_timer 18.1]
+Progress: Parameterizing module Interval_Timer_2nd_Core
+Progress: Adding Interval_Timer_2nd_Core_2 [altera_avalon_timer 18.1]
+Progress: Parameterizing module Interval_Timer_2nd_Core_2
+Progress: Adding IrDA [altera_up_avalon_irda 18.0]
+Progress: Parameterizing module IrDA
+Progress: Adding JTAG_UART [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module JTAG_UART
+Progress: Adding JTAG_UART_2nd_Core [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module JTAG_UART_2nd_Core
+Progress: Adding JTAG_to_FPGA_Bridge [altera_jtag_avalon_master 18.1]
+Progress: Parameterizing module JTAG_to_FPGA_Bridge
+Progress: Adding Nios2 [altera_nios2_gen2 18.1]
+Progress: Parameterizing module Nios2
+Progress: Adding Nios2_2nd_Core [altera_nios2_gen2 18.1]
+Progress: Parameterizing module Nios2_2nd_Core
+Progress: Adding Nios2_2nd_Core_Floating_Point [altera_nios_custom_instr_floating_point 18.1]
+Progress: Parameterizing module Nios2_2nd_Core_Floating_Point
+Progress: Adding Nios2_Floating_Point [altera_nios_custom_instr_floating_point 18.1]
+Progress: Parameterizing module Nios2_Floating_Point
+Progress: Adding PS2_Port [altera_up_avalon_ps2 18.0]
+Progress: Parameterizing module PS2_Port
+Progress: Adding PS2_Port_Dual [altera_up_avalon_ps2 18.0]
+Progress: Parameterizing module PS2_Port_Dual
+Progress: Adding Pushbuttons [altera_avalon_pio 18.1]
+Progress: Parameterizing module Pushbuttons
+Progress: Adding SDRAM [altera_avalon_new_sdram_controller 18.1]
+Progress: Parameterizing module SDRAM
+Progress: Adding SRAM [altera_up_avalon_sram 18.0]
+Progress: Parameterizing module SRAM
+Progress: Adding SysID [altera_avalon_sysid_qsys 18.1]
+Progress: Parameterizing module SysID
+Progress: Adding System_PLL [altera_up_avalon_sys_sdram_pll 18.0]
+Progress: Parameterizing module System_PLL
+Progress: Adding USB [altera_up_avalon_usb 18.0]
+Progress: Parameterizing module USB
+Progress: Adding VGA_Subsystem [VGA_Subsystem 1.0]
+Progress: Reading input file
+Progress: Adding Char_Buf_Subsystem [Char_Buf_Subsystem 1.0]
+Progress: Reading input file
+Progress: Adding ASCII_to_Image [altera_up_avalon_video_ascii_to_image 18.0]
+Progress: Parameterizing module ASCII_to_Image
+Progress: Adding Char_Buf_DMA [altera_up_avalon_video_dma_controller 18.0]
+Progress: Parameterizing module Char_Buf_DMA
+Progress: Adding Char_Buf_RGB_Resampler [altera_up_avalon_video_rgb_resampler 18.0]
+Progress: Parameterizing module Char_Buf_RGB_Resampler
+Progress: Adding Char_Buf_Scaler [altera_up_avalon_video_scaler 18.0]
+Progress: Parameterizing module Char_Buf_Scaler
+Progress: Adding Onchip_SRAM [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module Onchip_SRAM
+Progress: Adding Set_Black_Transparent [altera_up_avalon_video_change_alpha 18.0]
+Progress: Parameterizing module Set_Black_Transparent
+Progress: Adding Sys_Clk [clock_source 18.1]
+Progress: Parameterizing module Sys_Clk
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Progress: Parameterizing module Char_Buf_Subsystem
+Progress: Adding Sys_Clk [clock_source 18.1]
+Progress: Parameterizing module Sys_Clk
+Progress: Adding VGA_Alpha_Blender [altera_up_avalon_video_alpha_blender 18.0]
+Progress: Parameterizing module VGA_Alpha_Blender
+Progress: Adding VGA_Clk [clock_source 18.1]
+Progress: Parameterizing module VGA_Clk
+Progress: Adding VGA_Controller [altera_up_avalon_video_vga_controller 18.1]
+Warning: altera_up_avalon_video_vga_controller: Catalog mismatch; expected v18.0 but found v18.1
+Progress: Parameterizing module VGA_Controller
+Progress: Adding VGA_Dual_Clock_FIFO [altera_up_avalon_video_dual_clock_buffer 18.0]
+Progress: Parameterizing module VGA_Dual_Clock_FIFO
+Progress: Adding VGA_Pixel_DMA [altera_up_avalon_video_dma_controller 18.0]
+Progress: Parameterizing module VGA_Pixel_DMA
+Progress: Adding VGA_Pixel_FIFO [altera_up_avalon_video_dual_clock_buffer 18.0]
+Progress: Parameterizing module VGA_Pixel_FIFO
+Progress: Adding VGA_Pixel_RGB_Resampler [altera_up_avalon_video_rgb_resampler 18.0]
+Progress: Parameterizing module VGA_Pixel_RGB_Resampler
+Progress: Adding VGA_Pixel_Scaler [altera_up_avalon_video_scaler 18.0]
+Progress: Parameterizing module VGA_Pixel_Scaler
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Progress: Parameterizing module VGA_Subsystem
+Progress: Adding Video_PLL [altera_up_avalon_video_pll 18.0]
+Progress: Parameterizing module Video_PLL
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: Computer_System.JTAG_UART: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: Computer_System.JTAG_UART_2nd_Core: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: Computer_System.SDRAM: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: Computer_System.SysID: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: Computer_System.SysID: Time stamp will be automatically updated when this component is generated.
+Info: Computer_System.System_PLL: Refclk Freq: 50.0
+Info: Computer_System.VGA_Subsystem.Char_Buf_Subsystem.Char_Buf_RGB_Resampler: RGB Resampling: 1 (bits) x 1 (planes) -> 10 (bits) x 4 (planes)
+Info: Computer_System.VGA_Subsystem.Char_Buf_Subsystem.Char_Buf_Scaler: Change in Resolution: 80 x 60 -> 640 x 480
+Info: Computer_System.VGA_Subsystem.VGA_Controller: Video Output Stream: Format: 640 x 480 with Color: 10 (bits) x 3 (planes) converted to 8 (bits) per color plane
+Info: Computer_System.VGA_Subsystem.VGA_Pixel_RGB_Resampler: RGB Resampling: 16 (bits) x 1 (planes) -> 10 (bits) x 3 (planes)
+Info: Computer_System.VGA_Subsystem.VGA_Pixel_Scaler: Change in Resolution: 320 x 240 -> 640 x 480
+Info: Computer_System.VGA_Subsystem.VGA_Pixel_Scaler.avalon_scaler_source/VGA_Alpha_Blender.avalon_background_sink: The source has a channel signal of 2 bits, but the sink does not. Avalon-ST Adapter will be inserted.
+Info: Computer_System: Generating Computer_System "Computer_System" for QUARTUS_SYNTH
+Warning: Computer_System: "No matching role found for Nios2_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_ipending (ipending)"
+Warning: Computer_System: "No matching role found for Nios2_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_estatus (estatus)"
+Warning: Computer_System: "No matching role found for Nios2_2nd_Core_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_ipending (ipending)"
+Warning: Computer_System: "No matching role found for Nios2_2nd_Core_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_estatus (estatus)"
+Info: Flash: "Computer_System" instantiated Altera_UP_Flash_Memory_IP_Core_Avalon_Interface "Flash"
+Info: Interval_Timer: Starting RTL generation for module 'Computer_System_Interval_Timer'
+Info: Interval_Timer:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=Computer_System_Interval_Timer --dir=C:/Users/Aran/AppData/Local/Temp/alt8970_6011136079902898000.dir/0104_Interval_Timer_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Aran/AppData/Local/Temp/alt8970_6011136079902898000.dir/0104_Interval_Timer_gen//Computer_System_Interval_Timer_component_configuration.pl  --do_build_sim=0  ]
+Info: Interval_Timer: Done RTL generation for module 'Computer_System_Interval_Timer'
+Info: Interval_Timer: "Computer_System" instantiated altera_avalon_timer "Interval_Timer"
+Info: IrDA: Starting Generation of RS232 UART
+Info: IrDA: "Computer_System" instantiated altera_up_avalon_irda "IrDA"
+Info: JTAG_UART: Starting RTL generation for module 'Computer_System_JTAG_UART'
+Info: JTAG_UART:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=Computer_System_JTAG_UART --dir=C:/Users/Aran/AppData/Local/Temp/alt8970_6011136079902898000.dir/0106_JTAG_UART_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Aran/AppData/Local/Temp/alt8970_6011136079902898000.dir/0106_JTAG_UART_gen//Computer_System_JTAG_UART_component_configuration.pl  --do_build_sim=0  ]
+Info: JTAG_UART: Done RTL generation for module 'Computer_System_JTAG_UART'
+Info: JTAG_UART: "Computer_System" instantiated altera_avalon_jtag_uart "JTAG_UART"
+Info: JTAG_to_FPGA_Bridge: "Computer_System" instantiated altera_jtag_avalon_master "JTAG_to_FPGA_Bridge"
+Info: Nios2: "Computer_System" instantiated altera_nios2_gen2 "Nios2"
+Info: Nios2_2nd_Core: "Computer_System" instantiated altera_nios2_gen2 "Nios2_2nd_Core"
+Info: Nios2_2nd_Core_Floating_Point: "Computer_System" instantiated altera_nios_custom_instr_floating_point "Nios2_2nd_Core_Floating_Point"
+Info: PS2_Port: Starting Generation of PS2 Controller
+Info: PS2_Port: "Computer_System" instantiated altera_up_avalon_ps2 "PS2_Port"
+Info: Pushbuttons: Starting RTL generation for module 'Computer_System_Pushbuttons'
+Info: Pushbuttons:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Computer_System_Pushbuttons --dir=C:/Users/Aran/AppData/Local/Temp/alt8970_6011136079902898000.dir/0108_Pushbuttons_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Aran/AppData/Local/Temp/alt8970_6011136079902898000.dir/0108_Pushbuttons_gen//Computer_System_Pushbuttons_component_configuration.pl  --do_build_sim=0  ]
+Info: Pushbuttons: Done RTL generation for module 'Computer_System_Pushbuttons'
+Info: Pushbuttons: "Computer_System" instantiated altera_avalon_pio "Pushbuttons"
+Info: SDRAM: Starting RTL generation for module 'Computer_System_SDRAM'
+Info: SDRAM:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=Computer_System_SDRAM --dir=C:/Users/Aran/AppData/Local/Temp/alt8970_6011136079902898000.dir/0109_SDRAM_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Aran/AppData/Local/Temp/alt8970_6011136079902898000.dir/0109_SDRAM_gen//Computer_System_SDRAM_component_configuration.pl  --do_build_sim=0  ]
+Info: SDRAM: Done RTL generation for module 'Computer_System_SDRAM'
+Info: SDRAM: "Computer_System" instantiated altera_avalon_new_sdram_controller "SDRAM"
+Info: SRAM: Starting Generation of the SRAM Controller
+Info: SRAM: "Computer_System" instantiated altera_up_avalon_sram "SRAM"
+Info: SysID: "Computer_System" instantiated altera_avalon_sysid_qsys "SysID"
+Info: System_PLL: "Computer_System" instantiated altera_up_avalon_sys_sdram_pll "System_PLL"
+Info: USB: Starting Generation of USB Controller
+Info: USB: "Computer_System" instantiated altera_up_avalon_usb "USB"
+Info: avalon_st_adapter: Inserting channel_adapter: channel_adapter_0
+Info: VGA_Subsystem: "Computer_System" instantiated VGA_Subsystem "VGA_Subsystem"
+Info: Video_PLL: "Computer_System" instantiated altera_up_avalon_video_pll "Video_PLL"
+Info: Nios2_custom_instruction_master_translator: "Computer_System" instantiated altera_customins_master_translator "Nios2_custom_instruction_master_translator"
+Info: Nios2_custom_instruction_master_multi_xconnect: "Computer_System" instantiated altera_customins_xconnect "Nios2_custom_instruction_master_multi_xconnect"
+Info: Nios2_custom_instruction_master_multi_slave_translator0: "Computer_System" instantiated altera_customins_slave_translator "Nios2_custom_instruction_master_multi_slave_translator0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_010: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_011: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_012: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_013: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_014: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_015: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_016: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_017: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_018: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_019: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "Computer_System" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "Computer_System" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "Computer_System" instantiated altera_reset_controller "rst_controller"
+Info: jtag_phy_embedded_in_jtag_master: "JTAG_to_FPGA_Bridge" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: timing_adt: "JTAG_to_FPGA_Bridge" instantiated timing_adapter "timing_adt"
+Info: fifo: "JTAG_to_FPGA_Bridge" instantiated altera_avalon_sc_fifo "fifo"
+Info: b2p: "JTAG_to_FPGA_Bridge" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: p2b: "JTAG_to_FPGA_Bridge" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: transacto: "JTAG_to_FPGA_Bridge" instantiated altera_avalon_packets_to_master "transacto"
+Info: b2p_adapter: "JTAG_to_FPGA_Bridge" instantiated channel_adapter "b2p_adapter"
+Info: p2b_adapter: "JTAG_to_FPGA_Bridge" instantiated channel_adapter "p2b_adapter"
+Info: cpu: Starting RTL generation for module 'Computer_System_Nios2_cpu'
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=Computer_System_Nios2_cpu --dir=C:/Users/Aran/AppData/Local/Temp/alt8970_6011136079902898000.dir/0127_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/Aran/AppData/Local/Temp/alt8970_6011136079902898000.dir/0127_cpu_gen//Computer_System_Nios2_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2021.12.09 12:16:44 (*) Starting Nios II generation
+Info: cpu: # 2021.12.09 12:16:44 (*)   Checking for plaintext license.
+Info: cpu: # 2021.12.09 12:16:44 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
+Info: cpu: # 2021.12.09 12:16:44 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2021.12.09 12:16:44 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2021.12.09 12:16:44 (*)   Plaintext license not found.
+Info: cpu: # 2021.12.09 12:16:44 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2021.12.09 12:16:44 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2021.12.09 12:16:44 (*)   Creating all objects for CPU
+Info: cpu: # 2021.12.09 12:16:45 (*)   Generating RTL from CPU objects
+Info: cpu: # 2021.12.09 12:16:45 (*)   Creating plain-text RTL
+Info: cpu: # 2021.12.09 12:16:46 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'Computer_System_Nios2_cpu'
+Info: cpu: "Nios2" instantiated altera_nios2_gen2_unit "cpu"
+Info: cpu: Starting RTL generation for module 'Computer_System_Nios2_2nd_Core_cpu'
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=Computer_System_Nios2_2nd_Core_cpu --dir=C:/Users/Aran/AppData/Local/Temp/alt8970_6011136079902898000.dir/0128_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/Aran/AppData/Local/Temp/alt8970_6011136079902898000.dir/0128_cpu_gen//Computer_System_Nios2_2nd_Core_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2021.12.09 12:16:46 (*) Starting Nios II generation
+Info: cpu: # 2021.12.09 12:16:46 (*)   Checking for plaintext license.
+Info: cpu: # 2021.12.09 12:16:47 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
+Info: cpu: # 2021.12.09 12:16:47 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2021.12.09 12:16:47 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2021.12.09 12:16:47 (*)   Plaintext license not found.
+Info: cpu: # 2021.12.09 12:16:47 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2021.12.09 12:16:47 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2021.12.09 12:16:47 (*)   Creating all objects for CPU
+Info: cpu: # 2021.12.09 12:16:48 (*)   Generating RTL from CPU objects
+Info: cpu: # 2021.12.09 12:16:48 (*)   Creating plain-text RTL
+Info: cpu: # 2021.12.09 12:16:48 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'Computer_System_Nios2_2nd_Core_cpu'
+Info: cpu: "Nios2_2nd_Core" instantiated altera_nios2_gen2_unit "cpu"
+Info: sys_pll: "System_PLL" instantiated altera_up_altpll "sys_pll"
+Info: reset_from_locked: "System_PLL" instantiated altera_up_avalon_reset_from_locked_signal "reset_from_locked"
+Info: Char_Buf_Subsystem: "VGA_Subsystem" instantiated Char_Buf_Subsystem "Char_Buf_Subsystem"
+Info: VGA_Alpha_Blender: Starting Generation of the Alpha Blender
+Info: VGA_Alpha_Blender: "VGA_Subsystem" instantiated altera_up_avalon_video_alpha_blender "VGA_Alpha_Blender"
+Info: VGA_Controller: Starting Generation of VGA Controller
+Info: VGA_Controller: "VGA_Subsystem" instantiated altera_up_avalon_video_vga_controller "VGA_Controller"
+Info: VGA_Dual_Clock_FIFO: Starting Generation of the Dual Clock Buffer
+Info: VGA_Dual_Clock_FIFO: "VGA_Subsystem" instantiated altera_up_avalon_video_dual_clock_buffer "VGA_Dual_Clock_FIFO"
+Info: VGA_Pixel_DMA: Starting Generation of Video DMA Controller
+Info: VGA_Pixel_DMA: "VGA_Subsystem" instantiated altera_up_avalon_video_dma_controller "VGA_Pixel_DMA"
+Info: VGA_Pixel_FIFO: Starting Generation of the Dual Clock Buffer
+Info: VGA_Pixel_FIFO: "VGA_Subsystem" instantiated altera_up_avalon_video_dual_clock_buffer "VGA_Pixel_FIFO"
+Info: VGA_Pixel_RGB_Resampler: Starting Generation of Video RGB Resampler
+Info: VGA_Pixel_RGB_Resampler: "VGA_Subsystem" instantiated altera_up_avalon_video_rgb_resampler "VGA_Pixel_RGB_Resampler"
+Info: VGA_Pixel_Scaler: Starting Generation of Video Scaler
+Info: VGA_Pixel_Scaler: "VGA_Subsystem" instantiated altera_up_avalon_video_scaler "VGA_Pixel_Scaler"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "VGA_Subsystem" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: avalon_st_adapter: "VGA_Subsystem" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: Nios2_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "Nios2_data_master_translator"
+Info: IrDA_avalon_irda_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "IrDA_avalon_irda_slave_translator"
+Info: Nios2_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "Nios2_data_master_agent"
+Info: IrDA_avalon_irda_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "IrDA_avalon_irda_slave_agent"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
+Info: router_005: "mm_interconnect_0" instantiated altera_merlin_router "router_005"
+Info: router_006: "mm_interconnect_0" instantiated altera_merlin_router "router_006"
+Info: router_009: "mm_interconnect_0" instantiated altera_merlin_router "router_009"
+Info: router_012: "mm_interconnect_0" instantiated altera_merlin_router "router_012"
+Info: router_013: "mm_interconnect_0" instantiated altera_merlin_router "router_013"
+Info: router_021: "mm_interconnect_0" instantiated altera_merlin_router "router_021"
+Info: router_022: "mm_interconnect_0" instantiated altera_merlin_router "router_022"
+Info: JTAG_to_FPGA_Bridge_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "JTAG_to_FPGA_Bridge_master_limiter"
+Info: Reusing file C:/Users/Aran/GoogleDrive/School/Windesheim/KBS/SimpleNiosVGA/qyss/Computer_System_custom/Computer_System_custom/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file C:/Users/Aran/GoogleDrive/School/Windesheim/KBS/SimpleNiosVGA/qyss/Computer_System_custom/Computer_System_custom/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: SRAM_avalon_sram_slave_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "SRAM_avalon_sram_slave_burst_adapter"
+Info: Reusing file C:/Users/Aran/GoogleDrive/School/Windesheim/KBS/SimpleNiosVGA/qyss/Computer_System_custom/Computer_System_custom/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
+Info: Reusing file C:/Users/Aran/GoogleDrive/School/Windesheim/KBS/SimpleNiosVGA/qyss/Computer_System_custom/Computer_System_custom/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_002"
+Info: cmd_demux_003: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_003"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
+Info: Reusing file C:/Users/Aran/GoogleDrive/School/Windesheim/KBS/SimpleNiosVGA/qyss/Computer_System_custom/Computer_System_custom/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: cmd_mux_004: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_004"
+Info: Reusing file C:/Users/Aran/GoogleDrive/School/Windesheim/KBS/SimpleNiosVGA/qyss/Computer_System_custom/Computer_System_custom/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: cmd_mux_016: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_016"
+Info: Reusing file C:/Users/Aran/GoogleDrive/School/Windesheim/KBS/SimpleNiosVGA/qyss/Computer_System_custom/Computer_System_custom/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_001"
+Info: rsp_demux_004: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_004"
+Info: rsp_demux_016: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_016"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/Users/Aran/GoogleDrive/School/Windesheim/KBS/SimpleNiosVGA/qyss/Computer_System_custom/Computer_System_custom/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_002"
+Info: Reusing file C:/Users/Aran/GoogleDrive/School/Windesheim/KBS/SimpleNiosVGA/qyss/Computer_System_custom/Computer_System_custom/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_003: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_003"
+Info: Reusing file C:/Users/Aran/GoogleDrive/School/Windesheim/KBS/SimpleNiosVGA/qyss/Computer_System_custom/Computer_System_custom/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: SRAM_avalon_sram_slave_rsp_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "SRAM_avalon_sram_slave_rsp_width_adapter"
+Info: Reusing file C:/Users/Aran/GoogleDrive/School/Windesheim/KBS/SimpleNiosVGA/qyss/Computer_System_custom/Computer_System_custom/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file C:/Users/Aran/GoogleDrive/School/Windesheim/KBS/SimpleNiosVGA/qyss/Computer_System_custom/Computer_System_custom/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: avalon_st_adapter_004: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_004"
+Info: ASCII_to_Image: Starting Generation of ASCII to Image Stream Converter
+Info: ASCII_to_Image: "Char_Buf_Subsystem" instantiated altera_up_avalon_video_ascii_to_image "ASCII_to_Image"
+Info: Char_Buf_DMA: Starting Generation of Video DMA Controller
+Info: Char_Buf_DMA: "Char_Buf_Subsystem" instantiated altera_up_avalon_video_dma_controller "Char_Buf_DMA"
+Info: Reusing file C:/Users/Aran/GoogleDrive/School/Windesheim/KBS/SimpleNiosVGA/qyss/Computer_System_custom/Computer_System_custom/synthesis/submodules/altera_up_video_dma_control_slave.v
+Info: Reusing file C:/Users/Aran/GoogleDrive/School/Windesheim/KBS/SimpleNiosVGA/qyss/Computer_System_custom/Computer_System_custom/synthesis/submodules/altera_up_video_dma_to_memory.v
+Info: Reusing file C:/Users/Aran/GoogleDrive/School/Windesheim/KBS/SimpleNiosVGA/qyss/Computer_System_custom/Computer_System_custom/synthesis/submodules/altera_up_video_dma_to_stream.v
+Info: Char_Buf_RGB_Resampler: Starting Generation of Video RGB Resampler
+Info: Char_Buf_RGB_Resampler: "Char_Buf_Subsystem" instantiated altera_up_avalon_video_rgb_resampler "Char_Buf_RGB_Resampler"
+Info: Char_Buf_Scaler: Starting Generation of Video Scaler
+Info: Char_Buf_Scaler: "Char_Buf_Subsystem" instantiated altera_up_avalon_video_scaler "Char_Buf_Scaler"
+Info: Reusing file C:/Users/Aran/GoogleDrive/School/Windesheim/KBS/SimpleNiosVGA/qyss/Computer_System_custom/Computer_System_custom/synthesis/submodules/altera_up_video_scaler_shrink.v
+Info: Reusing file C:/Users/Aran/GoogleDrive/School/Windesheim/KBS/SimpleNiosVGA/qyss/Computer_System_custom/Computer_System_custom/synthesis/submodules/altera_up_video_scaler_multiply_width.v
+Info: Reusing file C:/Users/Aran/GoogleDrive/School/Windesheim/KBS/SimpleNiosVGA/qyss/Computer_System_custom/Computer_System_custom/synthesis/submodules/altera_up_video_scaler_multiply_height.v
+Info: Onchip_SRAM: Starting RTL generation for module 'Computer_System_VGA_Subsystem_Char_Buf_Subsystem_Onchip_SRAM'
+Info: Onchip_SRAM:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=Computer_System_VGA_Subsystem_Char_Buf_Subsystem_Onchip_SRAM --dir=C:/Users/Aran/AppData/Local/Temp/alt8970_6011136079902898000.dir/0175_Onchip_SRAM_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Aran/AppData/Local/Temp/alt8970_6011136079902898000.dir/0175_Onchip_SRAM_gen//Computer_System_VGA_Subsystem_Char_Buf_Subsystem_Onchip_SRAM_component_configuration.pl  --do_build_sim=0  ]
+Info: Onchip_SRAM: Done RTL generation for module 'Computer_System_VGA_Subsystem_Char_Buf_Subsystem_Onchip_SRAM'
+Info: Onchip_SRAM: "Char_Buf_Subsystem" instantiated altera_avalon_onchip_memory2 "Onchip_SRAM"
+Info: Set_Black_Transparent: Starting Generation of Video Change Alpha Value IP Core
+Info: Set_Black_Transparent: "Char_Buf_Subsystem" instantiated altera_up_avalon_video_change_alpha "Set_Black_Transparent"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "Char_Buf_Subsystem" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file C:/Users/Aran/GoogleDrive/School/Windesheim/KBS/SimpleNiosVGA/qyss/Computer_System_custom/Computer_System_custom/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/Users/Aran/GoogleDrive/School/Windesheim/KBS/SimpleNiosVGA/qyss/Computer_System_custom/Computer_System_custom/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: channel_adapter_0: "avalon_st_adapter" instantiated channel_adapter "channel_adapter_0"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: error_adapter_0: "avalon_st_adapter_004" instantiated error_adapter "error_adapter_0"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file C:/Users/Aran/GoogleDrive/School/Windesheim/KBS/SimpleNiosVGA/qyss/Computer_System_custom/Computer_System_custom/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/Users/Aran/GoogleDrive/School/Windesheim/KBS/SimpleNiosVGA/qyss/Computer_System_custom/Computer_System_custom/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Computer_System: Done "Computer_System" with 102 modules, 167 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

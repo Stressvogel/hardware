@@ -1,0 +1,538 @@
+
+# (C) 2001-2022 Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions and 
+# other software and tools, and its AMPP partner logic functions, and 
+# any output files any of the foregoing (including device programming 
+# or simulation files), and any associated documentation or information 
+# are expressly subject to the terms and conditions of the Altera 
+# Program License Subscription Agreement, Altera MegaCore Function 
+# License Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by Altera 
+# or its authorized distributors. Please refer to the applicable 
+# agreement for further details.
+
+# ACDS 18.1 646 win32 2022.01.11.08:17:35
+# ----------------------------------------
+# Auto-generated simulation script rivierapro_setup.tcl
+# ----------------------------------------
+# This script provides commands to simulate the following IP detected in
+# your Quartus project:
+#     Custom_qsys
+# 
+# Altera recommends that you source this Quartus-generated IP simulation
+# script from your own customized top-level script, and avoid editing this
+# generated script.
+# 
+# To write a top-level script that compiles Altera simulation libraries and
+# the Quartus-generated IP in your project, along with your design and
+# testbench files, copy the text from the TOP-LEVEL TEMPLATE section below
+# into a new file, e.g. named "aldec.do", and modify the text as directed.
+# 
+# ----------------------------------------
+# # TOP-LEVEL TEMPLATE - BEGIN
+# #
+# # QSYS_SIMDIR is used in the Quartus-generated IP simulation script to
+# # construct paths to the files required to simulate the IP in your Quartus
+# # project. By default, the IP script assumes that you are launching the
+# # simulator from the IP script location. If launching from another
+# # location, set QSYS_SIMDIR to the output directory you specified when you
+# # generated the IP script, relative to the directory from which you launch
+# # the simulator.
+# #
+# set QSYS_SIMDIR <script generation output directory>
+# #
+# # Source the generated IP simulation script.
+# source $QSYS_SIMDIR/aldec/rivierapro_setup.tcl
+# #
+# # Set any compilation options you require (this is unusual).
+# set USER_DEFINED_COMPILE_OPTIONS <compilation options>
+# set USER_DEFINED_VHDL_COMPILE_OPTIONS <compilation options for VHDL>
+# set USER_DEFINED_VERILOG_COMPILE_OPTIONS <compilation options for Verilog>
+# #
+# # Call command to compile the Quartus EDA simulation library.
+# dev_com
+# #
+# # Call command to compile the Quartus-generated IP simulation files.
+# com
+# #
+# # Add commands to compile all design files and testbench files, including
+# # the top level. (These are all the files required for simulation other
+# # than the files compiled by the Quartus-generated IP simulation script)
+# #
+# vlog -sv2k5 <your compilation options> <design and testbench files>
+# #
+# # Set the top-level simulation or testbench module/entity name, which is
+# # used by the elab command to elaborate the top level.
+# #
+# set TOP_LEVEL_NAME <simulation top>
+# #
+# # Set any elaboration options you require.
+# set USER_DEFINED_ELAB_OPTIONS <elaboration options>
+# #
+# # Call command to elaborate your design and testbench.
+# elab
+# #
+# # Run the simulation.
+# run
+# #
+# # Report success to the shell.
+# exit -code 0
+# #
+# # TOP-LEVEL TEMPLATE - END
+# ----------------------------------------
+# 
+# IP SIMULATION SCRIPT
+# ----------------------------------------
+# If Custom_qsys is one of several IP cores in your
+# Quartus project, you can generate a simulation script
+# suitable for inclusion in your top-level simulation
+# script by running the following command line:
+# 
+# ip-setup-simulation --quartus-project=<quartus project>
+# 
+# ip-setup-simulation will discover the Altera IP
+# within the Quartus project, and generate a unified
+# script which supports all the Altera IP within the design.
+# ----------------------------------------
+
+# ----------------------------------------
+# Initialize variables
+if ![info exists SYSTEM_INSTANCE_NAME] { 
+  set SYSTEM_INSTANCE_NAME ""
+} elseif { ![ string match "" $SYSTEM_INSTANCE_NAME ] } { 
+  set SYSTEM_INSTANCE_NAME "/$SYSTEM_INSTANCE_NAME"
+}
+
+if ![info exists TOP_LEVEL_NAME] { 
+  set TOP_LEVEL_NAME "Custom_qsys"
+}
+
+if ![info exists QSYS_SIMDIR] { 
+  set QSYS_SIMDIR "./../"
+}
+
+if ![info exists QUARTUS_INSTALL_DIR] { 
+  set QUARTUS_INSTALL_DIR "C:/intelfpga_lite/18.1/quartus/"
+}
+
+if ![info exists USER_DEFINED_COMPILE_OPTIONS] { 
+  set USER_DEFINED_COMPILE_OPTIONS ""
+}
+if ![info exists USER_DEFINED_VHDL_COMPILE_OPTIONS] { 
+  set USER_DEFINED_VHDL_COMPILE_OPTIONS ""
+}
+if ![info exists USER_DEFINED_VERILOG_COMPILE_OPTIONS] { 
+  set USER_DEFINED_VERILOG_COMPILE_OPTIONS ""
+}
+if ![info exists USER_DEFINED_ELAB_OPTIONS] { 
+  set USER_DEFINED_ELAB_OPTIONS ""
+}
+
+# ----------------------------------------
+# Initialize simulation properties - DO NOT MODIFY!
+set ELAB_OPTIONS ""
+set SIM_OPTIONS ""
+if ![ string match "*-64 vsim*" [ vsim -version ] ] {
+} else {
+}
+
+set Aldec "Riviera"
+if { [ string match "*Active-HDL*" [ vsim -version ] ] } {
+  set Aldec "Active"
+}
+
+if { [ string match "Active" $Aldec ] } {
+  scripterconf -tcl
+  createdesign "$TOP_LEVEL_NAME"  "."
+  opendesign "$TOP_LEVEL_NAME"
+}
+
+# ----------------------------------------
+# Copy ROM/RAM files to simulation directory
+alias file_copy {
+  echo "\[exec\] file_copy"
+  file copy -force $QSYS_SIMDIR/submodules/Custom_qsys_vga_subsystem_char_buf_subsystem_onchip_memory2_0.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/Custom_qsys_nios2_gen2_0_cpu_ociram_default_contents.dat ./
+  file copy -force $QSYS_SIMDIR/submodules/Custom_qsys_nios2_gen2_0_cpu_ociram_default_contents.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/Custom_qsys_nios2_gen2_0_cpu_ociram_default_contents.mif ./
+  file copy -force $QSYS_SIMDIR/submodules/Custom_qsys_nios2_gen2_0_cpu_rf_ram_a.dat ./
+  file copy -force $QSYS_SIMDIR/submodules/Custom_qsys_nios2_gen2_0_cpu_rf_ram_a.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/Custom_qsys_nios2_gen2_0_cpu_rf_ram_a.mif ./
+  file copy -force $QSYS_SIMDIR/submodules/Custom_qsys_nios2_gen2_0_cpu_rf_ram_b.dat ./
+  file copy -force $QSYS_SIMDIR/submodules/Custom_qsys_nios2_gen2_0_cpu_rf_ram_b.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/Custom_qsys_nios2_gen2_0_cpu_rf_ram_b.mif ./
+}
+
+# ----------------------------------------
+# Create compilation libraries
+proc ensure_lib { lib } { if ![file isdirectory $lib] { vlib $lib } }
+ensure_lib      ./libraries     
+ensure_lib      ./libraries/work
+vmap       work ./libraries/work
+ensure_lib                  ./libraries/altera_ver      
+vmap       altera_ver       ./libraries/altera_ver      
+ensure_lib                  ./libraries/lpm_ver         
+vmap       lpm_ver          ./libraries/lpm_ver         
+ensure_lib                  ./libraries/sgate_ver       
+vmap       sgate_ver        ./libraries/sgate_ver       
+ensure_lib                  ./libraries/altera_mf_ver   
+vmap       altera_mf_ver    ./libraries/altera_mf_ver   
+ensure_lib                  ./libraries/altera_lnsim_ver
+vmap       altera_lnsim_ver ./libraries/altera_lnsim_ver
+ensure_lib                  ./libraries/cycloneive_ver  
+vmap       cycloneive_ver   ./libraries/cycloneive_ver  
+ensure_lib                  ./libraries/altera          
+vmap       altera           ./libraries/altera          
+ensure_lib                  ./libraries/lpm             
+vmap       lpm              ./libraries/lpm             
+ensure_lib                  ./libraries/sgate           
+vmap       sgate            ./libraries/sgate           
+ensure_lib                  ./libraries/altera_mf       
+vmap       altera_mf        ./libraries/altera_mf       
+ensure_lib                  ./libraries/altera_lnsim    
+vmap       altera_lnsim     ./libraries/altera_lnsim    
+ensure_lib                  ./libraries/cycloneive      
+vmap       cycloneive       ./libraries/cycloneive      
+ensure_lib                                                                        ./libraries/rsp_mux                                                               
+vmap       rsp_mux                                                                ./libraries/rsp_mux                                                               
+ensure_lib                                                                        ./libraries/rsp_demux                                                             
+vmap       rsp_demux                                                              ./libraries/rsp_demux                                                             
+ensure_lib                                                                        ./libraries/cmd_mux                                                               
+vmap       cmd_mux                                                                ./libraries/cmd_mux                                                               
+ensure_lib                                                                        ./libraries/cmd_demux                                                             
+vmap       cmd_demux                                                              ./libraries/cmd_demux                                                             
+ensure_lib                                                                        ./libraries/router_001                                                            
+vmap       router_001                                                             ./libraries/router_001                                                            
+ensure_lib                                                                        ./libraries/router                                                                
+vmap       router                                                                 ./libraries/router                                                                
+ensure_lib                                                                        ./libraries/error_adapter_0                                                       
+vmap       error_adapter_0                                                        ./libraries/error_adapter_0                                                       
+ensure_lib                                                                        ./libraries/channel_adapter_0                                                     
+vmap       channel_adapter_0                                                      ./libraries/channel_adapter_0                                                     
+ensure_lib                                                                        ./libraries/mm_interconnect_0                                                     
+vmap       mm_interconnect_0                                                      ./libraries/mm_interconnect_0                                                     
+ensure_lib                                                                        ./libraries/onchip_memory2_0                                                      
+vmap       onchip_memory2_0                                                       ./libraries/onchip_memory2_0                                                      
+ensure_lib                                                                        ./libraries/avalon_st_adapter_002                                                 
+vmap       avalon_st_adapter_002                                                  ./libraries/avalon_st_adapter_002                                                 
+ensure_lib                                                                        ./libraries/avalon_st_adapter                                                     
+vmap       avalon_st_adapter                                                      ./libraries/avalon_st_adapter                                                     
+ensure_lib                                                                        ./libraries/nios2_gen2_0_data_master_to_sram_0_avalon_sram_slave_cmd_width_adapter
+vmap       nios2_gen2_0_data_master_to_sram_0_avalon_sram_slave_cmd_width_adapter ./libraries/nios2_gen2_0_data_master_to_sram_0_avalon_sram_slave_cmd_width_adapter
+ensure_lib                                                                        ./libraries/rsp_mux_002                                                           
+vmap       rsp_mux_002                                                            ./libraries/rsp_mux_002                                                           
+ensure_lib                                                                        ./libraries/rsp_mux_001                                                           
+vmap       rsp_mux_001                                                            ./libraries/rsp_mux_001                                                           
+ensure_lib                                                                        ./libraries/rsp_demux_015                                                         
+vmap       rsp_demux_015                                                          ./libraries/rsp_demux_015                                                         
+ensure_lib                                                                        ./libraries/rsp_demux_006                                                         
+vmap       rsp_demux_006                                                          ./libraries/rsp_demux_006                                                         
+ensure_lib                                                                        ./libraries/rsp_demux_002                                                         
+vmap       rsp_demux_002                                                          ./libraries/rsp_demux_002                                                         
+ensure_lib                                                                        ./libraries/cmd_mux_015                                                           
+vmap       cmd_mux_015                                                            ./libraries/cmd_mux_015                                                           
+ensure_lib                                                                        ./libraries/cmd_mux_009                                                           
+vmap       cmd_mux_009                                                            ./libraries/cmd_mux_009                                                           
+ensure_lib                                                                        ./libraries/cmd_mux_006                                                           
+vmap       cmd_mux_006                                                            ./libraries/cmd_mux_006                                                           
+ensure_lib                                                                        ./libraries/cmd_mux_002                                                           
+vmap       cmd_mux_002                                                            ./libraries/cmd_mux_002                                                           
+ensure_lib                                                                        ./libraries/cmd_demux_002                                                         
+vmap       cmd_demux_002                                                          ./libraries/cmd_demux_002                                                         
+ensure_lib                                                                        ./libraries/cmd_demux_001                                                         
+vmap       cmd_demux_001                                                          ./libraries/cmd_demux_001                                                         
+ensure_lib                                                                        ./libraries/sram_0_avalon_sram_slave_burst_adapter                                
+vmap       sram_0_avalon_sram_slave_burst_adapter                                 ./libraries/sram_0_avalon_sram_slave_burst_adapter                                
+ensure_lib                                                                        ./libraries/vga_subsystem_pixel_dma_master_limiter                                
+vmap       vga_subsystem_pixel_dma_master_limiter                                 ./libraries/vga_subsystem_pixel_dma_master_limiter                                
+ensure_lib                                                                        ./libraries/router_018                                                            
+vmap       router_018                                                             ./libraries/router_018                                                            
+ensure_lib                                                                        ./libraries/router_012                                                            
+vmap       router_012                                                             ./libraries/router_012                                                            
+ensure_lib                                                                        ./libraries/router_009                                                            
+vmap       router_009                                                             ./libraries/router_009                                                            
+ensure_lib                                                                        ./libraries/router_005                                                            
+vmap       router_005                                                             ./libraries/router_005                                                            
+ensure_lib                                                                        ./libraries/router_003                                                            
+vmap       router_003                                                             ./libraries/router_003                                                            
+ensure_lib                                                                        ./libraries/router_002                                                            
+vmap       router_002                                                             ./libraries/router_002                                                            
+ensure_lib                                                                        ./libraries/jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo                          
+vmap       jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo                           ./libraries/jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo                          
+ensure_lib                                                                        ./libraries/jtag_uart_0_avalon_jtag_slave_agent                                   
+vmap       jtag_uart_0_avalon_jtag_slave_agent                                    ./libraries/jtag_uart_0_avalon_jtag_slave_agent                                   
+ensure_lib                                                                        ./libraries/nios2_gen2_0_data_master_agent                                        
+vmap       nios2_gen2_0_data_master_agent                                         ./libraries/nios2_gen2_0_data_master_agent                                        
+ensure_lib                                                                        ./libraries/jtag_uart_0_avalon_jtag_slave_translator                              
+vmap       jtag_uart_0_avalon_jtag_slave_translator                               ./libraries/jtag_uart_0_avalon_jtag_slave_translator                              
+ensure_lib                                                                        ./libraries/nios2_gen2_0_data_master_translator                                   
+vmap       nios2_gen2_0_data_master_translator                                    ./libraries/nios2_gen2_0_data_master_translator                                   
+ensure_lib                                                                        ./libraries/char_buf_subsystem                                                    
+vmap       char_buf_subsystem                                                     ./libraries/char_buf_subsystem                                                    
+ensure_lib                                                                        ./libraries/reset_from_locked                                                     
+vmap       reset_from_locked                                                      ./libraries/reset_from_locked                                                     
+ensure_lib                                                                        ./libraries/sys_pll                                                               
+vmap       sys_pll                                                                ./libraries/sys_pll                                                               
+ensure_lib                                                                        ./libraries/cpu                                                                   
+vmap       cpu                                                                    ./libraries/cpu                                                                   
+ensure_lib                                                                        ./libraries/rst_controller                                                        
+vmap       rst_controller                                                         ./libraries/rst_controller                                                        
+ensure_lib                                                                        ./libraries/irq_mapper                                                            
+vmap       irq_mapper                                                             ./libraries/irq_mapper                                                            
+ensure_lib                                                                        ./libraries/video_pll_0                                                           
+vmap       video_pll_0                                                            ./libraries/video_pll_0                                                           
+ensure_lib                                                                        ./libraries/vga_subsystem                                                         
+vmap       vga_subsystem                                                          ./libraries/vga_subsystem                                                         
+ensure_lib                                                                        ./libraries/sysid_qsys_0                                                          
+vmap       sysid_qsys_0                                                           ./libraries/sysid_qsys_0                                                          
+ensure_lib                                                                        ./libraries/sys_sdram_pll_0                                                       
+vmap       sys_sdram_pll_0                                                        ./libraries/sys_sdram_pll_0                                                       
+ensure_lib                                                                        ./libraries/spi_pio                                                               
+vmap       spi_pio                                                                ./libraries/spi_pio                                                               
+ensure_lib                                                                        ./libraries/spi_0                                                                 
+vmap       spi_0                                                                  ./libraries/spi_0                                                                 
+ensure_lib                                                                        ./libraries/sdram_controller                                                      
+vmap       sdram_controller                                                       ./libraries/sdram_controller                                                      
+ensure_lib                                                                        ./libraries/pushbuttons                                                           
+vmap       pushbuttons                                                            ./libraries/pushbuttons                                                           
+ensure_lib                                                                        ./libraries/nios2_gen2_0                                                          
+vmap       nios2_gen2_0                                                           ./libraries/nios2_gen2_0                                                          
+ensure_lib                                                                        ./libraries/jtag_uart_0                                                           
+vmap       jtag_uart_0                                                            ./libraries/jtag_uart_0                                                           
+ensure_lib                                                                        ./libraries/Interval_Timer_2                                                      
+vmap       Interval_Timer_2                                                       ./libraries/Interval_Timer_2                                                      
+ensure_lib                                                                        ./libraries/Interval_Timer                                                        
+vmap       Interval_Timer                                                         ./libraries/Interval_Timer                                                        
+ensure_lib                                                                        ./libraries/Heartrate_Variability                                                 
+vmap       Heartrate_Variability                                                  ./libraries/Heartrate_Variability                                                 
+
+# ----------------------------------------
+# Compile device library files
+alias dev_com {
+  echo "\[exec\] dev_com"
+  eval vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QUARTUS_INSTALL_DIR/eda/sim_lib/altera_primitives.v"              -work altera_ver      
+  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QUARTUS_INSTALL_DIR/eda/sim_lib/220model.v"                       -work lpm_ver         
+  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QUARTUS_INSTALL_DIR/eda/sim_lib/sgate.v"                          -work sgate_ver       
+  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QUARTUS_INSTALL_DIR/eda/sim_lib/altera_mf.v"                      -work altera_mf_ver   
+  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QUARTUS_INSTALL_DIR/eda/sim_lib/altera_lnsim.sv"                  -work altera_lnsim_ver
+  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QUARTUS_INSTALL_DIR/eda/sim_lib/cycloneive_atoms.v"               -work cycloneive_ver  
+  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd"        -work altera          
+  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QUARTUS_INSTALL_DIR/eda/sim_lib/altera_standard_functions.vhd"    -work altera          
+  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QUARTUS_INSTALL_DIR/eda/sim_lib/alt_dspbuilder_package.vhd"       -work altera          
+  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QUARTUS_INSTALL_DIR/eda/sim_lib/altera_europa_support_lib.vhd"    -work altera          
+  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QUARTUS_INSTALL_DIR/eda/sim_lib/altera_primitives_components.vhd" -work altera          
+  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QUARTUS_INSTALL_DIR/eda/sim_lib/altera_primitives.vhd"            -work altera          
+  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QUARTUS_INSTALL_DIR/eda/sim_lib/220pack.vhd"                      -work lpm             
+  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QUARTUS_INSTALL_DIR/eda/sim_lib/220model.vhd"                     -work lpm             
+  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QUARTUS_INSTALL_DIR/eda/sim_lib/sgate_pack.vhd"                   -work sgate           
+  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QUARTUS_INSTALL_DIR/eda/sim_lib/sgate.vhd"                        -work sgate           
+  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QUARTUS_INSTALL_DIR/eda/sim_lib/altera_mf_components.vhd"         -work altera_mf       
+  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QUARTUS_INSTALL_DIR/eda/sim_lib/altera_mf.vhd"                    -work altera_mf       
+  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QUARTUS_INSTALL_DIR/eda/sim_lib/altera_lnsim.sv"                  -work altera_lnsim    
+  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QUARTUS_INSTALL_DIR/eda/sim_lib/altera_lnsim_components.vhd"      -work altera_lnsim    
+  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QUARTUS_INSTALL_DIR/eda/sim_lib/cycloneive_atoms.vhd"             -work cycloneive      
+  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QUARTUS_INSTALL_DIR/eda/sim_lib/cycloneive_components.vhd"        -work cycloneive      
+}
+
+# ----------------------------------------
+# Compile the design files in correct order
+alias com {
+  echo "\[exec\] com"
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_vga_subsystem_char_buf_subsystem_mm_interconnect_0_rsp_mux.sv"    -work rsp_mux                                                               
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                                  -work rsp_mux                                                               
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_vga_subsystem_char_buf_subsystem_mm_interconnect_0_rsp_demux.sv"  -work rsp_demux                                                             
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_vga_subsystem_char_buf_subsystem_mm_interconnect_0_cmd_mux.sv"    -work cmd_mux                                                               
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                                  -work cmd_mux                                                               
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_vga_subsystem_char_buf_subsystem_mm_interconnect_0_cmd_demux.sv"  -work cmd_demux                                                             
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_vga_subsystem_char_buf_subsystem_mm_interconnect_0_router_001.sv" -work router_001                                                            
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_vga_subsystem_char_buf_subsystem_mm_interconnect_0_router.sv"     -work router                                                                
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_avalon_st_adapter_002_error_adapter_0.sv"       -work error_adapter_0                                                       
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv"           -work error_adapter_0                                                       
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_vga_subsystem_avalon_st_adapter_channel_adapter_0.sv"             -work channel_adapter_0                                                     
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/Custom_qsys_vga_subsystem_char_buf_subsystem_mm_interconnect_0.v"             -work mm_interconnect_0                                                     
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/Custom_qsys_vga_subsystem_char_buf_subsystem_onchip_memory2_0.vhd"            -work onchip_memory2_0                                                      
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_avalon_st_adapter_002.vhd"                      -work avalon_st_adapter_002                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_avalon_st_adapter.vhd"                          -work avalon_st_adapter                                                     
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_width_adapter.sv"                                               -work nios2_gen2_0_data_master_to_sram_0_avalon_sram_slave_cmd_width_adapter
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_address_alignment.sv"                                           -work nios2_gen2_0_data_master_to_sram_0_avalon_sram_slave_cmd_width_adapter
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_burst_uncompressor.sv"                                          -work nios2_gen2_0_data_master_to_sram_0_avalon_sram_slave_cmd_width_adapter
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_rsp_mux_002.sv"                                 -work rsp_mux_002                                                           
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                                  -work rsp_mux_002                                                           
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_rsp_mux_001.sv"                                 -work rsp_mux_001                                                           
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                                  -work rsp_mux_001                                                           
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_rsp_mux.sv"                                     -work rsp_mux                                                               
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                                  -work rsp_mux                                                               
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_rsp_demux_015.sv"                               -work rsp_demux_015                                                         
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_rsp_demux_006.sv"                               -work rsp_demux_006                                                         
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_rsp_demux_002.sv"                               -work rsp_demux_002                                                         
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_rsp_demux.sv"                                   -work rsp_demux                                                             
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_cmd_mux_015.sv"                                 -work cmd_mux_015                                                           
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                                  -work cmd_mux_015                                                           
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_cmd_mux_009.sv"                                 -work cmd_mux_009                                                           
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                                  -work cmd_mux_009                                                           
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_cmd_mux_006.sv"                                 -work cmd_mux_006                                                           
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                                  -work cmd_mux_006                                                           
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_cmd_mux_002.sv"                                 -work cmd_mux_002                                                           
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                                  -work cmd_mux_002                                                           
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_cmd_mux.sv"                                     -work cmd_mux                                                               
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                                  -work cmd_mux                                                               
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_cmd_demux_002.sv"                               -work cmd_demux_002                                                         
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_cmd_demux_001.sv"                               -work cmd_demux_001                                                         
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_cmd_demux.sv"                                   -work cmd_demux                                                             
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_burst_adapter.sv"                                               -work sram_0_avalon_sram_slave_burst_adapter                                
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_burst_adapter_uncmpr.sv"                                        -work sram_0_avalon_sram_slave_burst_adapter                                
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_burst_adapter_13_1.sv"                                          -work sram_0_avalon_sram_slave_burst_adapter                                
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_burst_adapter_new.sv"                                           -work sram_0_avalon_sram_slave_burst_adapter                                
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_incr_burst_converter.sv"                                               -work sram_0_avalon_sram_slave_burst_adapter                                
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_wrap_burst_converter.sv"                                               -work sram_0_avalon_sram_slave_burst_adapter                                
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_default_burst_converter.sv"                                            -work sram_0_avalon_sram_slave_burst_adapter                                
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_address_alignment.sv"                                           -work sram_0_avalon_sram_slave_burst_adapter                                
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_avalon_st_pipeline_stage.sv"                                           -work sram_0_avalon_sram_slave_burst_adapter                                
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_avalon_st_pipeline_base.v"                                             -work sram_0_avalon_sram_slave_burst_adapter                                
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_traffic_limiter.sv"                                             -work vga_subsystem_pixel_dma_master_limiter                                
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_reorder_memory.sv"                                              -work vga_subsystem_pixel_dma_master_limiter                                
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_avalon_sc_fifo.v"                                                      -work vga_subsystem_pixel_dma_master_limiter                                
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_avalon_st_pipeline_base.v"                                             -work vga_subsystem_pixel_dma_master_limiter                                
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_router_018.sv"                                  -work router_018                                                            
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_router_012.sv"                                  -work router_012                                                            
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_router_009.sv"                                  -work router_009                                                            
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_router_005.sv"                                  -work router_005                                                            
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_router_003.sv"                                  -work router_003                                                            
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_router_002.sv"                                  -work router_002                                                            
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_router_001.sv"                                  -work router_001                                                            
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_router.sv"                                      -work router                                                                
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_avalon_sc_fifo.v"                                                      -work jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo                          
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_slave_agent.sv"                                                 -work jtag_uart_0_avalon_jtag_slave_agent                                   
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_burst_uncompressor.sv"                                          -work jtag_uart_0_avalon_jtag_slave_agent                                   
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_master_agent.sv"                                                -work nios2_gen2_0_data_master_agent                                        
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_slave_translator.sv"                                            -work jtag_uart_0_avalon_jtag_slave_translator                              
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_master_translator.sv"                                           -work nios2_gen2_0_data_master_translator                                   
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/Custom_qsys_vga_subsystem_avalon_st_adapter.vhd"                              -work avalon_st_adapter                                                     
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/Custom_qsys_vga_subsystem_char_buf_subsystem.vhd"                             -work char_buf_subsystem                                                    
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_up_avalon_reset_from_locked_signal.v"                                  -work reset_from_locked                                                     
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_up_altpll.v"                                                           -work sys_pll                                                               
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/Custom_qsys_nios2_gen2_0_cpu.v"                                               -work cpu                                                                   
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/Custom_qsys_nios2_gen2_0_cpu_debug_slave_sysclk.v"                            -work cpu                                                                   
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/Custom_qsys_nios2_gen2_0_cpu_debug_slave_tck.v"                               -work cpu                                                                   
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/Custom_qsys_nios2_gen2_0_cpu_debug_slave_wrapper.v"                           -work cpu                                                                   
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/Custom_qsys_nios2_gen2_0_cpu_test_bench.v"                                    -work cpu                                                                   
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_reset_controller.v"                                                    -work rst_controller                                                        
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_reset_synchronizer.v"                                                  -work rst_controller                                                        
+  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/Custom_qsys_irq_mapper.sv"                                                    -work irq_mapper                                                            
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0.v"                                              -work mm_interconnect_0                                                     
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/Custom_qsys_video_pll_0.vhd"                                                  -work video_pll_0                                                           
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/Custom_qsys_vga_subsystem.vhd"                                                -work vga_subsystem                                                         
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/Custom_qsys_sysid_qsys_0.v"                                                   -work sysid_qsys_0                                                          
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/Custom_qsys_sys_sdram_pll_0.vhd"                                              -work sys_sdram_pll_0                                                       
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/Custom_qsys_spi_pio.vhd"                                                      -work spi_pio                                                               
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/Custom_qsys_spi_0.vhd"                                                        -work spi_0                                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/Custom_qsys_sdram_controller.vhd"                                             -work sdram_controller                                                      
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/Custom_qsys_pushbuttons.vhd"                                                  -work pushbuttons                                                           
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/Custom_qsys_nios2_gen2_0.v"                                                   -work nios2_gen2_0                                                          
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/Custom_qsys_jtag_uart_0.vhd"                                                  -work jtag_uart_0                                                           
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/Custom_qsys_Interval_Timer_2.vhd"                                             -work Interval_Timer_2                                                      
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/Custom_qsys_Interval_Timer.vhd"                                               -work Interval_Timer                                                        
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/avalon_bus.vhd"                                                               -work Heartrate_Variability                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/HRV_calculator.vhd"                                                           -work Heartrate_Variability                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/HRV_calculator_architecture.vhd"                                              -work Heartrate_Variability                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/HRV_calculator_test.vhd"                                                      -work Heartrate_Variability                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/HRV_calculator_test_architecture.vhd"                                         -work Heartrate_Variability                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/RR_calculator.vhd"                                                            -work Heartrate_Variability                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/RR_calculator_architecture.vhd"                                               -work Heartrate_Variability                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/RR_timer.vhd"                                                                 -work Heartrate_Variability                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/RR_timer_architecture.vhd"                                                    -work Heartrate_Variability                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/SDRR2_calculator.vhd"                                                         -work Heartrate_Variability                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/SDRR2_calculator_architecture.vhd"                                            -work Heartrate_Variability                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/SDRR_calculator.vhd"                                                          -work Heartrate_Variability                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/SDRR_calculator_architecture.vhd"                                             -work Heartrate_Variability                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/clock_divider.vhd"                                                            -work Heartrate_Variability                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/moving_average_calculator.vhd"                                                -work Heartrate_Variability                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/moving_average_calculator_architecture.vhd"                                   -work Heartrate_Variability                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/peak_detector.vhd"                                                            -work Heartrate_Variability                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/peak_detector_architecture.vhd"                                               -work Heartrate_Variability                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/rom.vhd"                                                                      -work Heartrate_Variability                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/signal_generator.vhd"                                                         -work Heartrate_Variability                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/signal_smoother.vhd"                                                          -work Heartrate_Variability                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/signal_smoother_architecture.vhd"                                             -work Heartrate_Variability                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/square_root_calculator.vhd"                                                   -work Heartrate_Variability                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/synchronizer.vhd"                                                             -work Heartrate_Variability                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/synchronizer_architecture.vhd"                                                -work Heartrate_Variability                                                 
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/Custom_qsys.vhd"                                                                                                                                                     
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/custom_qsys_rst_controller.vhd"                                                                                                                                      
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/custom_qsys_rst_controller_001.vhd"                                                                                                                                  
+}
+
+# ----------------------------------------
+# Elaborate top level design
+alias elab {
+  echo "\[exec\] elab"
+  eval vsim +access +r -t ps $ELAB_OPTIONS -L work -L rsp_mux -L rsp_demux -L cmd_mux -L cmd_demux -L router_001 -L router -L error_adapter_0 -L channel_adapter_0 -L mm_interconnect_0 -L onchip_memory2_0 -L avalon_st_adapter_002 -L avalon_st_adapter -L nios2_gen2_0_data_master_to_sram_0_avalon_sram_slave_cmd_width_adapter -L rsp_mux_002 -L rsp_mux_001 -L rsp_demux_015 -L rsp_demux_006 -L rsp_demux_002 -L cmd_mux_015 -L cmd_mux_009 -L cmd_mux_006 -L cmd_mux_002 -L cmd_demux_002 -L cmd_demux_001 -L sram_0_avalon_sram_slave_burst_adapter -L vga_subsystem_pixel_dma_master_limiter -L router_018 -L router_012 -L router_009 -L router_005 -L router_003 -L router_002 -L jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo -L jtag_uart_0_avalon_jtag_slave_agent -L nios2_gen2_0_data_master_agent -L jtag_uart_0_avalon_jtag_slave_translator -L nios2_gen2_0_data_master_translator -L char_buf_subsystem -L reset_from_locked -L sys_pll -L cpu -L rst_controller -L irq_mapper -L video_pll_0 -L vga_subsystem -L sysid_qsys_0 -L sys_sdram_pll_0 -L spi_pio -L spi_0 -L sdram_controller -L pushbuttons -L nios2_gen2_0 -L jtag_uart_0 -L Interval_Timer_2 -L Interval_Timer -L Heartrate_Variability -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive $TOP_LEVEL_NAME
+}
+
+# ----------------------------------------
+# Elaborate the top level design with -dbg -O2 option
+alias elab_debug {
+  echo "\[exec\] elab_debug"
+  eval vsim -dbg -O2 +access +r -t ps $ELAB_OPTIONS -L work -L rsp_mux -L rsp_demux -L cmd_mux -L cmd_demux -L router_001 -L router -L error_adapter_0 -L channel_adapter_0 -L mm_interconnect_0 -L onchip_memory2_0 -L avalon_st_adapter_002 -L avalon_st_adapter -L nios2_gen2_0_data_master_to_sram_0_avalon_sram_slave_cmd_width_adapter -L rsp_mux_002 -L rsp_mux_001 -L rsp_demux_015 -L rsp_demux_006 -L rsp_demux_002 -L cmd_mux_015 -L cmd_mux_009 -L cmd_mux_006 -L cmd_mux_002 -L cmd_demux_002 -L cmd_demux_001 -L sram_0_avalon_sram_slave_burst_adapter -L vga_subsystem_pixel_dma_master_limiter -L router_018 -L router_012 -L router_009 -L router_005 -L router_003 -L router_002 -L jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo -L jtag_uart_0_avalon_jtag_slave_agent -L nios2_gen2_0_data_master_agent -L jtag_uart_0_avalon_jtag_slave_translator -L nios2_gen2_0_data_master_translator -L char_buf_subsystem -L reset_from_locked -L sys_pll -L cpu -L rst_controller -L irq_mapper -L video_pll_0 -L vga_subsystem -L sysid_qsys_0 -L sys_sdram_pll_0 -L spi_pio -L spi_0 -L sdram_controller -L pushbuttons -L nios2_gen2_0 -L jtag_uart_0 -L Interval_Timer_2 -L Interval_Timer -L Heartrate_Variability -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive $TOP_LEVEL_NAME
+}
+
+# ----------------------------------------
+# Compile all the design files and elaborate the top level design
+alias ld "
+  dev_com
+  com
+  elab
+"
+
+# ----------------------------------------
+# Compile all the design files and elaborate the top level design with -dbg -O2
+alias ld_debug "
+  dev_com
+  com
+  elab_debug
+"
+
+# ----------------------------------------
+# Print out user commmand line aliases
+alias h {
+  echo "List Of Command Line Aliases"
+  echo
+  echo "file_copy                                         -- Copy ROM/RAM files to simulation directory"
+  echo
+  echo "dev_com                                           -- Compile device library files"
+  echo
+  echo "com                                               -- Compile the design files in correct order"
+  echo
+  echo "elab                                              -- Elaborate top level design"
+  echo
+  echo "elab_debug                                        -- Elaborate the top level design with -dbg -O2 option"
+  echo
+  echo "ld                                                -- Compile all the design files and elaborate the top level design"
+  echo
+  echo "ld_debug                                          -- Compile all the design files and elaborate the top level design with -dbg -O2"
+  echo
+  echo 
+  echo
+  echo "List Of Variables"
+  echo
+  echo "TOP_LEVEL_NAME                                    -- Top level module name."
+  echo "                                                     For most designs, this should be overridden"
+  echo "                                                     to enable the elab/elab_debug aliases."
+  echo
+  echo "SYSTEM_INSTANCE_NAME                              -- Instantiated system module name inside top level module."
+  echo
+  echo "QSYS_SIMDIR                                       -- Platform Designer base simulation directory."
+  echo
+  echo "QUARTUS_INSTALL_DIR                               -- Quartus installation directory."
+  echo
+  echo "USER_DEFINED_COMPILE_OPTIONS                      -- User-defined compile options, added to com/dev_com aliases."
+  echo
+  echo "USER_DEFINED_ELAB_OPTIONS                         -- User-defined elaboration options, added to elab/elab_debug aliases."
+  echo
+  echo "USER_DEFINED_VHDL_COMPILE_OPTIONS                 -- User-defined vhdl compile options, added to com/dev_com aliases."
+  echo
+  echo "USER_DEFINED_VERILOG_COMPILE_OPTIONS              -- User-defined verilog compile options, added to com/dev_com aliases."
+}
+file_copy
+h
