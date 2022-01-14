@@ -1,0 +1,67 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst Custom_qsys.vga_subsystem.vga_pixel_rgb_resampler -pg 1
+preplace inst Custom_qsys.vga_subsystem.vga_dual_clock_fifo -pg 1
+preplace inst Custom_qsys.vga_subsystem.char_buf_subsystem.video_ascii_to_image_0 -pg 1
+preplace inst Custom_qsys.vga_subsystem.char_buf_subsystem.onchip_memory2_0 -pg 1
+preplace inst Custom_qsys.spi_0 -pg 1 -lvl 5 -y 790
+preplace inst Custom_qsys.sdram_controller -pg 1 -lvl 5 -y 990
+preplace inst Custom_qsys.vga_subsystem.char_buf_subsystem.sys_clk -pg 1
+preplace inst Custom_qsys.vga_subsystem -pg 1 -lvl 3 -y 760
+preplace inst Custom_qsys.sys_sdram_pll_0.sys_pll -pg 1
+preplace inst Custom_qsys.sys_sdram_pll_0 -pg 1 -lvl 1 -y 1080
+preplace inst Custom_qsys.ps2_0 -pg 1 -lvl 5 -y 250
+preplace inst Custom_qsys.video_pll_0.reset_from_locked -pg 1
+preplace inst Custom_qsys.vga_subsystem.vga_alpha_blender -pg 1
+preplace inst Custom_qsys.vga_subsystem.char_buf_subsystem.video_scaler_0 -pg 1
+preplace inst Custom_qsys.nios2_gen2_0.reset_bridge -pg 1
+preplace inst Custom_qsys.Heartrate_Variability -pg 1 -lvl 5 -y 30
+preplace inst Custom_qsys.vga_subsystem.char_buf_subsystem -pg 1
+preplace inst Custom_qsys.Interval_Timer_2 -pg 1 -lvl 5 -y 590
+preplace inst Custom_qsys.video_pll_0.video_pll -pg 1
+preplace inst Custom_qsys.vga_subsystem.char_buf_subsystem.video_change_alpha_0 -pg 1
+preplace inst Custom_qsys.vga_subsystem.vga_pixel_scaler -pg 1
+preplace inst Custom_qsys.vga_subsystem.bus_clk -pg 1
+preplace inst Custom_qsys.nios2_gen2_0 -pg 1 -lvl 4 -y 840
+preplace inst Custom_qsys.vga_subsystem.vga_pixel_fifo -pg 1
+preplace inst Custom_qsys.vga_subsystem.vga_pixel_dma -pg 1
+preplace inst Custom_qsys.vga_subsystem.char_buf_subsystem.video_dma_controller_0 -pg 1
+preplace inst Custom_qsys.sysid_qsys_0 -pg 1 -lvl 5 -y 910
+preplace inst Custom_qsys.sys_sdram_pll_0.reset_from_locked -pg 1
+preplace inst Custom_qsys.sram_0 -pg 1 -lvl 5 -y 1090
+preplace inst Custom_qsys.pushbuttons -pg 1 -lvl 5 -y 370
+preplace inst Custom_qsys.nios2_gen2_0.cpu -pg 1
+preplace inst Custom_qsys.Interval_Timer -pg 1 -lvl 5 -y 490
+preplace inst Custom_qsys.video_pll_0 -pg 1 -lvl 2 -y 950
+preplace inst Custom_qsys.vga_subsystem.char_buf_subsystem.video_rgb_resampler_0 -pg 1
+preplace inst Custom_qsys.spi_pio -pg 1 -lvl 5 -y 1210
+preplace inst Custom_qsys.nios2_gen2_0.clock_bridge -pg 1
+preplace inst Custom_qsys -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst Custom_qsys.vga_subsystem.vga_controller -pg 1
+preplace inst Custom_qsys.vga_subsystem.vga_clk -pg 1
+preplace inst Custom_qsys.jtag_uart_0 -pg 1 -lvl 5 -y 690
+preplace netloc INTERCONNECT<net_container>Custom_qsys</net_container>(SLAVE)vga_subsystem.char_buffer_control_slave,(SLAVE)sdram_controller.s1,(SLAVE)ps2_0.avalon_ps2_slave,(MASTER)nios2_gen2_0.data_master,(SLAVE)spi_0.spi_control_port,(SLAVE)spi_pio.s1,(SLAVE)vga_subsystem.pixel_dma_control_slave,(SLAVE)vga_subsystem.char_buffer_slave,(SLAVE)nios2_gen2_0.debug_mem_slave,(SLAVE)Interval_Timer_2.s1,(MASTER)nios2_gen2_0.instruction_master,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)Interval_Timer.s1,(MASTER)vga_subsystem.pixel_dma_master,(SLAVE)vga_subsystem.rgb_slave,(SLAVE)pushbuttons.s1,(SLAVE)Heartrate_Variability.stress_level,(SLAVE)sysid_qsys_0.control_slave,(SLAVE)sram_0.avalon_sram_slave) 1 2 3 690 720 1110 800 1530
+preplace netloc EXPORT<net_container>Custom_qsys</net_container>(SLAVE)spi_0.external,(SLAVE)Custom_qsys.spi) 1 0 5 NJ 890 NJ 890 NJ 980 NJ 780 NJ
+preplace netloc EXPORT<net_container>Custom_qsys</net_container>(SLAVE)Heartrate_Variability.LEDG,(SLAVE)Custom_qsys.hrv_ledg) 1 0 5 NJ 100 NJ 100 NJ 100 NJ 100 NJ
+preplace netloc EXPORT<net_container>Custom_qsys</net_container>(SLAVE)Custom_qsys.hrv_ledr,(SLAVE)Heartrate_Variability.LEDR) 1 0 5 NJ 130 NJ 130 NJ 130 NJ 130 NJ
+preplace netloc EXPORT<net_container>Custom_qsys</net_container>(SLAVE)Custom_qsys.spi_pio,(SLAVE)spi_pio.external_connection) 1 0 5 NJ 1240 NJ 1240 NJ 1240 NJ 1240 NJ
+preplace netloc EXPORT<net_container>Custom_qsys</net_container>(SLAVE)Custom_qsys.ref_reset,(SLAVE)sys_sdram_pll_0.ref_reset) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>Custom_qsys</net_container>(SLAVE)spi_0.clk,(SLAVE)Interval_Timer_2.clk,(SLAVE)sysid_qsys_0.clk,(SLAVE)sdram_controller.clk,(SLAVE)pushbuttons.clk,(SLAVE)Heartrate_Variability.clock_sink,(SLAVE)vga_subsystem.vga_bus_clk,(MASTER)sys_sdram_pll_0.sys_clk,(SLAVE)Interval_Timer.clk,(SLAVE)nios2_gen2_0.clk,(SLAVE)spi_pio.clk,(SLAVE)video_pll_0.ref_clk,(SLAVE)jtag_uart_0.clk,(SLAVE)sram_0.clk,(SLAVE)ps2_0.clk) 1 1 4 370 910 710 1000 1150 760 1570
+preplace netloc EXPORT<net_container>Custom_qsys</net_container>(SLAVE)Custom_qsys.ref_clk,(SLAVE)sys_sdram_pll_0.ref_clk) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>Custom_qsys</net_container>(SLAVE)vga_subsystem.vga_clk,(MASTER)video_pll_0.vga_clk) 1 2 1 730
+preplace netloc EXPORT<net_container>Custom_qsys</net_container>(SLAVE)Custom_qsys.pushbuttons,(SLAVE)pushbuttons.external_connection) 1 0 5 NJ 400 NJ 400 NJ 400 NJ 400 NJ
+preplace netloc FAN_OUT<net_container>Custom_qsys</net_container>(SLAVE)spi_0.irq,(SLAVE)ps2_0.interrupt,(SLAVE)jtag_uart_0.irq,(SLAVE)pushbuttons.irq,(SLAVE)Interval_Timer_2.irq,(MASTER)nios2_gen2_0.irq,(SLAVE)Interval_Timer.irq) 1 4 1 1610
+preplace netloc EXPORT<net_container>Custom_qsys</net_container>(MASTER)Custom_qsys.sdram_clk,(MASTER)sys_sdram_pll_0.sdram_clk) 1 1 5 NJ 1160 NJ 1160 NJ 1160 NJ 1200 NJ
+preplace netloc INTERCONNECT<net_container>Custom_qsys</net_container>(SLAVE)Interval_Timer_2.reset,(SLAVE)vga_subsystem.bus_reset,(SLAVE)video_pll_0.ref_reset,(SLAVE)ps2_0.reset,(SLAVE)nios2_gen2_0.reset,(MASTER)sys_sdram_pll_0.reset_source,(SLAVE)Interval_Timer.reset,(SLAVE)pushbuttons.reset,(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)sdram_controller.reset,(SLAVE)spi_0.reset,(SLAVE)jtag_uart_0.reset,(SLAVE)spi_pio.reset,(SLAVE)Heartrate_Variability.reset_reset,(SLAVE)sysid_qsys_0.reset,(SLAVE)sram_0.reset) 1 1 4 430 1030 670 700 1130 740 1590
+preplace netloc EXPORT<net_container>Custom_qsys</net_container>(SLAVE)sdram_controller.wire,(SLAVE)Custom_qsys.sdram) 1 0 5 NJ 1020 NJ 1050 NJ 1060 NJ 1060 NJ
+preplace netloc EXPORT<net_container>Custom_qsys</net_container>(SLAVE)Heartrate_Variability.HEX0,(SLAVE)Custom_qsys.hrv_hex0) 1 0 5 NJ 40 NJ 40 NJ 40 NJ 40 NJ
+preplace netloc EXPORT<net_container>Custom_qsys</net_container>(SLAVE)Custom_qsys.ps2,(SLAVE)ps2_0.external_interface) 1 0 5 NJ 300 NJ 300 NJ 300 NJ 300 NJ
+preplace netloc EXPORT<net_container>Custom_qsys</net_container>(SLAVE)Custom_qsys.hrv_clock,(SLAVE)Heartrate_Variability.clock) 1 0 5 NJ 150 NJ 150 NJ 150 NJ 150 NJ
+preplace netloc EXPORT<net_container>Custom_qsys</net_container>(SLAVE)Custom_qsys.sram,(SLAVE)sram_0.external_interface) 1 0 5 NJ 1040 NJ 1140 NJ 1140 NJ 1140 NJ
+preplace netloc EXPORT<net_container>Custom_qsys</net_container>(SLAVE)Custom_qsys.heartbeat_data,(SLAVE)Heartrate_Variability.heartbeat_data) 1 0 5 NJ 170 NJ 170 NJ 170 NJ 170 NJ
+preplace netloc EXPORT<net_container>Custom_qsys</net_container>(SLAVE)vga_subsystem.vga,(SLAVE)Custom_qsys.vga) 1 0 3 NJ 870 NJ 870 NJ
+preplace netloc EXPORT<net_container>Custom_qsys</net_container>(SLAVE)Heartrate_Variability.HEX2,(SLAVE)Custom_qsys.hrv_hex2) 1 0 5 NJ 80 NJ 80 NJ 80 NJ 80 NJ
+preplace netloc POINT_TO_POINT<net_container>Custom_qsys</net_container>(SLAVE)vga_subsystem.vga_reset,(MASTER)video_pll_0.reset_source) 1 2 1 750
+preplace netloc EXPORT<net_container>Custom_qsys</net_container>(SLAVE)Heartrate_Variability.HEX1,(SLAVE)Custom_qsys.hrv_hex1) 1 0 5 NJ 60 NJ 60 NJ 60 NJ 60 NJ
+levelinfo -pg 1 0 100 1900
+levelinfo -hier Custom_qsys 110 190 510 930 1290 1660 1810

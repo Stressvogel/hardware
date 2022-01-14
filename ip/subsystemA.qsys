@@ -156,7 +156,7 @@
    dir="end" />
  <module name="bus_clk" kind="clock_source" version="18.1" enabled="1">
   <parameter name="clockFrequency" value="50000000" />
-  <parameter name="clockFrequencyKnown" value="true" />
+  <parameter name="clockFrequencyKnown" value="false" />
   <parameter name="inputClockFrequency" value="0" />
   <parameter name="resetSynchronousEdges" value="NONE" />
  </module>
@@ -166,7 +166,7 @@
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
   <parameter name="AUTO_GENERATION_ID" value="0" />
   <parameter name="AUTO_SYS_CLK_CLOCK_DOMAIN" value="2" />
-  <parameter name="AUTO_SYS_CLK_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_SYS_CLK_CLOCK_RATE" value="0" />
   <parameter name="AUTO_SYS_CLK_RESET_DOMAIN" value="2" />
   <parameter name="AUTO_UNIQUE_ID">$${FILENAME}_char_buf_subsystem</parameter>
  </module>
@@ -175,13 +175,13 @@
    kind="altera_up_avalon_video_alpha_blender"
    version="18.0"
    enabled="1">
-  <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
   <parameter name="mode" value="Simple" />
  </module>
  <module name="vga_clk" kind="clock_source" version="18.1" enabled="1">
-  <parameter name="clockFrequency" value="25000000" />
-  <parameter name="clockFrequencyKnown" value="true" />
+  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequencyKnown" value="false" />
   <parameter name="inputClockFrequency" value="0" />
   <parameter name="resetSynchronousEdges" value="NONE" />
  </module>
@@ -190,7 +190,7 @@
    kind="altera_up_avalon_video_vga_controller"
    version="18.1"
    enabled="1">
-  <parameter name="AUTO_CLK_CLOCK_RATE" value="25000000" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
   <parameter name="board" value="DE10-Standard" />
   <parameter name="device" value="VGA Connector" />
@@ -202,8 +202,8 @@
    kind="altera_up_avalon_video_dual_clock_buffer"
    version="18.0"
    enabled="1">
-  <parameter name="AUTO_CLOCK_STREAM_IN_CLOCK_RATE" value="50000000" />
-  <parameter name="AUTO_CLOCK_STREAM_OUT_CLOCK_RATE" value="25000000" />
+  <parameter name="AUTO_CLOCK_STREAM_IN_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_CLOCK_STREAM_OUT_CLOCK_RATE" value="0" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
   <parameter name="color_bits" value="10" />
   <parameter name="color_planes" value="3" />
@@ -213,7 +213,7 @@
    kind="altera_up_avalon_video_dma_controller"
    version="18.0"
    enabled="1">
-  <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
   <parameter name="addr_mode" value="X-Y" />
   <parameter name="back_start_address" value="134217728" />
@@ -230,8 +230,8 @@
    kind="altera_up_avalon_video_dual_clock_buffer"
    version="18.0"
    enabled="1">
-  <parameter name="AUTO_CLOCK_STREAM_IN_CLOCK_RATE" value="50000000" />
-  <parameter name="AUTO_CLOCK_STREAM_OUT_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_CLOCK_STREAM_IN_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_CLOCK_STREAM_OUT_CLOCK_RATE" value="0" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
   <parameter name="color_bits" value="16" />
   <parameter name="color_planes" value="1" />
@@ -241,7 +241,7 @@
    kind="altera_up_avalon_video_rgb_resampler"
    version="18.0"
    enabled="1">
-  <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
   <parameter name="alpha" value="1023" />
   <parameter name="input_type" value="16-bit RGB" />
@@ -252,7 +252,7 @@
    kind="altera_up_avalon_video_scaler"
    version="18.0"
    enabled="1">
-  <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
   <parameter name="color_bits" value="10" />
   <parameter name="color_planes" value="3" />

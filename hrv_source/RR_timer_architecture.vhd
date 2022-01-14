@@ -9,7 +9,8 @@
 
 -- counts every ms until peak is detected, then releases counter value
 architecture behavioural of RR_timer is
-
+	constant MIN_COUNTER : integer := 250;
+	constant MAX_COUNTER : integer := 2000;
 begin
 
 	process (clk, reset_n)
@@ -31,11 +32,11 @@ begin
 				
 			-- if peak detected, check if counter holds realistic value between 30 BPM and 240 BPM
 			if prev_peak = '0' and peak_detected = '1' then 
-				if counter > 250 and counter < 2000 then
+				if counter > MIN_COUNTER and counter < MAX_COUNTER then
 						RR_time_temp := std_logic_vector(counter);
 						counter := (others => '0');
 				-- if counter is not realistic, only reset it
-				elsif counter > 2000 then
+				elsif counter > MAX_COUNTER then
 						counter := (others => '0');
 				end if;
 			end if;

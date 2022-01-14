@@ -8,93 +8,54 @@ use IEEE.numeric_std.all;
 
 entity Custom_qsys is
 	port (
-		hrv_hex0_readdata             : out   std_logic_vector(6 downto 0);                     --    hrv_hex0.readdata
-		hrv_hex1_readdata             : out   std_logic_vector(6 downto 0);                     --    hrv_hex1.readdata
-		hrv_hex2_readdata             : out   std_logic_vector(6 downto 0);                     --    hrv_hex2.readdata
-		hrv_i2c_export                : inout std_logic_vector(1 downto 0)  := (others => '0'); --     hrv_i2c.export
-		hrv_ledg_writeresponsevalid_n : out   std_logic;                                        --    hrv_ledg.writeresponsevalid_n
-		hrv_ledr_readdata             : out   std_logic_vector(15 downto 0);                    --    hrv_ledr.readdata
-		ps2_CLK                       : inout std_logic                     := '0';             --         ps2.CLK
-		ps2_DAT                       : inout std_logic                     := '0';             --            .DAT
-		pushbuttons_export            : in    std_logic_vector(3 downto 0)  := (others => '0'); -- pushbuttons.export
-		ref_clk_clk                   : in    std_logic                     := '0';             --     ref_clk.clk
-		ref_reset_reset               : in    std_logic                     := '0';             --   ref_reset.reset
-		sdram_addr                    : out   std_logic_vector(12 downto 0);                    --       sdram.addr
-		sdram_ba                      : out   std_logic_vector(1 downto 0);                     --            .ba
-		sdram_cas_n                   : out   std_logic;                                        --            .cas_n
-		sdram_cke                     : out   std_logic;                                        --            .cke
-		sdram_cs_n                    : out   std_logic;                                        --            .cs_n
-		sdram_dq                      : inout std_logic_vector(31 downto 0) := (others => '0'); --            .dq
-		sdram_dqm                     : out   std_logic_vector(3 downto 0);                     --            .dqm
-		sdram_ras_n                   : out   std_logic;                                        --            .ras_n
-		sdram_we_n                    : out   std_logic;                                        --            .we_n
-		sdram_clk_clk                 : out   std_logic;                                        --   sdram_clk.clk
-		spi_MISO                      : in    std_logic                     := '0';             --         spi.MISO
-		spi_MOSI                      : out   std_logic;                                        --            .MOSI
-		spi_SCLK                      : out   std_logic;                                        --            .SCLK
-		spi_SS_n                      : out   std_logic;                                        --            .SS_n
-		spi_pio_export                : out   std_logic_vector(3 downto 0);                     --     spi_pio.export
-		sram_DQ                       : inout std_logic_vector(15 downto 0) := (others => '0'); --        sram.DQ
-		sram_ADDR                     : out   std_logic_vector(19 downto 0);                    --            .ADDR
-		sram_LB_N                     : out   std_logic;                                        --            .LB_N
-		sram_UB_N                     : out   std_logic;                                        --            .UB_N
-		sram_CE_N                     : out   std_logic;                                        --            .CE_N
-		sram_OE_N                     : out   std_logic;                                        --            .OE_N
-		sram_WE_N                     : out   std_logic;                                        --            .WE_N
-		vga_CLK                       : out   std_logic;                                        --         vga.CLK
-		vga_HS                        : out   std_logic;                                        --            .HS
-		vga_VS                        : out   std_logic;                                        --            .VS
-		vga_BLANK                     : out   std_logic;                                        --            .BLANK
-		vga_SYNC                      : out   std_logic;                                        --            .SYNC
-		vga_R                         : out   std_logic_vector(7 downto 0);                     --            .R
-		vga_G                         : out   std_logic_vector(7 downto 0);                     --            .G
-		vga_B                         : out   std_logic_vector(7 downto 0)                      --            .B
+		heartbeat_data_export : in    std_logic_vector(15 downto 0) := (others => '0'); -- heartbeat_data.export
+		hrv_clock_export      : in    std_logic                     := '0';             --      hrv_clock.export
+		ps2_CLK               : inout std_logic                     := '0';             --            ps2.CLK
+		ps2_DAT               : inout std_logic                     := '0';             --               .DAT
+		pushbuttons_export    : in    std_logic_vector(3 downto 0)  := (others => '0'); --    pushbuttons.export
+		ref_clk_clk           : in    std_logic                     := '0';             --        ref_clk.clk
+		ref_reset_reset       : in    std_logic                     := '0';             --      ref_reset.reset
+		sdram_addr            : out   std_logic_vector(12 downto 0);                    --          sdram.addr
+		sdram_ba              : out   std_logic_vector(1 downto 0);                     --               .ba
+		sdram_cas_n           : out   std_logic;                                        --               .cas_n
+		sdram_cke             : out   std_logic;                                        --               .cke
+		sdram_cs_n            : out   std_logic;                                        --               .cs_n
+		sdram_dq              : inout std_logic_vector(31 downto 0) := (others => '0'); --               .dq
+		sdram_dqm             : out   std_logic_vector(3 downto 0);                     --               .dqm
+		sdram_ras_n           : out   std_logic;                                        --               .ras_n
+		sdram_we_n            : out   std_logic;                                        --               .we_n
+		sdram_clk_clk         : out   std_logic;                                        --      sdram_clk.clk
+		sram_DQ               : inout std_logic_vector(15 downto 0) := (others => '0'); --           sram.DQ
+		sram_ADDR             : out   std_logic_vector(19 downto 0);                    --               .ADDR
+		sram_LB_N             : out   std_logic;                                        --               .LB_N
+		sram_UB_N             : out   std_logic;                                        --               .UB_N
+		sram_CE_N             : out   std_logic;                                        --               .CE_N
+		sram_OE_N             : out   std_logic;                                        --               .OE_N
+		sram_WE_N             : out   std_logic;                                        --               .WE_N
+		vga_CLK               : out   std_logic;                                        --            vga.CLK
+		vga_HS                : out   std_logic;                                        --               .HS
+		vga_VS                : out   std_logic;                                        --               .VS
+		vga_BLANK             : out   std_logic;                                        --               .BLANK
+		vga_SYNC              : out   std_logic;                                        --               .SYNC
+		vga_R                 : out   std_logic_vector(7 downto 0);                     --               .R
+		vga_G                 : out   std_logic_vector(7 downto 0);                     --               .G
+		vga_B                 : out   std_logic_vector(7 downto 0)                      --               .B
 	);
 end entity Custom_qsys;
 
 architecture rtl of Custom_qsys is
-	component DE2_115 is
+	component HRV_Avalon is
 		port (
-			csi_clock_clk              : in    std_logic                     := 'X';             -- clk
-			csi_reset_reset            : in    std_logic                     := 'X';             -- reset
-			avs_stress_level_address   : in    std_logic_vector(1 downto 0)  := (others => 'X'); -- address
-			avs_stress_level_readdata  : out   std_logic_vector(15 downto 0);                    -- readdata
-			avs_stress_level_write     : in    std_logic                     := 'X';             -- write
-			avs_stress_level_writedata : in    std_logic_vector(15 downto 0) := (others => 'X'); -- writedata
-			I2C_GPIO                   : inout std_logic_vector(1 downto 0)  := (others => 'X'); -- export
-			HEX0_signal                : out   std_logic_vector(6 downto 0);                     -- readdata
-			HEX1_signal                : out   std_logic_vector(6 downto 0);                     -- readdata
-			HEX2_signal                : out   std_logic_vector(6 downto 0);                     -- readdata
-			LEDG_signal                : out   std_logic;                                        -- writeresponsevalid_n
-			LEDR_signal                : out   std_logic_vector(15 downto 0)                     -- readdata
+			csi_clock_clk              : in  std_logic                     := 'X';             -- clk
+			csi_reset_reset            : in  std_logic                     := 'X';             -- reset
+			hrv_clock                  : in  std_logic                     := 'X';             -- export
+			heartbeat_data             : in  std_logic_vector(15 downto 0) := (others => 'X'); -- export
+			avs_stress_level_address   : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- address
+			avs_stress_level_readdata  : out std_logic_vector(15 downto 0);                    -- readdata
+			avs_stress_level_write     : in  std_logic                     := 'X';             -- write
+			avs_stress_level_writedata : in  std_logic_vector(15 downto 0) := (others => 'X')  -- writedata
 		);
-	end component DE2_115;
-
-	component Custom_qsys_Interval_Timer is
-		port (
-			clk        : in  std_logic                     := 'X';             -- clk
-			reset_n    : in  std_logic                     := 'X';             -- reset_n
-			address    : in  std_logic_vector(2 downto 0)  := (others => 'X'); -- address
-			writedata  : in  std_logic_vector(15 downto 0) := (others => 'X'); -- writedata
-			readdata   : out std_logic_vector(15 downto 0);                    -- readdata
-			chipselect : in  std_logic                     := 'X';             -- chipselect
-			write_n    : in  std_logic                     := 'X';             -- write_n
-			irq        : out std_logic                                         -- irq
-		);
-	end component Custom_qsys_Interval_Timer;
-
-	component Custom_qsys_Interval_Timer_2 is
-		port (
-			clk        : in  std_logic                     := 'X';             -- clk
-			reset_n    : in  std_logic                     := 'X';             -- reset_n
-			address    : in  std_logic_vector(2 downto 0)  := (others => 'X'); -- address
-			writedata  : in  std_logic_vector(15 downto 0) := (others => 'X'); -- writedata
-			readdata   : out std_logic_vector(15 downto 0);                    -- readdata
-			chipselect : in  std_logic                     := 'X';             -- chipselect
-			write_n    : in  std_logic                     := 'X';             -- write_n
-			irq        : out std_logic                                         -- irq
-		);
-	end component Custom_qsys_Interval_Timer_2;
+	end component HRV_Avalon;
 
 	component Custom_qsys_jtag_uart_0 is
 		port (
@@ -198,37 +159,6 @@ architecture rtl of Custom_qsys is
 			zs_we_n        : out   std_logic                                         -- export
 		);
 	end component Custom_qsys_sdram_controller;
-
-	component Custom_qsys_spi_0 is
-		port (
-			clk           : in  std_logic                     := 'X';             -- clk
-			reset_n       : in  std_logic                     := 'X';             -- reset_n
-			data_from_cpu : in  std_logic_vector(15 downto 0) := (others => 'X'); -- writedata
-			data_to_cpu   : out std_logic_vector(15 downto 0);                    -- readdata
-			mem_addr      : in  std_logic_vector(2 downto 0)  := (others => 'X'); -- address
-			read_n        : in  std_logic                     := 'X';             -- read_n
-			spi_select    : in  std_logic                     := 'X';             -- chipselect
-			write_n       : in  std_logic                     := 'X';             -- write_n
-			irq           : out std_logic;                                        -- irq
-			MISO          : in  std_logic                     := 'X';             -- export
-			MOSI          : out std_logic;                                        -- export
-			SCLK          : out std_logic;                                        -- export
-			SS_n          : out std_logic                                         -- export
-		);
-	end component Custom_qsys_spi_0;
-
-	component Custom_qsys_spi_pio is
-		port (
-			clk        : in  std_logic                     := 'X';             -- clk
-			reset_n    : in  std_logic                     := 'X';             -- reset_n
-			address    : in  std_logic_vector(2 downto 0)  := (others => 'X'); -- address
-			write_n    : in  std_logic                     := 'X';             -- write_n
-			writedata  : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
-			chipselect : in  std_logic                     := 'X';             -- chipselect
-			readdata   : out std_logic_vector(31 downto 0);                    -- readdata
-			out_port   : out std_logic_vector(3 downto 0)                      -- export
-		);
-	end component Custom_qsys_spi_pio;
 
 	component Custom_qsys_sram_0 is
 		port (
@@ -347,20 +277,10 @@ architecture rtl of Custom_qsys is
 			vga_subsystem_pixel_dma_master_readdata             : out std_logic_vector(15 downto 0);                    -- readdata
 			vga_subsystem_pixel_dma_master_readdatavalid        : out std_logic;                                        -- readdatavalid
 			vga_subsystem_pixel_dma_master_lock                 : in  std_logic                     := 'X';             -- lock
-			Heartrate_Variability_stress_level_address          : out std_logic_vector(1 downto 0);                     -- address
-			Heartrate_Variability_stress_level_write            : out std_logic;                                        -- write
-			Heartrate_Variability_stress_level_readdata         : in  std_logic_vector(15 downto 0) := (others => 'X'); -- readdata
-			Heartrate_Variability_stress_level_writedata        : out std_logic_vector(15 downto 0);                    -- writedata
-			Interval_Timer_s1_address                           : out std_logic_vector(2 downto 0);                     -- address
-			Interval_Timer_s1_write                             : out std_logic;                                        -- write
-			Interval_Timer_s1_readdata                          : in  std_logic_vector(15 downto 0) := (others => 'X'); -- readdata
-			Interval_Timer_s1_writedata                         : out std_logic_vector(15 downto 0);                    -- writedata
-			Interval_Timer_s1_chipselect                        : out std_logic;                                        -- chipselect
-			Interval_Timer_2_s1_address                         : out std_logic_vector(2 downto 0);                     -- address
-			Interval_Timer_2_s1_write                           : out std_logic;                                        -- write
-			Interval_Timer_2_s1_readdata                        : in  std_logic_vector(15 downto 0) := (others => 'X'); -- readdata
-			Interval_Timer_2_s1_writedata                       : out std_logic_vector(15 downto 0);                    -- writedata
-			Interval_Timer_2_s1_chipselect                      : out std_logic;                                        -- chipselect
+			Heartrate_Variability_stress_level_1_address        : out std_logic_vector(1 downto 0);                     -- address
+			Heartrate_Variability_stress_level_1_write          : out std_logic;                                        -- write
+			Heartrate_Variability_stress_level_1_readdata       : in  std_logic_vector(15 downto 0) := (others => 'X'); -- readdata
+			Heartrate_Variability_stress_level_1_writedata      : out std_logic_vector(15 downto 0);                    -- writedata
 			jtag_uart_0_avalon_jtag_slave_address               : out std_logic_vector(0 downto 0);                     -- address
 			jtag_uart_0_avalon_jtag_slave_write                 : out std_logic;                                        -- write
 			jtag_uart_0_avalon_jtag_slave_read                  : out std_logic;                                        -- read
@@ -398,17 +318,6 @@ architecture rtl of Custom_qsys is
 			sdram_controller_s1_readdatavalid                   : in  std_logic                     := 'X';             -- readdatavalid
 			sdram_controller_s1_waitrequest                     : in  std_logic                     := 'X';             -- waitrequest
 			sdram_controller_s1_chipselect                      : out std_logic;                                        -- chipselect
-			spi_0_spi_control_port_address                      : out std_logic_vector(2 downto 0);                     -- address
-			spi_0_spi_control_port_write                        : out std_logic;                                        -- write
-			spi_0_spi_control_port_read                         : out std_logic;                                        -- read
-			spi_0_spi_control_port_readdata                     : in  std_logic_vector(15 downto 0) := (others => 'X'); -- readdata
-			spi_0_spi_control_port_writedata                    : out std_logic_vector(15 downto 0);                    -- writedata
-			spi_0_spi_control_port_chipselect                   : out std_logic;                                        -- chipselect
-			spi_pio_s1_address                                  : out std_logic_vector(2 downto 0);                     -- address
-			spi_pio_s1_write                                    : out std_logic;                                        -- write
-			spi_pio_s1_readdata                                 : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
-			spi_pio_s1_writedata                                : out std_logic_vector(31 downto 0);                    -- writedata
-			spi_pio_s1_chipselect                               : out std_logic;                                        -- chipselect
 			sram_0_avalon_sram_slave_address                    : out std_logic_vector(19 downto 0);                    -- address
 			sram_0_avalon_sram_slave_write                      : out std_logic;                                        -- write
 			sram_0_avalon_sram_slave_read                       : out std_logic;                                        -- read
@@ -449,9 +358,6 @@ architecture rtl of Custom_qsys is
 			receiver0_irq : in  std_logic                     := 'X'; -- irq
 			receiver1_irq : in  std_logic                     := 'X'; -- irq
 			receiver2_irq : in  std_logic                     := 'X'; -- irq
-			receiver3_irq : in  std_logic                     := 'X'; -- irq
-			receiver4_irq : in  std_logic                     := 'X'; -- irq
-			receiver5_irq : in  std_logic                     := 'X'; -- irq
 			sender_irq    : out std_logic_vector(31 downto 0)         -- irq
 		);
 	end component Custom_qsys_irq_mapper;
@@ -588,7 +494,7 @@ architecture rtl of Custom_qsys is
 		);
 	end component custom_qsys_rst_controller_001;
 
-	signal sys_sdram_pll_0_sys_clk_clk                                          : std_logic;                     -- sys_sdram_pll_0:sys_clk_clk -> [Heartrate_Variability:csi_clock_clk, Interval_Timer:clk, Interval_Timer_2:clk, irq_mapper:clk, jtag_uart_0:clk, mm_interconnect_0:sys_sdram_pll_0_sys_clk_clk, nios2_gen2_0:clk, ps2_0:clk, pushbuttons:clk, rst_controller:clk, rst_controller_001:clk, sdram_controller:clk, spi_0:clk, spi_pio:clk, sram_0:clk, sysid_qsys_0:clock, vga_subsystem:vga_bus_clk_clk, video_pll_0:ref_clk_clk]
+	signal sys_sdram_pll_0_sys_clk_clk                                          : std_logic;                     -- sys_sdram_pll_0:sys_clk_clk -> [Heartrate_Variability:csi_clock_clk, irq_mapper:clk, jtag_uart_0:clk, mm_interconnect_0:sys_sdram_pll_0_sys_clk_clk, nios2_gen2_0:clk, ps2_0:clk, pushbuttons:clk, rst_controller:clk, rst_controller_001:clk, sdram_controller:clk, sram_0:clk, sysid_qsys_0:clock, vga_subsystem:vga_bus_clk_clk, video_pll_0:ref_clk_clk]
 	signal video_pll_0_vga_clk_clk                                              : std_logic;                     -- video_pll_0:vga_clk_clk -> vga_subsystem:vga_clk_clk
 	signal sys_sdram_pll_0_reset_source_reset                                   : std_logic;                     -- sys_sdram_pll_0:reset_source_reset -> [rst_controller:reset_in1, rst_controller_001:reset_in0, sys_sdram_pll_0_reset_source_reset:in]
 	signal video_pll_0_reset_source_reset                                       : std_logic;                     -- video_pll_0:reset_source_reset -> video_pll_0_reset_source_reset:in
@@ -672,42 +578,18 @@ architecture rtl of Custom_qsys is
 	signal mm_interconnect_0_sdram_controller_s1_readdatavalid                  : std_logic;                     -- sdram_controller:za_valid -> mm_interconnect_0:sdram_controller_s1_readdatavalid
 	signal mm_interconnect_0_sdram_controller_s1_write                          : std_logic;                     -- mm_interconnect_0:sdram_controller_s1_write -> mm_interconnect_0_sdram_controller_s1_write:in
 	signal mm_interconnect_0_sdram_controller_s1_writedata                      : std_logic_vector(31 downto 0); -- mm_interconnect_0:sdram_controller_s1_writedata -> sdram_controller:az_data
-	signal mm_interconnect_0_spi_pio_s1_chipselect                              : std_logic;                     -- mm_interconnect_0:spi_pio_s1_chipselect -> spi_pio:chipselect
-	signal mm_interconnect_0_spi_pio_s1_readdata                                : std_logic_vector(31 downto 0); -- spi_pio:readdata -> mm_interconnect_0:spi_pio_s1_readdata
-	signal mm_interconnect_0_spi_pio_s1_address                                 : std_logic_vector(2 downto 0);  -- mm_interconnect_0:spi_pio_s1_address -> spi_pio:address
-	signal mm_interconnect_0_spi_pio_s1_write                                   : std_logic;                     -- mm_interconnect_0:spi_pio_s1_write -> mm_interconnect_0_spi_pio_s1_write:in
-	signal mm_interconnect_0_spi_pio_s1_writedata                               : std_logic_vector(31 downto 0); -- mm_interconnect_0:spi_pio_s1_writedata -> spi_pio:writedata
 	signal mm_interconnect_0_pushbuttons_s1_chipselect                          : std_logic;                     -- mm_interconnect_0:pushbuttons_s1_chipselect -> pushbuttons:chipselect
 	signal mm_interconnect_0_pushbuttons_s1_readdata                            : std_logic_vector(31 downto 0); -- pushbuttons:readdata -> mm_interconnect_0:pushbuttons_s1_readdata
 	signal mm_interconnect_0_pushbuttons_s1_address                             : std_logic_vector(1 downto 0);  -- mm_interconnect_0:pushbuttons_s1_address -> pushbuttons:address
 	signal mm_interconnect_0_pushbuttons_s1_write                               : std_logic;                     -- mm_interconnect_0:pushbuttons_s1_write -> mm_interconnect_0_pushbuttons_s1_write:in
 	signal mm_interconnect_0_pushbuttons_s1_writedata                           : std_logic_vector(31 downto 0); -- mm_interconnect_0:pushbuttons_s1_writedata -> pushbuttons:writedata
-	signal mm_interconnect_0_interval_timer_s1_chipselect                       : std_logic;                     -- mm_interconnect_0:Interval_Timer_s1_chipselect -> Interval_Timer:chipselect
-	signal mm_interconnect_0_interval_timer_s1_readdata                         : std_logic_vector(15 downto 0); -- Interval_Timer:readdata -> mm_interconnect_0:Interval_Timer_s1_readdata
-	signal mm_interconnect_0_interval_timer_s1_address                          : std_logic_vector(2 downto 0);  -- mm_interconnect_0:Interval_Timer_s1_address -> Interval_Timer:address
-	signal mm_interconnect_0_interval_timer_s1_write                            : std_logic;                     -- mm_interconnect_0:Interval_Timer_s1_write -> mm_interconnect_0_interval_timer_s1_write:in
-	signal mm_interconnect_0_interval_timer_s1_writedata                        : std_logic_vector(15 downto 0); -- mm_interconnect_0:Interval_Timer_s1_writedata -> Interval_Timer:writedata
-	signal mm_interconnect_0_interval_timer_2_s1_chipselect                     : std_logic;                     -- mm_interconnect_0:Interval_Timer_2_s1_chipselect -> Interval_Timer_2:chipselect
-	signal mm_interconnect_0_interval_timer_2_s1_readdata                       : std_logic_vector(15 downto 0); -- Interval_Timer_2:readdata -> mm_interconnect_0:Interval_Timer_2_s1_readdata
-	signal mm_interconnect_0_interval_timer_2_s1_address                        : std_logic_vector(2 downto 0);  -- mm_interconnect_0:Interval_Timer_2_s1_address -> Interval_Timer_2:address
-	signal mm_interconnect_0_interval_timer_2_s1_write                          : std_logic;                     -- mm_interconnect_0:Interval_Timer_2_s1_write -> mm_interconnect_0_interval_timer_2_s1_write:in
-	signal mm_interconnect_0_interval_timer_2_s1_writedata                      : std_logic_vector(15 downto 0); -- mm_interconnect_0:Interval_Timer_2_s1_writedata -> Interval_Timer_2:writedata
-	signal mm_interconnect_0_spi_0_spi_control_port_chipselect                  : std_logic;                     -- mm_interconnect_0:spi_0_spi_control_port_chipselect -> spi_0:spi_select
-	signal mm_interconnect_0_spi_0_spi_control_port_readdata                    : std_logic_vector(15 downto 0); -- spi_0:data_to_cpu -> mm_interconnect_0:spi_0_spi_control_port_readdata
-	signal mm_interconnect_0_spi_0_spi_control_port_address                     : std_logic_vector(2 downto 0);  -- mm_interconnect_0:spi_0_spi_control_port_address -> spi_0:mem_addr
-	signal mm_interconnect_0_spi_0_spi_control_port_read                        : std_logic;                     -- mm_interconnect_0:spi_0_spi_control_port_read -> mm_interconnect_0_spi_0_spi_control_port_read:in
-	signal mm_interconnect_0_spi_0_spi_control_port_write                       : std_logic;                     -- mm_interconnect_0:spi_0_spi_control_port_write -> mm_interconnect_0_spi_0_spi_control_port_write:in
-	signal mm_interconnect_0_spi_0_spi_control_port_writedata                   : std_logic_vector(15 downto 0); -- mm_interconnect_0:spi_0_spi_control_port_writedata -> spi_0:data_from_cpu
-	signal mm_interconnect_0_heartrate_variability_stress_level_readdata        : std_logic_vector(15 downto 0); -- Heartrate_Variability:avs_stress_level_readdata -> mm_interconnect_0:Heartrate_Variability_stress_level_readdata
-	signal mm_interconnect_0_heartrate_variability_stress_level_address         : std_logic_vector(1 downto 0);  -- mm_interconnect_0:Heartrate_Variability_stress_level_address -> Heartrate_Variability:avs_stress_level_address
-	signal mm_interconnect_0_heartrate_variability_stress_level_write           : std_logic;                     -- mm_interconnect_0:Heartrate_Variability_stress_level_write -> Heartrate_Variability:avs_stress_level_write
-	signal mm_interconnect_0_heartrate_variability_stress_level_writedata       : std_logic_vector(15 downto 0); -- mm_interconnect_0:Heartrate_Variability_stress_level_writedata -> Heartrate_Variability:avs_stress_level_writedata
+	signal mm_interconnect_0_heartrate_variability_stress_level_1_readdata      : std_logic_vector(15 downto 0); -- Heartrate_Variability:avs_stress_level_readdata -> mm_interconnect_0:Heartrate_Variability_stress_level_1_readdata
+	signal mm_interconnect_0_heartrate_variability_stress_level_1_address       : std_logic_vector(1 downto 0);  -- mm_interconnect_0:Heartrate_Variability_stress_level_1_address -> Heartrate_Variability:avs_stress_level_address
+	signal mm_interconnect_0_heartrate_variability_stress_level_1_write         : std_logic;                     -- mm_interconnect_0:Heartrate_Variability_stress_level_1_write -> Heartrate_Variability:avs_stress_level_write
+	signal mm_interconnect_0_heartrate_variability_stress_level_1_writedata     : std_logic_vector(15 downto 0); -- mm_interconnect_0:Heartrate_Variability_stress_level_1_writedata -> Heartrate_Variability:avs_stress_level_writedata
 	signal irq_mapper_receiver0_irq                                             : std_logic;                     -- ps2_0:irq -> irq_mapper:receiver0_irq
 	signal irq_mapper_receiver1_irq                                             : std_logic;                     -- jtag_uart_0:av_irq -> irq_mapper:receiver1_irq
-	signal irq_mapper_receiver2_irq                                             : std_logic;                     -- spi_0:irq -> irq_mapper:receiver2_irq
-	signal irq_mapper_receiver3_irq                                             : std_logic;                     -- pushbuttons:irq -> irq_mapper:receiver3_irq
-	signal irq_mapper_receiver4_irq                                             : std_logic;                     -- Interval_Timer:irq -> irq_mapper:receiver4_irq
-	signal irq_mapper_receiver5_irq                                             : std_logic;                     -- Interval_Timer_2:irq -> irq_mapper:receiver5_irq
+	signal irq_mapper_receiver2_irq                                             : std_logic;                     -- pushbuttons:irq -> irq_mapper:receiver2_irq
 	signal nios2_gen2_0_irq_irq                                                 : std_logic_vector(31 downto 0); -- irq_mapper:sender_irq -> nios2_gen2_0:irq
 	signal rst_controller_reset_out_reset                                       : std_logic;                     -- rst_controller:reset_out -> [Heartrate_Variability:csi_reset_reset, mm_interconnect_0:ps2_0_reset_reset_bridge_in_reset_reset, ps2_0:reset, rst_controller_reset_out_reset:in, sram_0:reset]
 	signal nios2_gen2_0_debug_reset_request_reset                               : std_logic;                     -- nios2_gen2_0:debug_reset_request -> rst_controller:reset_in0
@@ -720,55 +602,22 @@ architecture rtl of Custom_qsys is
 	signal mm_interconnect_0_sdram_controller_s1_read_ports_inv                 : std_logic;                     -- mm_interconnect_0_sdram_controller_s1_read:inv -> sdram_controller:az_rd_n
 	signal mm_interconnect_0_sdram_controller_s1_byteenable_ports_inv           : std_logic_vector(3 downto 0);  -- mm_interconnect_0_sdram_controller_s1_byteenable:inv -> sdram_controller:az_be_n
 	signal mm_interconnect_0_sdram_controller_s1_write_ports_inv                : std_logic;                     -- mm_interconnect_0_sdram_controller_s1_write:inv -> sdram_controller:az_wr_n
-	signal mm_interconnect_0_spi_pio_s1_write_ports_inv                         : std_logic;                     -- mm_interconnect_0_spi_pio_s1_write:inv -> spi_pio:write_n
 	signal mm_interconnect_0_pushbuttons_s1_write_ports_inv                     : std_logic;                     -- mm_interconnect_0_pushbuttons_s1_write:inv -> pushbuttons:write_n
-	signal mm_interconnect_0_interval_timer_s1_write_ports_inv                  : std_logic;                     -- mm_interconnect_0_interval_timer_s1_write:inv -> Interval_Timer:write_n
-	signal mm_interconnect_0_interval_timer_2_s1_write_ports_inv                : std_logic;                     -- mm_interconnect_0_interval_timer_2_s1_write:inv -> Interval_Timer_2:write_n
-	signal mm_interconnect_0_spi_0_spi_control_port_read_ports_inv              : std_logic;                     -- mm_interconnect_0_spi_0_spi_control_port_read:inv -> spi_0:read_n
-	signal mm_interconnect_0_spi_0_spi_control_port_write_ports_inv             : std_logic;                     -- mm_interconnect_0_spi_0_spi_control_port_write:inv -> spi_0:write_n
-	signal rst_controller_reset_out_reset_ports_inv                             : std_logic;                     -- rst_controller_reset_out_reset:inv -> [Interval_Timer:reset_n, pushbuttons:reset_n, sdram_controller:reset_n, spi_0:reset_n, spi_pio:reset_n, sysid_qsys_0:reset_n]
-	signal rst_controller_001_reset_out_reset_ports_inv                         : std_logic;                     -- rst_controller_001_reset_out_reset:inv -> [Interval_Timer_2:reset_n, jtag_uart_0:rst_n, nios2_gen2_0:reset_n]
+	signal rst_controller_reset_out_reset_ports_inv                             : std_logic;                     -- rst_controller_reset_out_reset:inv -> [pushbuttons:reset_n, sdram_controller:reset_n, sysid_qsys_0:reset_n]
+	signal rst_controller_001_reset_out_reset_ports_inv                         : std_logic;                     -- rst_controller_001_reset_out_reset:inv -> [jtag_uart_0:rst_n, nios2_gen2_0:reset_n]
 
 begin
 
-	heartrate_variability : component DE2_115
+	heartrate_variability : component HRV_Avalon
 		port map (
-			csi_clock_clk              => sys_sdram_pll_0_sys_clk_clk,                                    --        clock.clk
-			csi_reset_reset            => rst_controller_reset_out_reset,                                 --  reset_reset.reset
-			avs_stress_level_address   => mm_interconnect_0_heartrate_variability_stress_level_address,   -- stress_level.address
-			avs_stress_level_readdata  => mm_interconnect_0_heartrate_variability_stress_level_readdata,  --             .readdata
-			avs_stress_level_write     => mm_interconnect_0_heartrate_variability_stress_level_write,     --             .write
-			avs_stress_level_writedata => mm_interconnect_0_heartrate_variability_stress_level_writedata, --             .writedata
-			I2C_GPIO                   => hrv_i2c_export,                                                 --          I2C.export
-			HEX0_signal                => hrv_hex0_readdata,                                              --         HEX0.readdata
-			HEX1_signal                => hrv_hex1_readdata,                                              --         HEX1.readdata
-			HEX2_signal                => hrv_hex2_readdata,                                              --         HEX2.readdata
-			LEDG_signal                => hrv_ledg_writeresponsevalid_n,                                  --         LEDG.writeresponsevalid_n
-			LEDR_signal                => hrv_ledr_readdata                                               --         LEDR.readdata
-		);
-
-	interval_timer : component Custom_qsys_Interval_Timer
-		port map (
-			clk        => sys_sdram_pll_0_sys_clk_clk,                         --   clk.clk
-			reset_n    => rst_controller_reset_out_reset_ports_inv,            -- reset.reset_n
-			address    => mm_interconnect_0_interval_timer_s1_address,         --    s1.address
-			writedata  => mm_interconnect_0_interval_timer_s1_writedata,       --      .writedata
-			readdata   => mm_interconnect_0_interval_timer_s1_readdata,        --      .readdata
-			chipselect => mm_interconnect_0_interval_timer_s1_chipselect,      --      .chipselect
-			write_n    => mm_interconnect_0_interval_timer_s1_write_ports_inv, --      .write_n
-			irq        => irq_mapper_receiver4_irq                             --   irq.irq
-		);
-
-	interval_timer_2 : component Custom_qsys_Interval_Timer_2
-		port map (
-			clk        => sys_sdram_pll_0_sys_clk_clk,                           --   clk.clk
-			reset_n    => rst_controller_001_reset_out_reset_ports_inv,          -- reset.reset_n
-			address    => mm_interconnect_0_interval_timer_2_s1_address,         --    s1.address
-			writedata  => mm_interconnect_0_interval_timer_2_s1_writedata,       --      .writedata
-			readdata   => mm_interconnect_0_interval_timer_2_s1_readdata,        --      .readdata
-			chipselect => mm_interconnect_0_interval_timer_2_s1_chipselect,      --      .chipselect
-			write_n    => mm_interconnect_0_interval_timer_2_s1_write_ports_inv, --      .write_n
-			irq        => irq_mapper_receiver5_irq                               --   irq.irq
+			csi_clock_clk              => sys_sdram_pll_0_sys_clk_clk,                                      --     clock_sink.clk
+			csi_reset_reset            => rst_controller_reset_out_reset,                                   --    reset_reset.reset
+			hrv_clock                  => hrv_clock_export,                                                 --          clock.export
+			heartbeat_data             => heartbeat_data_export,                                            -- heartbeat_data.export
+			avs_stress_level_address   => mm_interconnect_0_heartrate_variability_stress_level_1_address,   -- stress_level_1.address
+			avs_stress_level_readdata  => mm_interconnect_0_heartrate_variability_stress_level_1_readdata,  --               .readdata
+			avs_stress_level_write     => mm_interconnect_0_heartrate_variability_stress_level_1_write,     --               .write
+			avs_stress_level_writedata => mm_interconnect_0_heartrate_variability_stress_level_1_writedata  --               .writedata
 		);
 
 	jtag_uart_0 : component Custom_qsys_jtag_uart_0
@@ -842,7 +691,7 @@ begin
 			chipselect => mm_interconnect_0_pushbuttons_s1_chipselect,      --                    .chipselect
 			readdata   => mm_interconnect_0_pushbuttons_s1_readdata,        --                    .readdata
 			in_port    => pushbuttons_export,                               -- external_connection.export
-			irq        => irq_mapper_receiver3_irq                          --                 irq.irq
+			irq        => irq_mapper_receiver2_irq                          --                 irq.irq
 		);
 
 	sdram_controller : component Custom_qsys_sdram_controller
@@ -867,35 +716,6 @@ begin
 			zs_dqm         => sdram_dqm,                                                  --      .export
 			zs_ras_n       => sdram_ras_n,                                                --      .export
 			zs_we_n        => sdram_we_n                                                  --      .export
-		);
-
-	spi_0 : component Custom_qsys_spi_0
-		port map (
-			clk           => sys_sdram_pll_0_sys_clk_clk,                              --              clk.clk
-			reset_n       => rst_controller_reset_out_reset_ports_inv,                 --            reset.reset_n
-			data_from_cpu => mm_interconnect_0_spi_0_spi_control_port_writedata,       -- spi_control_port.writedata
-			data_to_cpu   => mm_interconnect_0_spi_0_spi_control_port_readdata,        --                 .readdata
-			mem_addr      => mm_interconnect_0_spi_0_spi_control_port_address,         --                 .address
-			read_n        => mm_interconnect_0_spi_0_spi_control_port_read_ports_inv,  --                 .read_n
-			spi_select    => mm_interconnect_0_spi_0_spi_control_port_chipselect,      --                 .chipselect
-			write_n       => mm_interconnect_0_spi_0_spi_control_port_write_ports_inv, --                 .write_n
-			irq           => irq_mapper_receiver2_irq,                                 --              irq.irq
-			MISO          => spi_MISO,                                                 --         external.export
-			MOSI          => spi_MOSI,                                                 --                 .export
-			SCLK          => spi_SCLK,                                                 --                 .export
-			SS_n          => spi_SS_n                                                  --                 .export
-		);
-
-	spi_pio : component Custom_qsys_spi_pio
-		port map (
-			clk        => sys_sdram_pll_0_sys_clk_clk,                  --                 clk.clk
-			reset_n    => rst_controller_reset_out_reset_ports_inv,     --               reset.reset_n
-			address    => mm_interconnect_0_spi_pio_s1_address,         --                  s1.address
-			write_n    => mm_interconnect_0_spi_pio_s1_write_ports_inv, --                    .write_n
-			writedata  => mm_interconnect_0_spi_pio_s1_writedata,       --                    .writedata
-			chipselect => mm_interconnect_0_spi_pio_s1_chipselect,      --                    .chipselect
-			readdata   => mm_interconnect_0_spi_pio_s1_readdata,        --                    .readdata
-			out_port   => spi_pio_export                                -- external_connection.export
 		);
 
 	sram_0 : component Custom_qsys_sram_0
@@ -1010,20 +830,10 @@ begin
 			vga_subsystem_pixel_dma_master_readdata             => vga_subsystem_pixel_dma_master_readdata,                              --                                              .readdata
 			vga_subsystem_pixel_dma_master_readdatavalid        => vga_subsystem_pixel_dma_master_readdatavalid,                         --                                              .readdatavalid
 			vga_subsystem_pixel_dma_master_lock                 => vga_subsystem_pixel_dma_master_lock,                                  --                                              .lock
-			Heartrate_Variability_stress_level_address          => mm_interconnect_0_heartrate_variability_stress_level_address,         --            Heartrate_Variability_stress_level.address
-			Heartrate_Variability_stress_level_write            => mm_interconnect_0_heartrate_variability_stress_level_write,           --                                              .write
-			Heartrate_Variability_stress_level_readdata         => mm_interconnect_0_heartrate_variability_stress_level_readdata,        --                                              .readdata
-			Heartrate_Variability_stress_level_writedata        => mm_interconnect_0_heartrate_variability_stress_level_writedata,       --                                              .writedata
-			Interval_Timer_s1_address                           => mm_interconnect_0_interval_timer_s1_address,                          --                             Interval_Timer_s1.address
-			Interval_Timer_s1_write                             => mm_interconnect_0_interval_timer_s1_write,                            --                                              .write
-			Interval_Timer_s1_readdata                          => mm_interconnect_0_interval_timer_s1_readdata,                         --                                              .readdata
-			Interval_Timer_s1_writedata                         => mm_interconnect_0_interval_timer_s1_writedata,                        --                                              .writedata
-			Interval_Timer_s1_chipselect                        => mm_interconnect_0_interval_timer_s1_chipselect,                       --                                              .chipselect
-			Interval_Timer_2_s1_address                         => mm_interconnect_0_interval_timer_2_s1_address,                        --                           Interval_Timer_2_s1.address
-			Interval_Timer_2_s1_write                           => mm_interconnect_0_interval_timer_2_s1_write,                          --                                              .write
-			Interval_Timer_2_s1_readdata                        => mm_interconnect_0_interval_timer_2_s1_readdata,                       --                                              .readdata
-			Interval_Timer_2_s1_writedata                       => mm_interconnect_0_interval_timer_2_s1_writedata,                      --                                              .writedata
-			Interval_Timer_2_s1_chipselect                      => mm_interconnect_0_interval_timer_2_s1_chipselect,                     --                                              .chipselect
+			Heartrate_Variability_stress_level_1_address        => mm_interconnect_0_heartrate_variability_stress_level_1_address,       --          Heartrate_Variability_stress_level_1.address
+			Heartrate_Variability_stress_level_1_write          => mm_interconnect_0_heartrate_variability_stress_level_1_write,         --                                              .write
+			Heartrate_Variability_stress_level_1_readdata       => mm_interconnect_0_heartrate_variability_stress_level_1_readdata,      --                                              .readdata
+			Heartrate_Variability_stress_level_1_writedata      => mm_interconnect_0_heartrate_variability_stress_level_1_writedata,     --                                              .writedata
 			jtag_uart_0_avalon_jtag_slave_address               => mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_address,              --                 jtag_uart_0_avalon_jtag_slave.address
 			jtag_uart_0_avalon_jtag_slave_write                 => mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_write,                --                                              .write
 			jtag_uart_0_avalon_jtag_slave_read                  => mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_read,                 --                                              .read
@@ -1061,17 +871,6 @@ begin
 			sdram_controller_s1_readdatavalid                   => mm_interconnect_0_sdram_controller_s1_readdatavalid,                  --                                              .readdatavalid
 			sdram_controller_s1_waitrequest                     => mm_interconnect_0_sdram_controller_s1_waitrequest,                    --                                              .waitrequest
 			sdram_controller_s1_chipselect                      => mm_interconnect_0_sdram_controller_s1_chipselect,                     --                                              .chipselect
-			spi_0_spi_control_port_address                      => mm_interconnect_0_spi_0_spi_control_port_address,                     --                        spi_0_spi_control_port.address
-			spi_0_spi_control_port_write                        => mm_interconnect_0_spi_0_spi_control_port_write,                       --                                              .write
-			spi_0_spi_control_port_read                         => mm_interconnect_0_spi_0_spi_control_port_read,                        --                                              .read
-			spi_0_spi_control_port_readdata                     => mm_interconnect_0_spi_0_spi_control_port_readdata,                    --                                              .readdata
-			spi_0_spi_control_port_writedata                    => mm_interconnect_0_spi_0_spi_control_port_writedata,                   --                                              .writedata
-			spi_0_spi_control_port_chipselect                   => mm_interconnect_0_spi_0_spi_control_port_chipselect,                  --                                              .chipselect
-			spi_pio_s1_address                                  => mm_interconnect_0_spi_pio_s1_address,                                 --                                    spi_pio_s1.address
-			spi_pio_s1_write                                    => mm_interconnect_0_spi_pio_s1_write,                                   --                                              .write
-			spi_pio_s1_readdata                                 => mm_interconnect_0_spi_pio_s1_readdata,                                --                                              .readdata
-			spi_pio_s1_writedata                                => mm_interconnect_0_spi_pio_s1_writedata,                               --                                              .writedata
-			spi_pio_s1_chipselect                               => mm_interconnect_0_spi_pio_s1_chipselect,                              --                                              .chipselect
 			sram_0_avalon_sram_slave_address                    => mm_interconnect_0_sram_0_avalon_sram_slave_address,                   --                      sram_0_avalon_sram_slave.address
 			sram_0_avalon_sram_slave_write                      => mm_interconnect_0_sram_0_avalon_sram_slave_write,                     --                                              .write
 			sram_0_avalon_sram_slave_read                       => mm_interconnect_0_sram_0_avalon_sram_slave_read,                      --                                              .read
@@ -1111,9 +910,6 @@ begin
 			receiver0_irq => irq_mapper_receiver0_irq,           -- receiver0.irq
 			receiver1_irq => irq_mapper_receiver1_irq,           -- receiver1.irq
 			receiver2_irq => irq_mapper_receiver2_irq,           -- receiver2.irq
-			receiver3_irq => irq_mapper_receiver3_irq,           -- receiver3.irq
-			receiver4_irq => irq_mapper_receiver4_irq,           -- receiver4.irq
-			receiver5_irq => irq_mapper_receiver5_irq,           -- receiver5.irq
 			sender_irq    => nios2_gen2_0_irq_irq                --    sender.irq
 		);
 
@@ -1261,17 +1057,7 @@ begin
 
 	mm_interconnect_0_sdram_controller_s1_write_ports_inv <= not mm_interconnect_0_sdram_controller_s1_write;
 
-	mm_interconnect_0_spi_pio_s1_write_ports_inv <= not mm_interconnect_0_spi_pio_s1_write;
-
 	mm_interconnect_0_pushbuttons_s1_write_ports_inv <= not mm_interconnect_0_pushbuttons_s1_write;
-
-	mm_interconnect_0_interval_timer_s1_write_ports_inv <= not mm_interconnect_0_interval_timer_s1_write;
-
-	mm_interconnect_0_interval_timer_2_s1_write_ports_inv <= not mm_interconnect_0_interval_timer_2_s1_write;
-
-	mm_interconnect_0_spi_0_spi_control_port_read_ports_inv <= not mm_interconnect_0_spi_0_spi_control_port_read;
-
-	mm_interconnect_0_spi_0_spi_control_port_write_ports_inv <= not mm_interconnect_0_spi_0_spi_control_port_write;
 
 	rst_controller_reset_out_reset_ports_inv <= not rst_controller_reset_out_reset;
 

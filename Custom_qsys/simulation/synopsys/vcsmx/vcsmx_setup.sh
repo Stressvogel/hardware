@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 18.1 646 win32 2022.01.11.08:17:35
+# ACDS 18.1 646 win32 2022.01.13.21:06:43
 
 # ----------------------------------------
 # vcsmx - auto-generated simulation script
@@ -107,7 +107,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 18.1 646 win32 2022.01.11.08:17:35
+# ACDS 18.1 646 win32 2022.01.13.21:06:43
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="Custom_qsys"
@@ -162,10 +162,10 @@ mkdir -p ./libraries/avalon_st_adapter/
 mkdir -p ./libraries/nios2_gen2_0_data_master_to_sram_0_avalon_sram_slave_cmd_width_adapter/
 mkdir -p ./libraries/rsp_mux_002/
 mkdir -p ./libraries/rsp_mux_001/
-mkdir -p ./libraries/rsp_demux_015/
+mkdir -p ./libraries/rsp_demux_011/
 mkdir -p ./libraries/rsp_demux_006/
 mkdir -p ./libraries/rsp_demux_002/
-mkdir -p ./libraries/cmd_mux_015/
+mkdir -p ./libraries/cmd_mux_011/
 mkdir -p ./libraries/cmd_mux_009/
 mkdir -p ./libraries/cmd_mux_006/
 mkdir -p ./libraries/cmd_mux_002/
@@ -173,7 +173,7 @@ mkdir -p ./libraries/cmd_demux_002/
 mkdir -p ./libraries/cmd_demux_001/
 mkdir -p ./libraries/sram_0_avalon_sram_slave_burst_adapter/
 mkdir -p ./libraries/vga_subsystem_pixel_dma_master_limiter/
-mkdir -p ./libraries/router_018/
+mkdir -p ./libraries/router_014/
 mkdir -p ./libraries/router_012/
 mkdir -p ./libraries/router_009/
 mkdir -p ./libraries/router_005/
@@ -194,14 +194,10 @@ mkdir -p ./libraries/video_pll_0/
 mkdir -p ./libraries/vga_subsystem/
 mkdir -p ./libraries/sysid_qsys_0/
 mkdir -p ./libraries/sys_sdram_pll_0/
-mkdir -p ./libraries/spi_pio/
-mkdir -p ./libraries/spi_0/
 mkdir -p ./libraries/sdram_controller/
 mkdir -p ./libraries/pushbuttons/
 mkdir -p ./libraries/nios2_gen2_0/
 mkdir -p ./libraries/jtag_uart_0/
-mkdir -p ./libraries/Interval_Timer_2/
-mkdir -p ./libraries/Interval_Timer/
 mkdir -p ./libraries/Heartrate_Variability/
 mkdir -p ./libraries/altera_ver/
 mkdir -p ./libraries/lpm_ver/
@@ -285,12 +281,12 @@ if [ $SKIP_COM -eq 0 ]; then
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                                  -work rsp_mux_001                                                           
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_rsp_mux.sv"                                     -work rsp_mux                                                               
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                                  -work rsp_mux                                                               
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_rsp_demux_015.sv"                               -work rsp_demux_015                                                         
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_rsp_demux_011.sv"                               -work rsp_demux_011                                                         
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_rsp_demux_006.sv"                               -work rsp_demux_006                                                         
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_rsp_demux_002.sv"                               -work rsp_demux_002                                                         
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_rsp_demux.sv"                                   -work rsp_demux                                                             
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_cmd_mux_015.sv"                                 -work cmd_mux_015                                                           
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                                  -work cmd_mux_015                                                           
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_cmd_mux_011.sv"                                 -work cmd_mux_011                                                           
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                                  -work cmd_mux_011                                                           
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_cmd_mux_009.sv"                                 -work cmd_mux_009                                                           
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                                  -work cmd_mux_009                                                           
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_cmd_mux_006.sv"                                 -work cmd_mux_006                                                           
@@ -316,7 +312,7 @@ if [ $SKIP_COM -eq 0 ]; then
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_reorder_memory.sv"                                              -work vga_subsystem_pixel_dma_master_limiter                                
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_avalon_sc_fifo.v"                                                      -work vga_subsystem_pixel_dma_master_limiter                                
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_avalon_st_pipeline_base.v"                                             -work vga_subsystem_pixel_dma_master_limiter                                
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_router_018.sv"                                  -work router_018                                                            
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_router_014.sv"                                  -work router_014                                                            
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_router_012.sv"                                  -work router_012                                                            
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_router_009.sv"                                  -work router_009                                                            
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/Custom_qsys_mm_interconnect_0_router_005.sv"                                  -work router_005                                                            
@@ -347,19 +343,17 @@ if [ $SKIP_COM -eq 0 ]; then
   vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/Custom_qsys_vga_subsystem.vhd"                                                -work vga_subsystem                                                         
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/submodules/Custom_qsys_sysid_qsys_0.v"                                                   -work sysid_qsys_0                                                          
   vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/Custom_qsys_sys_sdram_pll_0.vhd"                                              -work sys_sdram_pll_0                                                       
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/Custom_qsys_spi_pio.vhd"                                                      -work spi_pio                                                               
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/Custom_qsys_spi_0.vhd"                                                        -work spi_0                                                                 
   vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/Custom_qsys_sdram_controller.vhd"                                             -work sdram_controller                                                      
   vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/Custom_qsys_pushbuttons.vhd"                                                  -work pushbuttons                                                           
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/submodules/Custom_qsys_nios2_gen2_0.v"                                                   -work nios2_gen2_0                                                          
   vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/Custom_qsys_jtag_uart_0.vhd"                                                  -work jtag_uart_0                                                           
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/Custom_qsys_Interval_Timer_2.vhd"                                             -work Interval_Timer_2                                                      
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/Custom_qsys_Interval_Timer.vhd"                                               -work Interval_Timer                                                        
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/avalon_bus.vhd"                                                               -work Heartrate_Variability                                                 
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/clock_divider.vhd"                                                            -work Heartrate_Variability                                                 
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/HRV_Avalon.vhd"                                                               -work Heartrate_Variability                                                 
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/HRV_Avalon_architecture.vhd"                                                  -work Heartrate_Variability                                                 
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/HRV_buffer.vhd"                                                               -work Heartrate_Variability                                                 
+  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/HRV_buffer_architecture.vhd"                                                  -work Heartrate_Variability                                                 
   vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/HRV_calculator.vhd"                                                           -work Heartrate_Variability                                                 
   vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/HRV_calculator_architecture.vhd"                                              -work Heartrate_Variability                                                 
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/HRV_calculator_test.vhd"                                                      -work Heartrate_Variability                                                 
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/HRV_calculator_test_architecture.vhd"                                         -work Heartrate_Variability                                                 
   vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/RR_calculator.vhd"                                                            -work Heartrate_Variability                                                 
   vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/RR_calculator_architecture.vhd"                                               -work Heartrate_Variability                                                 
   vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/RR_timer.vhd"                                                                 -work Heartrate_Variability                                                 
@@ -368,13 +362,10 @@ if [ $SKIP_COM -eq 0 ]; then
   vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/SDRR2_calculator_architecture.vhd"                                            -work Heartrate_Variability                                                 
   vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/SDRR_calculator.vhd"                                                          -work Heartrate_Variability                                                 
   vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/SDRR_calculator_architecture.vhd"                                             -work Heartrate_Variability                                                 
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/clock_divider.vhd"                                                            -work Heartrate_Variability                                                 
   vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/moving_average_calculator.vhd"                                                -work Heartrate_Variability                                                 
   vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/moving_average_calculator_architecture.vhd"                                   -work Heartrate_Variability                                                 
   vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/peak_detector.vhd"                                                            -work Heartrate_Variability                                                 
   vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/peak_detector_architecture.vhd"                                               -work Heartrate_Variability                                                 
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/rom.vhd"                                                                      -work Heartrate_Variability                                                 
-  vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/signal_generator.vhd"                                                         -work Heartrate_Variability                                                 
   vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/signal_smoother.vhd"                                                          -work Heartrate_Variability                                                 
   vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/signal_smoother_architecture.vhd"                                             -work Heartrate_Variability                                                 
   vhdlan -xlrm $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS             "$QSYS_SIMDIR/submodules/square_root_calculator.vhd"                                                   -work Heartrate_Variability                                                 

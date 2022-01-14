@@ -101,9 +101,9 @@
    type="SYSTEM_VERILOG"
    library="rsp_mux" />
  <file
-   path="simulation/submodules/Custom_qsys_mm_interconnect_0_rsp_demux_015.sv"
+   path="simulation/submodules/Custom_qsys_mm_interconnect_0_rsp_demux_011.sv"
    type="SYSTEM_VERILOG"
-   library="rsp_demux_015" />
+   library="rsp_demux_011" />
  <file
    path="simulation/submodules/Custom_qsys_mm_interconnect_0_rsp_demux_006.sv"
    type="SYSTEM_VERILOG"
@@ -117,13 +117,13 @@
    type="SYSTEM_VERILOG"
    library="rsp_demux" />
  <file
-   path="simulation/submodules/Custom_qsys_mm_interconnect_0_cmd_mux_015.sv"
+   path="simulation/submodules/Custom_qsys_mm_interconnect_0_cmd_mux_011.sv"
    type="SYSTEM_VERILOG"
-   library="cmd_mux_015" />
+   library="cmd_mux_011" />
  <file
    path="simulation/submodules/altera_merlin_arbitrator.sv"
    type="SYSTEM_VERILOG"
-   library="cmd_mux_015" />
+   library="cmd_mux_011" />
  <file
    path="simulation/submodules/Custom_qsys_mm_interconnect_0_cmd_mux_009.sv"
    type="SYSTEM_VERILOG"
@@ -225,9 +225,9 @@
    type="SYSTEM_VERILOG"
    library="vga_subsystem_pixel_dma_master_limiter" />
  <file
-   path="simulation/submodules/Custom_qsys_mm_interconnect_0_router_018.sv"
+   path="simulation/submodules/Custom_qsys_mm_interconnect_0_router_014.sv"
    type="SYSTEM_VERILOG"
-   library="router_018" />
+   library="router_014" />
  <file
    path="simulation/submodules/Custom_qsys_mm_interconnect_0_router_012.sv"
    type="SYSTEM_VERILOG"
@@ -397,14 +397,6 @@
    type="VHDL"
    library="sys_sdram_pll_0" />
  <file
-   path="simulation/submodules/Custom_qsys_spi_pio.vhd"
-   type="VHDL"
-   library="spi_pio" />
- <file
-   path="simulation/submodules/Custom_qsys_spi_0.vhd"
-   type="VHDL"
-   library="spi_0" />
- <file
    path="simulation/submodules/Custom_qsys_sdram_controller.vhd"
    type="VHDL"
    library="sdram_controller" />
@@ -421,84 +413,48 @@
    type="VHDL"
    library="jtag_uart_0" />
  <file
-   path="simulation/submodules/Custom_qsys_Interval_Timer_2.vhd"
-   type="VHDL"
-   library="Interval_Timer_2" />
- <file
-   path="simulation/submodules/Custom_qsys_Interval_Timer.vhd"
-   type="VHDL"
-   library="Interval_Timer" />
- <file
-   path="simulation/submodules/avalon_bus.vhd"
+   path="simulation/submodules/clock_divider.vhd"
    type="VHDL"
    library="Heartrate_Variability" />
  <file
-   path="simulation/submodules/HRV.vhd.bak"
-   type="OTHER"
+   path="simulation/submodules/HRV_Avalon.vhd"
+   type="VHDL"
    library="Heartrate_Variability" />
  <file
-   path="simulation/submodules/HRV_architecture.vhd.bak"
-   type="OTHER"
+   path="simulation/submodules/HRV_Avalon_architecture.vhd"
+   type="VHDL"
+   library="Heartrate_Variability" />
+ <file
+   path="simulation/submodules/HRV_buffer.vhd"
+   type="VHDL"
+   library="Heartrate_Variability" />
+ <file
+   path="simulation/submodules/HRV_buffer_architecture.vhd"
+   type="VHDL"
    library="Heartrate_Variability" />
  <file
    path="simulation/submodules/HRV_calculator.vhd"
    type="VHDL"
    library="Heartrate_Variability" />
  <file
-   path="simulation/submodules/HRV_calculator.vhd.bak"
-   type="OTHER"
-   library="Heartrate_Variability" />
- <file
    path="simulation/submodules/HRV_calculator_architecture.vhd"
    type="VHDL"
-   library="Heartrate_Variability" />
- <file
-   path="simulation/submodules/HRV_calculator_architecture.vhd.bak"
-   type="OTHER"
-   library="Heartrate_Variability" />
- <file
-   path="simulation/submodules/HRV_calculator_test.vhd"
-   type="VHDL"
-   library="Heartrate_Variability" />
- <file
-   path="simulation/submodules/HRV_calculator_test_architecture.vhd"
-   type="VHDL"
-   library="Heartrate_Variability" />
- <file
-   path="simulation/submodules/HRV_calculator_test_architecture.vhd.bak"
-   type="OTHER"
    library="Heartrate_Variability" />
  <file
    path="simulation/submodules/RR_calculator.vhd"
    type="VHDL"
    library="Heartrate_Variability" />
  <file
-   path="simulation/submodules/RR_calculator.vhd.bak"
-   type="OTHER"
-   library="Heartrate_Variability" />
- <file
    path="simulation/submodules/RR_calculator_architecture.vhd"
    type="VHDL"
-   library="Heartrate_Variability" />
- <file
-   path="simulation/submodules/RR_calculator_architecture.vhd.bak"
-   type="OTHER"
    library="Heartrate_Variability" />
  <file
    path="simulation/submodules/RR_timer.vhd"
    type="VHDL"
    library="Heartrate_Variability" />
  <file
-   path="simulation/submodules/RR_timer.vhd.bak"
-   type="OTHER"
-   library="Heartrate_Variability" />
- <file
    path="simulation/submodules/RR_timer_architecture.vhd"
    type="VHDL"
-   library="Heartrate_Variability" />
- <file
-   path="simulation/submodules/RR_timer_architecture.vhd.bak"
-   type="OTHER"
    library="Heartrate_Variability" />
  <file
    path="simulation/submodules/SDRR2_calculator.vhd"
@@ -509,108 +465,36 @@
    type="VHDL"
    library="Heartrate_Variability" />
  <file
-   path="simulation/submodules/SDRR2_calculator_architecture.vhd.bak"
-   type="OTHER"
-   library="Heartrate_Variability" />
- <file
    path="simulation/submodules/SDRR_calculator.vhd"
    type="VHDL"
-   library="Heartrate_Variability" />
- <file
-   path="simulation/submodules/SDRR_calculator.vhd.bak"
-   type="OTHER"
    library="Heartrate_Variability" />
  <file
    path="simulation/submodules/SDRR_calculator_architecture.vhd"
    type="VHDL"
    library="Heartrate_Variability" />
  <file
-   path="simulation/submodules/SDRR_calculator_architecture.vhd.bak"
-   type="OTHER"
-   library="Heartrate_Variability" />
- <file
-   path="simulation/submodules/clock_divider.vhd"
-   type="VHDL"
-   library="Heartrate_Variability" />
- <file
-   path="simulation/submodules/clock_divider.vhd.bak"
-   type="OTHER"
-   library="Heartrate_Variability" />
- <file
    path="simulation/submodules/moving_average_calculator.vhd"
    type="VHDL"
-   library="Heartrate_Variability" />
- <file
-   path="simulation/submodules/moving_average_calculator.vhd.bak"
-   type="OTHER"
    library="Heartrate_Variability" />
  <file
    path="simulation/submodules/moving_average_calculator_architecture.vhd"
    type="VHDL"
    library="Heartrate_Variability" />
  <file
-   path="simulation/submodules/moving_average_calculator_architecture.vhd.bak"
-   type="OTHER"
-   library="Heartrate_Variability" />
- <file
    path="simulation/submodules/peak_detector.vhd"
    type="VHDL"
-   library="Heartrate_Variability" />
- <file
-   path="simulation/submodules/peak_detector.vhd.bak"
-   type="OTHER"
    library="Heartrate_Variability" />
  <file
    path="simulation/submodules/peak_detector_architecture.vhd"
    type="VHDL"
    library="Heartrate_Variability" />
  <file
-   path="simulation/submodules/peak_detector_architecture.vhd.bak"
-   type="OTHER"
-   library="Heartrate_Variability" />
- <file
-   path="simulation/submodules/peak_time.vhd.bak"
-   type="OTHER"
-   library="Heartrate_Variability" />
- <file
-   path="simulation/submodules/peak_time_architecture.vhd.bak"
-   type="OTHER"
-   library="Heartrate_Variability" />
- <file
-   path="simulation/submodules/rom.vhd"
-   type="VHDL"
-   library="Heartrate_Variability" />
- <file
-   path="simulation/submodules/signal_filter.vhd.bak"
-   type="OTHER"
-   library="Heartrate_Variability" />
- <file
-   path="simulation/submodules/signal_filter_architecture.vhd.bak"
-   type="OTHER"
-   library="Heartrate_Variability" />
- <file
-   path="simulation/submodules/signal_generator.vhd"
-   type="VHDL"
-   library="Heartrate_Variability" />
- <file
-   path="simulation/submodules/signal_generator.vhd.bak"
-   type="OTHER"
-   library="Heartrate_Variability" />
- <file
    path="simulation/submodules/signal_smoother.vhd"
    type="VHDL"
    library="Heartrate_Variability" />
  <file
-   path="simulation/submodules/signal_smoother.vhd.bak"
-   type="OTHER"
-   library="Heartrate_Variability" />
- <file
    path="simulation/submodules/signal_smoother_architecture.vhd"
    type="VHDL"
-   library="Heartrate_Variability" />
- <file
-   path="simulation/submodules/signal_smoother_architecture.vhd.bak"
-   type="OTHER"
    library="Heartrate_Variability" />
  <file
    path="simulation/submodules/square_root_calculator.vhd"
@@ -623,10 +507,6 @@
  <file
    path="simulation/submodules/synchronizer_architecture.vhd"
    type="VHDL"
-   library="Heartrate_Variability" />
- <file
-   path="simulation/submodules/synchronizer_architecture.vhd.bak"
-   type="OTHER"
    library="Heartrate_Variability" />
  <file path="simulation/Custom_qsys.vhd" type="VHDL" />
  <file path="simulation/custom_qsys_rst_controller.vhd" type="VHDL" />

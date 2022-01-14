@@ -2,6 +2,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
+-- calculates SDRR value to the power of 2 of incoming signal
 entity SDRR2_calculator is
 	generic (use_samples : integer := 60);
 	port (clk, reset_n : in std_logic;

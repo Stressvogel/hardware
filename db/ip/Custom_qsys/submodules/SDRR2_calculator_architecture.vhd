@@ -11,16 +11,16 @@
 
 -- calculates SDRR value to the power of 2 of incoming signal
 architecture behavioural of SDRR2_calculator is
-
+	constant RR_DATA_SIZE : integer := 12;
 begin
 
 	process (clk, reset_n)
-		variable data : unsigned(use_samples*12-1 downto 0);																-- holds input data
+		variable data : unsigned(use_samples*RR_DATA_SIZE-1 downto 0);																-- holds input data
 		variable sum : integer;																										-- holds sum, range of maximum sum to the power of two 
 		variable mean : integer;																									-- used to hold mean 
-		variable data_temp : integer range 0 to 2**12-1;																	-- temporary holds integer form of datapoint
+		variable data_temp : integer range 0 to 2**RR_DATA_SIZE-1;																	-- temporary holds integer form of datapoint
 		variable SDRR2_temp : unsigned(23 downto 0);																			-- holds SDDR2 value to output
-		variable prev_RR_time : unsigned (11 downto 0);																		-- holds previous RR time for comparison
+		variable prev_RR_time : unsigned (RR_DATA_SIZE-1 downto 0);																		-- holds previous RR time for comparison
 	begin
 		
 		if reset_n = '0' then
@@ -33,15 +33,15 @@ begin
 			-- only execute when input is new RR time
 			if prev_RR_time /= unsigned(RR_time) and prev_RR_time = 0 then
 				-- put input in the buffer
-				data := data((use_samples-1)*12-1 downto 0) & unsigned(RR_time);
+				data := data((use_samples-1)*RR_DATA_SIZE-1 downto 0) & unsigned(RR_time);
 				
 				-- only execute if buffer is filled
-				if to_integer(data(use_samples*12-1 downto use_samples*12-12)) /= 0 then
+				if to_integer(data(use_samples*RR_DATA_SIZE-1 downto use_samples*RR_DATA_SIZE-RR_DATA_SIZE)) /= 0 then
 					sum := 0;
 					
 					-- calculate sum of all datapoints
 					for i in 0 to use_samples-1 loop
-						sum := sum + to_integer(data((i*12)+11 downto i*12));
+						sum := sum + to_integer(data((i*RR_DATA_SIZE)+11 downto i*RR_DATA_SIZE));
 					end loop;
 					
 					-- calculate the mean 
@@ -50,7 +50,7 @@ begin
 					
 					-- calculate sum of (RRi - mean)^2
 					for i in 0 to use_samples-1 loop
-						data_temp := to_integer(data((i*12)+11 downto i*12));
+						data_temp := to_integer(data((i*RR_DATA_SIZE)+11 downto i*RR_DATA_SIZE));
 						
 						if data_temp >= mean then
 							sum := sum + (data_temp - mean)**2;

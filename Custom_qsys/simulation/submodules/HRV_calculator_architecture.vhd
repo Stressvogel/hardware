@@ -8,6 +8,7 @@
 --		);
 --end entity; 
 
+-- Calculates HRV value based on heartrate data
 architecture structural of HRV_calculator is
 
 	component signal_smoother is

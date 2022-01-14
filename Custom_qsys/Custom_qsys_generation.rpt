@@ -1,13 +1,9 @@
 Info: Starting: Create simulation model
-Info: qsys-generate E:\quartus\Computer_System_custom\Custom_qsys.qsys --simulation=VHDL --allow-mixed-language-simulation --output-directory=E:\quartus\Computer_System_custom\Custom_qsys\simulation --family="Cyclone IV E" --part=EP4CE115F29C7
-Progress: Loading Computer_System_custom/Custom_qsys.qsys
+Info: qsys-generate C:\Users\matti\Documents\Windesheim\VHDL\Stressvogel\Custom_qsys.qsys --simulation=VHDL --allow-mixed-language-simulation --output-directory=C:\Users\matti\Documents\Windesheim\VHDL\Stressvogel\Custom_qsys\simulation --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading Stressvogel/Custom_qsys.qsys
 Progress: Reading input file
 Progress: Adding Heartrate_Variability [Heartrate_Variability 1.0]
 Progress: Parameterizing module Heartrate_Variability
-Progress: Adding Interval_Timer [altera_avalon_timer 18.1]
-Progress: Parameterizing module Interval_Timer
-Progress: Adding Interval_Timer_2 [altera_avalon_timer 18.1]
-Progress: Parameterizing module Interval_Timer_2
 Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
 Progress: Parameterizing module jtag_uart_0
 Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
@@ -18,10 +14,6 @@ Progress: Adding pushbuttons [altera_avalon_pio 18.1]
 Progress: Parameterizing module pushbuttons
 Progress: Adding sdram_controller [altera_avalon_new_sdram_controller 18.1]
 Progress: Parameterizing module sdram_controller
-Progress: Adding spi_0 [altera_avalon_spi 18.1]
-Progress: Parameterizing module spi_0
-Progress: Adding spi_pio [altera_avalon_pio 18.1]
-Progress: Parameterizing module spi_pio
 Progress: Adding sram_0 [altera_up_avalon_sram 18.0]
 Progress: Parameterizing module sram_0
 Progress: Adding sys_sdram_pll_0 [altera_up_avalon_sys_sdram_pll 18.0]
@@ -29,51 +21,6 @@ Progress: Parameterizing module sys_sdram_pll_0
 Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 18.1]
 Progress: Parameterizing module sysid_qsys_0
 Progress: Adding vga_subsystem [subsystemA 1.0]
-Progress: Reading input file
-Progress: Adding bus_clk [clock_source 18.1]
-Progress: Parameterizing module bus_clk
-Progress: Adding char_buf_subsystem [subsystemB 1.0]
-Progress: Reading input file
-Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
-Progress: Parameterizing module onchip_memory2_0
-Progress: Adding sys_clk [clock_source 18.1]
-Progress: Parameterizing module sys_clk
-Progress: Adding video_ascii_to_image_0 [altera_up_avalon_video_ascii_to_image 18.0]
-Progress: Parameterizing module video_ascii_to_image_0
-Progress: Adding video_change_alpha_0 [altera_up_avalon_video_change_alpha 18.0]
-Progress: Parameterizing module video_change_alpha_0
-Progress: Adding video_dma_controller_0 [altera_up_avalon_video_dma_controller 18.0]
-Progress: Parameterizing module video_dma_controller_0
-Progress: Adding video_rgb_resampler_0 [altera_up_avalon_video_rgb_resampler 18.0]
-Progress: Parameterizing module video_rgb_resampler_0
-Progress: Adding video_scaler_0 [altera_up_avalon_video_scaler 18.0]
-Progress: Parameterizing module video_scaler_0
-Progress: Building connections
-Progress: Parameterizing connections
-Progress: Validating
-Progress: Done reading input file
-Progress: Parameterizing module char_buf_subsystem
-Progress: Adding vga_alpha_blender [altera_up_avalon_video_alpha_blender 18.0]
-Progress: Parameterizing module vga_alpha_blender
-Progress: Adding vga_clk [clock_source 18.1]
-Progress: Parameterizing module vga_clk
-Progress: Adding vga_controller [altera_up_avalon_video_vga_controller 18.1]
-Warning: altera_up_avalon_video_vga_controller: Catalog mismatch; expected v18.0 but found v18.1
-Progress: Parameterizing module vga_controller
-Progress: Adding vga_dual_clock_fifo [altera_up_avalon_video_dual_clock_buffer 18.0]
-Progress: Parameterizing module vga_dual_clock_fifo
-Progress: Adding vga_pixel_dma [altera_up_avalon_video_dma_controller 18.0]
-Progress: Parameterizing module vga_pixel_dma
-Progress: Adding vga_pixel_fifo [altera_up_avalon_video_dual_clock_buffer 18.0]
-Progress: Parameterizing module vga_pixel_fifo
-Progress: Adding vga_pixel_rgb_resampler [altera_up_avalon_video_rgb_resampler 18.0]
-Progress: Parameterizing module vga_pixel_rgb_resampler
-Progress: Adding vga_pixel_scaler [altera_up_avalon_video_scaler 18.0]
-Progress: Parameterizing module vga_pixel_scaler
-Progress: Building connections
-Progress: Parameterizing connections
-Progress: Validating
-Progress: Done reading input file
 Progress: Parameterizing module vga_subsystem
 Progress: Adding video_pll_0 [altera_up_avalon_video_pll 18.0]
 Progress: Parameterizing module video_pll_0
@@ -94,16 +41,8 @@ Info: Custom_qsys.vga_subsystem.vga_pixel_scaler: Change in Resolution: 320 x 24
 Info: Custom_qsys.vga_subsystem.vga_pixel_scaler.avalon_scaler_source/vga_alpha_blender.avalon_background_sink: The source has a channel signal of 2 bits, but the sink does not. Avalon-ST Adapter will be inserted.
 Info: Custom_qsys: Generating Custom_qsys "Custom_qsys" for SIM_VHDL
 Info: Heartrate_Variability: "Custom_qsys" instantiated Heartrate_Variability "Heartrate_Variability"
-Info: Interval_Timer: Starting RTL generation for module 'Custom_qsys_Interval_Timer'
-Info: Interval_Timer:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=Custom_qsys_Interval_Timer --dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0143_Interval_Timer_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --vhdl --config=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0143_Interval_Timer_gen//Custom_qsys_Interval_Timer_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0143_Interval_Timer_gen/  ]
-Info: Interval_Timer: Done RTL generation for module 'Custom_qsys_Interval_Timer'
-Info: Interval_Timer: "Custom_qsys" instantiated altera_avalon_timer "Interval_Timer"
-Info: Interval_Timer_2: Starting RTL generation for module 'Custom_qsys_Interval_Timer_2'
-Info: Interval_Timer_2:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=Custom_qsys_Interval_Timer_2 --dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0144_Interval_Timer_2_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --vhdl --config=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0144_Interval_Timer_2_gen//Custom_qsys_Interval_Timer_2_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0144_Interval_Timer_2_gen/  ]
-Info: Interval_Timer_2: Done RTL generation for module 'Custom_qsys_Interval_Timer_2'
-Info: Interval_Timer_2: "Custom_qsys" instantiated altera_avalon_timer "Interval_Timer_2"
 Info: jtag_uart_0: Starting RTL generation for module 'Custom_qsys_jtag_uart_0'
-Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=Custom_qsys_jtag_uart_0 --dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0145_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --vhdl --config=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0145_jtag_uart_0_gen//Custom_qsys_jtag_uart_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0145_jtag_uart_0_gen/  ]
+Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=Custom_qsys_jtag_uart_0 --dir=C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0003_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --vhdl --config=C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0003_jtag_uart_0_gen//Custom_qsys_jtag_uart_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0003_jtag_uart_0_gen/  ]
 Info: jtag_uart_0: Done RTL generation for module 'Custom_qsys_jtag_uart_0'
 Info: jtag_uart_0: "Custom_qsys" instantiated altera_avalon_jtag_uart "jtag_uart_0"
 Info: nios2_gen2_0: "Custom_qsys" instantiated altera_nios2_gen2 "nios2_gen2_0"
@@ -111,21 +50,13 @@ Info: ps2_0: Starting Generation of PS2 Controller
 Warning: ps2_0: No files generated for fileset SIM_VHDL
 Info: ps2_0: "Custom_qsys" instantiated altera_up_avalon_ps2 "ps2_0"
 Info: pushbuttons: Starting RTL generation for module 'Custom_qsys_pushbuttons'
-Info: pushbuttons:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Custom_qsys_pushbuttons --dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0147_pushbuttons_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --vhdl --config=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0147_pushbuttons_gen//Custom_qsys_pushbuttons_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0147_pushbuttons_gen/  ]
+Info: pushbuttons:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Custom_qsys_pushbuttons --dir=C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0005_pushbuttons_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --vhdl --config=C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0005_pushbuttons_gen//Custom_qsys_pushbuttons_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0005_pushbuttons_gen/  ]
 Info: pushbuttons: Done RTL generation for module 'Custom_qsys_pushbuttons'
 Info: pushbuttons: "Custom_qsys" instantiated altera_avalon_pio "pushbuttons"
 Info: sdram_controller: Starting RTL generation for module 'Custom_qsys_sdram_controller'
-Info: sdram_controller:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=Custom_qsys_sdram_controller --dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0148_sdram_controller_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --vhdl --config=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0148_sdram_controller_gen//Custom_qsys_sdram_controller_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0148_sdram_controller_gen/  ]
+Info: sdram_controller:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=Custom_qsys_sdram_controller --dir=C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0006_sdram_controller_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --vhdl --config=C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0006_sdram_controller_gen//Custom_qsys_sdram_controller_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0006_sdram_controller_gen/  ]
 Info: sdram_controller: Done RTL generation for module 'Custom_qsys_sdram_controller'
 Info: sdram_controller: "Custom_qsys" instantiated altera_avalon_new_sdram_controller "sdram_controller"
-Info: spi_0: Starting RTL generation for module 'Custom_qsys_spi_0'
-Info: spi_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi/generate_rtl.pl --name=Custom_qsys_spi_0 --dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0149_spi_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --vhdl --config=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0149_spi_0_gen//Custom_qsys_spi_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0149_spi_0_gen/  ]
-Info: spi_0: Done RTL generation for module 'Custom_qsys_spi_0'
-Info: spi_0: "Custom_qsys" instantiated altera_avalon_spi "spi_0"
-Info: spi_pio: Starting RTL generation for module 'Custom_qsys_spi_pio'
-Info: spi_pio:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Custom_qsys_spi_pio --dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0150_spi_pio_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --vhdl --config=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0150_spi_pio_gen//Custom_qsys_spi_pio_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0150_spi_pio_gen/  ]
-Info: spi_pio: Done RTL generation for module 'Custom_qsys_spi_pio'
-Info: spi_pio: "Custom_qsys" instantiated altera_avalon_pio "spi_pio"
 Info: sram_0: Starting Generation of the SRAM Controller
 Warning: sram_0: No files generated for fileset SIM_VHDL
 Info: sram_0: "Custom_qsys" instantiated altera_up_avalon_sram "sram_0"
@@ -146,28 +77,24 @@ Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_010: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_011: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_012: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_013: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_014: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_015: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "Custom_qsys" instantiated altera_mm_interconnect "mm_interconnect_0"
 Info: irq_mapper: "Custom_qsys" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "Custom_qsys" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'Custom_qsys_nios2_gen2_0_cpu'
-Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=Custom_qsys_nios2_gen2_0_cpu --dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0155_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0155_cpu_gen//Custom_qsys_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0155_cpu_gen/  ]
-Info: cpu: # 2022.01.11 08:17:26 (*) Starting Nios II generation
-Info: cpu: # 2022.01.11 08:17:26 (*)   Checking for plaintext license.
-Info: cpu: # 2022.01.11 08:17:26 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
-Info: cpu: # 2022.01.11 08:17:26 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2022.01.11 08:17:26 (*)   LM_LICENSE_FILE environment variable is empty
-Info: cpu: # 2022.01.11 08:17:26 (*)   Plaintext license not found.
-Info: cpu: # 2022.01.11 08:17:26 (*)   No license required to generate encrypted Nios II/e.
-Info: cpu: # 2022.01.11 08:17:26 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2022.01.11 08:17:26 (*)   Creating all objects for CPU
-Info: cpu: # 2022.01.11 08:17:27 (*)   Creating 'C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0155_cpu_gen//Custom_qsys_nios2_gen2_0_cpu_nios2_waves.do'
-Info: cpu: # 2022.01.11 08:17:27 (*)   Generating RTL from CPU objects
-Info: cpu: # 2022.01.11 08:17:27 (*)   Creating plain-text RTL
-Info: cpu: # 2022.01.11 08:17:28 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=Custom_qsys_nios2_gen2_0_cpu --dir=C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0011_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0011_cpu_gen//Custom_qsys_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0011_cpu_gen/  ]
+Info: cpu: # 2022.01.13 21:06:26 (*) Starting Nios II generation
+Info: cpu: # 2022.01.13 21:06:26 (*)   Checking for plaintext license.
+Info: cpu: # 2022.01.13 21:06:26 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
+Info: cpu: # 2022.01.13 21:06:26 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2022.01.13 21:06:26 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2022.01.13 21:06:26 (*)   Plaintext license not found.
+Info: cpu: # 2022.01.13 21:06:26 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2022.01.13 21:06:26 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2022.01.13 21:06:26 (*)   Creating all objects for CPU
+Info: cpu: # 2022.01.13 21:06:28 (*)   Creating 'C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0011_cpu_gen//Custom_qsys_nios2_gen2_0_cpu_nios2_waves.do'
+Info: cpu: # 2022.01.13 21:06:28 (*)   Generating RTL from CPU objects
+Info: cpu: # 2022.01.13 21:06:28 (*)   Creating plain-text RTL
+Info: cpu: # 2022.01.13 21:06:28 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'Custom_qsys_nios2_gen2_0_cpu'
 Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
 Info: sys_pll: "sys_sdram_pll_0" instantiated altera_up_altpll "sys_pll"
@@ -207,40 +134,40 @@ Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_
 Info: router_005: "mm_interconnect_0" instantiated altera_merlin_router "router_005"
 Info: router_009: "mm_interconnect_0" instantiated altera_merlin_router "router_009"
 Info: router_012: "mm_interconnect_0" instantiated altera_merlin_router "router_012"
-Info: router_018: "mm_interconnect_0" instantiated altera_merlin_router "router_018"
+Info: router_014: "mm_interconnect_0" instantiated altera_merlin_router "router_014"
 Info: vga_subsystem_pixel_dma_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "vga_subsystem_pixel_dma_master_limiter"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/simulation/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/simulation/submodules/altera_avalon_sc_fifo.v
 Info: sram_0_avalon_sram_slave_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "sram_0_avalon_sram_slave_burst_adapter"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/simulation/submodules/altera_avalon_st_pipeline_base.v
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/simulation/submodules/altera_avalon_st_pipeline_base.v
 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
 Info: cmd_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_002"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
 Info: cmd_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_002"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/simulation/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/simulation/submodules/altera_merlin_arbitrator.sv
 Info: cmd_mux_006: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_006"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/simulation/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/simulation/submodules/altera_merlin_arbitrator.sv
 Info: cmd_mux_009: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_009"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/simulation/submodules/altera_merlin_arbitrator.sv
-Info: cmd_mux_015: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_015"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/simulation/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/simulation/submodules/altera_merlin_arbitrator.sv
+Info: cmd_mux_011: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_011"
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/simulation/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_002"
 Info: rsp_demux_006: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_006"
-Info: rsp_demux_015: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_015"
+Info: rsp_demux_011: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_011"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/simulation/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/simulation/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/simulation/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/simulation/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_002"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/simulation/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/simulation/submodules/altera_merlin_arbitrator.sv
 Info: nios2_gen2_0_data_master_to_sram_0_avalon_sram_slave_cmd_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "nios2_gen2_0_data_master_to_sram_0_avalon_sram_slave_cmd_width_adapter"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/simulation/submodules/altera_merlin_address_alignment.sv
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/simulation/submodules/altera_merlin_burst_uncompressor.sv
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/simulation/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/simulation/submodules/altera_merlin_burst_uncompressor.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: avalon_st_adapter_002: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_002"
 Info: onchip_memory2_0: Starting RTL generation for module 'Custom_qsys_vga_subsystem_char_buf_subsystem_onchip_memory2_0'
-Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=Custom_qsys_vga_subsystem_char_buf_subsystem_onchip_memory2_0 --dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0196_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --vhdl --config=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0196_onchip_memory2_0_gen//Custom_qsys_vga_subsystem_char_buf_subsystem_onchip_memory2_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0196_onchip_memory2_0_gen/  ]
+Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=Custom_qsys_vga_subsystem_char_buf_subsystem_onchip_memory2_0 --dir=C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0052_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --vhdl --config=C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0052_onchip_memory2_0_gen//Custom_qsys_vga_subsystem_char_buf_subsystem_onchip_memory2_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0052_onchip_memory2_0_gen/  ]
 Info: onchip_memory2_0: Done RTL generation for module 'Custom_qsys_vga_subsystem_char_buf_subsystem_onchip_memory2_0'
 Info: onchip_memory2_0: "char_buf_subsystem" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
 Info: video_ascii_to_image_0: Starting Generation of ASCII to Image Stream Converter
@@ -268,42 +195,38 @@ Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
 Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/simulation/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/simulation/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/simulation/submodules/altera_merlin_arbitrator.sv
-Info: Custom_qsys: Done "Custom_qsys" with 80 modules, 147 files
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/simulation/submodules/altera_merlin_arbitrator.sv
+Info: Custom_qsys: Done "Custom_qsys" with 76 modules, 117 files
 Info: qsys-generate succeeded.
 Info: Finished: Create simulation model
 Info: Starting: Create Modelsim Project.
-Info: sim-script-gen --spd=E:\quartus\Computer_System_custom\Custom_qsys\Custom_qsys.spd --output-directory=E:/quartus/Computer_System_custom/Custom_qsys/simulation/ --use-relative-paths=true
-Info: Doing: ip-make-simscript --spd=E:\quartus\Computer_System_custom\Custom_qsys\Custom_qsys.spd --output-directory=E:/quartus/Computer_System_custom/Custom_qsys/simulation/ --use-relative-paths=true
-Info: Generating the following file(s) for MODELSIM simulator in E:/quartus/Computer_System_custom/Custom_qsys/simulation/ directory:
+Info: sim-script-gen --spd=C:\Users\matti\Documents\Windesheim\VHDL\Stressvogel\Custom_qsys\Custom_qsys.spd --output-directory=C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/simulation/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=C:\Users\matti\Documents\Windesheim\VHDL\Stressvogel\Custom_qsys\Custom_qsys.spd --output-directory=C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/simulation/ directory:
 Info: 	mentor/msim_setup.tcl
 Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
-Info: Generating the following file(s) for VCSMX simulator in E:/quartus/Computer_System_custom/Custom_qsys/simulation/ directory:
+Info: Generating the following file(s) for VCSMX simulator in C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/simulation/ directory:
 Info: 	synopsys/vcsmx/synopsys_sim.setup
 Info: 	synopsys/vcsmx/vcsmx_setup.sh
-Info: Generating the following file(s) for NCSIM simulator in E:/quartus/Computer_System_custom/Custom_qsys/simulation/ directory:
+Info: Generating the following file(s) for NCSIM simulator in C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/simulation/ directory:
 Info: 	cadence/cds.lib
 Info: 	cadence/hdl.var
 Info: 	cadence/ncsim_setup.sh
-Info: 	56 .cds.lib files in cadence/cds_libs/ directory
-Info: Generating the following file(s) for RIVIERA simulator in E:/quartus/Computer_System_custom/Custom_qsys/simulation/ directory:
+Info: 	52 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/simulation/ directory:
 Info: 	aldec/rivierapro_setup.tcl
-Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under E:/quartus/Computer_System_custom/Custom_qsys/simulation/.
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/simulation/.
 Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
 Info: Finished: Create Modelsim Project.
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate E:\quartus\Computer_System_custom\Custom_qsys.qsys --block-symbol-file --output-directory=E:\quartus\Computer_System_custom\Custom_qsys --family="Cyclone IV E" --part=EP4CE115F29C7
-Progress: Loading Computer_System_custom/Custom_qsys.qsys
+Info: qsys-generate C:\Users\matti\Documents\Windesheim\VHDL\Stressvogel\Custom_qsys.qsys --block-symbol-file --output-directory=C:\Users\matti\Documents\Windesheim\VHDL\Stressvogel\Custom_qsys --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading Stressvogel/Custom_qsys.qsys
 Progress: Reading input file
 Progress: Adding Heartrate_Variability [Heartrate_Variability 1.0]
 Progress: Parameterizing module Heartrate_Variability
-Progress: Adding Interval_Timer [altera_avalon_timer 18.1]
-Progress: Parameterizing module Interval_Timer
-Progress: Adding Interval_Timer_2 [altera_avalon_timer 18.1]
-Progress: Parameterizing module Interval_Timer_2
 Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
 Progress: Parameterizing module jtag_uart_0
 Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
@@ -314,10 +237,6 @@ Progress: Adding pushbuttons [altera_avalon_pio 18.1]
 Progress: Parameterizing module pushbuttons
 Progress: Adding sdram_controller [altera_avalon_new_sdram_controller 18.1]
 Progress: Parameterizing module sdram_controller
-Progress: Adding spi_0 [altera_avalon_spi 18.1]
-Progress: Parameterizing module spi_0
-Progress: Adding spi_pio [altera_avalon_pio 18.1]
-Progress: Parameterizing module spi_pio
 Progress: Adding sram_0 [altera_up_avalon_sram 18.0]
 Progress: Parameterizing module sram_0
 Progress: Adding sys_sdram_pll_0 [altera_up_avalon_sys_sdram_pll 18.0]
@@ -347,15 +266,11 @@ Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate E:\quartus\Computer_System_custom\Custom_qsys.qsys --synthesis=VHDL --output-directory=E:\quartus\Computer_System_custom\Custom_qsys\synthesis --family="Cyclone IV E" --part=EP4CE115F29C7
-Progress: Loading Computer_System_custom/Custom_qsys.qsys
+Info: qsys-generate C:\Users\matti\Documents\Windesheim\VHDL\Stressvogel\Custom_qsys.qsys --synthesis=VHDL --output-directory=C:\Users\matti\Documents\Windesheim\VHDL\Stressvogel\Custom_qsys\synthesis --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading Stressvogel/Custom_qsys.qsys
 Progress: Reading input file
 Progress: Adding Heartrate_Variability [Heartrate_Variability 1.0]
 Progress: Parameterizing module Heartrate_Variability
-Progress: Adding Interval_Timer [altera_avalon_timer 18.1]
-Progress: Parameterizing module Interval_Timer
-Progress: Adding Interval_Timer_2 [altera_avalon_timer 18.1]
-Progress: Parameterizing module Interval_Timer_2
 Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
 Progress: Parameterizing module jtag_uart_0
 Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
@@ -366,10 +281,6 @@ Progress: Adding pushbuttons [altera_avalon_pio 18.1]
 Progress: Parameterizing module pushbuttons
 Progress: Adding sdram_controller [altera_avalon_new_sdram_controller 18.1]
 Progress: Parameterizing module sdram_controller
-Progress: Adding spi_0 [altera_avalon_spi 18.1]
-Progress: Parameterizing module spi_0
-Progress: Adding spi_pio [altera_avalon_pio 18.1]
-Progress: Parameterizing module spi_pio
 Progress: Adding sram_0 [altera_up_avalon_sram 18.0]
 Progress: Parameterizing module sram_0
 Progress: Adding sys_sdram_pll_0 [altera_up_avalon_sys_sdram_pll 18.0]
@@ -397,37 +308,21 @@ Info: Custom_qsys.vga_subsystem.vga_pixel_scaler: Change in Resolution: 320 x 24
 Info: Custom_qsys.vga_subsystem.vga_pixel_scaler.avalon_scaler_source/vga_alpha_blender.avalon_background_sink: The source has a channel signal of 2 bits, but the sink does not. Avalon-ST Adapter will be inserted.
 Info: Custom_qsys: Generating Custom_qsys "Custom_qsys" for QUARTUS_SYNTH
 Info: Heartrate_Variability: "Custom_qsys" instantiated Heartrate_Variability "Heartrate_Variability"
-Info: Interval_Timer: Starting RTL generation for module 'Custom_qsys_Interval_Timer'
-Info: Interval_Timer:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=Custom_qsys_Interval_Timer --dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0213_Interval_Timer_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0213_Interval_Timer_gen//Custom_qsys_Interval_Timer_component_configuration.pl  --do_build_sim=0  ]
-Info: Interval_Timer: Done RTL generation for module 'Custom_qsys_Interval_Timer'
-Info: Interval_Timer: "Custom_qsys" instantiated altera_avalon_timer "Interval_Timer"
-Info: Interval_Timer_2: Starting RTL generation for module 'Custom_qsys_Interval_Timer_2'
-Info: Interval_Timer_2:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=Custom_qsys_Interval_Timer_2 --dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0214_Interval_Timer_2_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0214_Interval_Timer_2_gen//Custom_qsys_Interval_Timer_2_component_configuration.pl  --do_build_sim=0  ]
-Info: Interval_Timer_2: Done RTL generation for module 'Custom_qsys_Interval_Timer_2'
-Info: Interval_Timer_2: "Custom_qsys" instantiated altera_avalon_timer "Interval_Timer_2"
 Info: jtag_uart_0: Starting RTL generation for module 'Custom_qsys_jtag_uart_0'
-Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=Custom_qsys_jtag_uart_0 --dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0215_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0215_jtag_uart_0_gen//Custom_qsys_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=Custom_qsys_jtag_uart_0 --dir=C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0069_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0069_jtag_uart_0_gen//Custom_qsys_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
 Info: jtag_uart_0: Done RTL generation for module 'Custom_qsys_jtag_uart_0'
 Info: jtag_uart_0: "Custom_qsys" instantiated altera_avalon_jtag_uart "jtag_uart_0"
 Info: nios2_gen2_0: "Custom_qsys" instantiated altera_nios2_gen2 "nios2_gen2_0"
 Info: ps2_0: Starting Generation of PS2 Controller
 Info: ps2_0: "Custom_qsys" instantiated altera_up_avalon_ps2 "ps2_0"
 Info: pushbuttons: Starting RTL generation for module 'Custom_qsys_pushbuttons'
-Info: pushbuttons:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Custom_qsys_pushbuttons --dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0217_pushbuttons_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0217_pushbuttons_gen//Custom_qsys_pushbuttons_component_configuration.pl  --do_build_sim=0  ]
+Info: pushbuttons:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Custom_qsys_pushbuttons --dir=C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0071_pushbuttons_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0071_pushbuttons_gen//Custom_qsys_pushbuttons_component_configuration.pl  --do_build_sim=0  ]
 Info: pushbuttons: Done RTL generation for module 'Custom_qsys_pushbuttons'
 Info: pushbuttons: "Custom_qsys" instantiated altera_avalon_pio "pushbuttons"
 Info: sdram_controller: Starting RTL generation for module 'Custom_qsys_sdram_controller'
-Info: sdram_controller:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=Custom_qsys_sdram_controller --dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0218_sdram_controller_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0218_sdram_controller_gen//Custom_qsys_sdram_controller_component_configuration.pl  --do_build_sim=0  ]
+Info: sdram_controller:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=Custom_qsys_sdram_controller --dir=C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0072_sdram_controller_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0072_sdram_controller_gen//Custom_qsys_sdram_controller_component_configuration.pl  --do_build_sim=0  ]
 Info: sdram_controller: Done RTL generation for module 'Custom_qsys_sdram_controller'
 Info: sdram_controller: "Custom_qsys" instantiated altera_avalon_new_sdram_controller "sdram_controller"
-Info: spi_0: Starting RTL generation for module 'Custom_qsys_spi_0'
-Info: spi_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi/generate_rtl.pl --name=Custom_qsys_spi_0 --dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0219_spi_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0219_spi_0_gen//Custom_qsys_spi_0_component_configuration.pl  --do_build_sim=0  ]
-Info: spi_0: Done RTL generation for module 'Custom_qsys_spi_0'
-Info: spi_0: "Custom_qsys" instantiated altera_avalon_spi "spi_0"
-Info: spi_pio: Starting RTL generation for module 'Custom_qsys_spi_pio'
-Info: spi_pio:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Custom_qsys_spi_pio --dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0220_spi_pio_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0220_spi_pio_gen//Custom_qsys_spi_pio_component_configuration.pl  --do_build_sim=0  ]
-Info: spi_pio: Done RTL generation for module 'Custom_qsys_spi_pio'
-Info: spi_pio: "Custom_qsys" instantiated altera_avalon_pio "spi_pio"
 Info: sram_0: Starting Generation of the SRAM Controller
 Info: sram_0: "Custom_qsys" instantiated altera_up_avalon_sram "sram_0"
 Info: sys_sdram_pll_0: "Custom_qsys" instantiated altera_up_avalon_sys_sdram_pll "sys_sdram_pll_0"
@@ -447,27 +342,23 @@ Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_010: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_011: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_012: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_013: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_014: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_015: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "Custom_qsys" instantiated altera_mm_interconnect "mm_interconnect_0"
 Info: irq_mapper: "Custom_qsys" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "Custom_qsys" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'Custom_qsys_nios2_gen2_0_cpu'
-Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=Custom_qsys_nios2_gen2_0_cpu --dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0225_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0225_cpu_gen//Custom_qsys_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2022.01.11 08:18:10 (*) Starting Nios II generation
-Info: cpu: # 2022.01.11 08:18:10 (*)   Checking for plaintext license.
-Info: cpu: # 2022.01.11 08:18:11 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
-Info: cpu: # 2022.01.11 08:18:11 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2022.01.11 08:18:11 (*)   LM_LICENSE_FILE environment variable is empty
-Info: cpu: # 2022.01.11 08:18:11 (*)   Plaintext license not found.
-Info: cpu: # 2022.01.11 08:18:11 (*)   No license required to generate encrypted Nios II/e.
-Info: cpu: # 2022.01.11 08:18:11 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2022.01.11 08:18:11 (*)   Creating all objects for CPU
-Info: cpu: # 2022.01.11 08:18:12 (*)   Generating RTL from CPU objects
-Info: cpu: # 2022.01.11 08:18:12 (*)   Creating plain-text RTL
-Info: cpu: # 2022.01.11 08:18:12 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=Custom_qsys_nios2_gen2_0_cpu --dir=C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0077_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0077_cpu_gen//Custom_qsys_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2022.01.13 21:07:45 (*) Starting Nios II generation
+Info: cpu: # 2022.01.13 21:07:45 (*)   Checking for plaintext license.
+Info: cpu: # 2022.01.13 21:07:45 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
+Info: cpu: # 2022.01.13 21:07:45 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2022.01.13 21:07:45 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2022.01.13 21:07:45 (*)   Plaintext license not found.
+Info: cpu: # 2022.01.13 21:07:45 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2022.01.13 21:07:45 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2022.01.13 21:07:45 (*)   Creating all objects for CPU
+Info: cpu: # 2022.01.13 21:07:47 (*)   Generating RTL from CPU objects
+Info: cpu: # 2022.01.13 21:07:47 (*)   Creating plain-text RTL
+Info: cpu: # 2022.01.13 21:07:47 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'Custom_qsys_nios2_gen2_0_cpu'
 Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
 Info: sys_pll: "sys_sdram_pll_0" instantiated altera_up_altpll "sys_pll"
@@ -500,40 +391,40 @@ Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_
 Info: router_005: "mm_interconnect_0" instantiated altera_merlin_router "router_005"
 Info: router_009: "mm_interconnect_0" instantiated altera_merlin_router "router_009"
 Info: router_012: "mm_interconnect_0" instantiated altera_merlin_router "router_012"
-Info: router_018: "mm_interconnect_0" instantiated altera_merlin_router "router_018"
+Info: router_014: "mm_interconnect_0" instantiated altera_merlin_router "router_014"
 Info: vga_subsystem_pixel_dma_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "vga_subsystem_pixel_dma_master_limiter"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/synthesis/submodules/altera_avalon_sc_fifo.v
 Info: sram_0_avalon_sram_slave_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "sram_0_avalon_sram_slave_burst_adapter"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/synthesis/submodules/altera_avalon_st_pipeline_base.v
 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
 Info: cmd_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_002"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
 Info: cmd_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_002"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: cmd_mux_006: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_006"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: cmd_mux_009: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_009"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
-Info: cmd_mux_015: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_015"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: cmd_mux_011: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_011"
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_002"
 Info: rsp_demux_006: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_006"
-Info: rsp_demux_015: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_015"
+Info: rsp_demux_011: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_011"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_002"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: nios2_gen2_0_data_master_to_sram_0_avalon_sram_slave_cmd_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "nios2_gen2_0_data_master_to_sram_0_avalon_sram_slave_cmd_width_adapter"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/synthesis/submodules/altera_merlin_address_alignment.sv
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/synthesis/submodules/altera_merlin_burst_uncompressor.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: avalon_st_adapter_002: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_002"
 Info: onchip_memory2_0: Starting RTL generation for module 'Custom_qsys_vga_subsystem_char_buf_subsystem_onchip_memory2_0'
-Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=Custom_qsys_vga_subsystem_char_buf_subsystem_onchip_memory2_0 --dir=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0266_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Aran/AppData/Local/Temp/alt9003_3935829413816851824.dir/0266_onchip_memory2_0_gen//Custom_qsys_vga_subsystem_char_buf_subsystem_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=Custom_qsys_vga_subsystem_char_buf_subsystem_onchip_memory2_0 --dir=C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0118_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/matti/AppData/Local/Temp/alt9005_4442805772613409003.dir/0118_onchip_memory2_0_gen//Custom_qsys_vga_subsystem_char_buf_subsystem_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
 Info: onchip_memory2_0: Done RTL generation for module 'Custom_qsys_vga_subsystem_char_buf_subsystem_onchip_memory2_0'
 Info: onchip_memory2_0: "char_buf_subsystem" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
 Info: video_ascii_to_image_0: Starting Generation of ASCII to Image Stream Converter
@@ -542,16 +433,16 @@ Info: video_change_alpha_0: Starting Generation of Video Change Alpha Value IP C
 Info: video_change_alpha_0: "char_buf_subsystem" instantiated altera_up_avalon_video_change_alpha "video_change_alpha_0"
 Info: video_dma_controller_0: Starting Generation of Video DMA Controller
 Info: video_dma_controller_0: "char_buf_subsystem" instantiated altera_up_avalon_video_dma_controller "video_dma_controller_0"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/synthesis/submodules/altera_up_video_dma_control_slave.v
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/synthesis/submodules/altera_up_video_dma_to_memory.v
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/synthesis/submodules/altera_up_video_dma_to_stream.v
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/synthesis/submodules/altera_up_video_dma_control_slave.v
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/synthesis/submodules/altera_up_video_dma_to_memory.v
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/synthesis/submodules/altera_up_video_dma_to_stream.v
 Info: video_rgb_resampler_0: Starting Generation of Video RGB Resampler
 Info: video_rgb_resampler_0: "char_buf_subsystem" instantiated altera_up_avalon_video_rgb_resampler "video_rgb_resampler_0"
 Info: video_scaler_0: Starting Generation of Video Scaler
 Info: video_scaler_0: "char_buf_subsystem" instantiated altera_up_avalon_video_scaler "video_scaler_0"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/synthesis/submodules/altera_up_video_scaler_shrink.v
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/synthesis/submodules/altera_up_video_scaler_multiply_width.v
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/synthesis/submodules/altera_up_video_scaler_multiply_height.v
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/synthesis/submodules/altera_up_video_scaler_shrink.v
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/synthesis/submodules/altera_up_video_scaler_multiply_width.v
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/synthesis/submodules/altera_up_video_scaler_multiply_height.v
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "char_buf_subsystem" instantiated altera_mm_interconnect "mm_interconnect_0"
@@ -562,10 +453,10 @@ Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
 Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file E:/quartus/Computer_System_custom/Custom_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
-Info: Custom_qsys: Done "Custom_qsys" with 80 modules, 180 files
+Info: Reusing file C:/Users/matti/Documents/Windesheim/VHDL/Stressvogel/Custom_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Custom_qsys: Done "Custom_qsys" with 76 modules, 138 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis

@@ -1,5 +1,5 @@
 Flow report for Computer_System_custom
-Tue Jan 11 09:04:47 2022
+Thu Jan 13 23:09:09 2022
 Quartus Prime Version 18.1.1 Build 646 04/11/2019 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Jan 11 09:03:37 2022       ;
+; Flow Status                        ; Successful - Thu Jan 13 23:08:11 2022       ;
 ; Quartus Prime Version              ; 18.1.1 Build 646 04/11/2019 SJ Lite Edition ;
 ; Revision Name                      ; Computer_System_custom                      ;
 ; Top-level Entity Name              ; top_level                                   ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 88,718 / 114,480 ( 77 % )                   ;
-;     Total combinational functions  ; 80,669 / 114,480 ( 70 % )                   ;
-;     Dedicated logic registers      ; 45,696 / 114,480 ( 40 % )                   ;
-; Total registers                    ; 45815                                       ;
-; Total pins                         ; 212 / 529 ( 40 % )                          ;
+; Total logic elements               ; 88,277 / 114,480 ( 77 % )                   ;
+;     Total combinational functions  ; 80,275 / 114,480 ( 70 % )                   ;
+;     Dedicated logic registers      ; 45,346 / 114,480 ( 40 % )                   ;
+; Total registers                    ; 45465                                       ;
+; Total pins                         ; 174 / 529 ( 33 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 111,008 / 3,981,312 ( 3 % )                 ;
 ; Embedded Multiplier 9-bit elements ; 532 / 532 ( 100 % )                         ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+------------------------+
 ; Option            ; Setting                ;
 +-------------------+------------------------+
-; Start date & time ; 01/11/2022 08:42:42    ;
+; Start date & time ; 01/13/2022 22:33:40    ;
 ; Main task         ; Compilation            ;
 ; Revision Name     ; Computer_System_custom ;
 +-------------------+------------------------+
@@ -76,7 +76,8 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+--------------------------------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value                        ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+--------------------------------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 66504332413339.164188696218220         ; --                                   ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 215938451996542.164210962019076        ; --                                   ; --          ; --         ;
+; ENABLE_SIGNALTAP                    ; On                                     ; --                                   ; --          ; --         ;
 ; FLOW_ENABLE_IO_ASSIGNMENT_ANALYSIS  ; On                                     ; Off                                  ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --                                   ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --                                   ; --          ; --         ;
@@ -89,7 +90,9 @@ https://fpgasoftware.intel.com/eula.
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --                                   ; --          ; --         ;
 ; PROJECT_IP_REGENERATION_POLICY      ; ALWAYS_REGENERATE_IP                   ; SKIP_REGENERATING_IP_IF_HDL_MODIFIED ; --          ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --                                   ; --          ; --         ;
+; SLD_FILE                            ; db/stp2_auto_stripped.stp              ; --                                   ; --          ; --         ;
 ; TOP_LEVEL_ENTITY                    ; top_level                              ; Computer_System_custom               ; --          ; --         ;
+; USE_SIGNALTAP_FILE                  ; output_files/stp2.stp                  ; --                                   ; --          ; --         ;
 +-------------------------------------+----------------------------------------+--------------------------------------+-------------+------------+
 
 
@@ -98,12 +101,12 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:04:33     ; 1.0                     ; 5707 MB             ; 00:05:25                           ;
-; I/O Assignment Analysis ; 00:01:24     ; 1.0                     ; 5335 MB             ; 00:01:23                           ;
-; Fitter                  ; 00:14:08     ; 1.2                     ; 8256 MB             ; 00:51:55                           ;
-; Assembler               ; 00:00:08     ; 1.0                     ; 5015 MB             ; 00:00:07                           ;
-; Timing Analyzer         ; 00:01:07     ; 3.2                     ; 6192 MB             ; 00:01:29                           ;
-; Total                   ; 00:21:20     ; --                      ; --                  ; 01:00:19                           ;
+; Analysis & Synthesis    ; 00:08:41     ; 1.0                     ; 5627 MB             ; 00:09:39                           ;
+; I/O Assignment Analysis ; 00:01:48     ; 1.0                     ; 5329 MB             ; 00:01:47                           ;
+; Fitter                  ; 00:23:03     ; 1.0                     ; 7213 MB             ; 00:50:56                           ;
+; Assembler               ; 00:00:10     ; 1.0                     ; 5016 MB             ; 00:00:10                           ;
+; Timing Analyzer         ; 00:00:55     ; 2.4                     ; 6062 MB             ; 00:01:17                           ;
+; Total                   ; 00:34:37     ; --                      ; --                  ; 01:03:49                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -112,11 +115,11 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------+------------------+------------+------------+----------------+
 ; Module Name             ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +-------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis    ; ARAN-TUF         ; Windows 10 ; 10.0       ; x86_64         ;
-; I/O Assignment Analysis ; ARAN-TUF         ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                  ; ARAN-TUF         ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler               ; ARAN-TUF         ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer         ; ARAN-TUF         ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis    ; UNKNOWN          ; Windows 10 ; 10.0       ; x86_64         ;
+; I/O Assignment Analysis ; UNKNOWN          ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                  ; UNKNOWN          ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler               ; UNKNOWN          ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer         ; UNKNOWN          ; Windows 10 ; 10.0       ; x86_64         ;
 +-------------------------+------------------+------------+------------+----------------+
 
 

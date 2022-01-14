@@ -1,4 +1,53 @@
 
+State Machine - |top_level|MAX30102_driver:driver|get_data_next
+Name get_data_next.output_data get_data_next.disable get_data_next.read_data get_data_next.wait_for_data get_data_next.send_read_request get_data_next.write_fifo_data_reg 
+get_data_next.write_fifo_data_reg 0 0 0 0 0 0 
+get_data_next.send_read_request 0 0 0 0 1 1 
+get_data_next.wait_for_data 0 0 0 1 0 1 
+get_data_next.read_data 0 0 1 0 0 1 
+get_data_next.disable 0 1 0 0 0 1 
+get_data_next.output_data 1 0 0 0 0 1 
+
+State Machine - |top_level|MAX30102_driver:driver|polling_next
+Name polling_next.check_available polling_next.disable polling_next.read_wr_ptr_data polling_next.send_wr_ptr_address 
+polling_next.send_wr_ptr_address 0 0 0 0 
+polling_next.read_wr_ptr_data 0 0 1 1 
+polling_next.disable 0 1 0 1 
+polling_next.check_available 1 0 0 1 
+
+State Machine - |top_level|MAX30102_driver:driver|set_registers_next
+Name set_registers_next.finished set_registers_next.send_led_pulse_data2 set_registers_next.send_led_pulse_data1 set_registers_next.send_led_pulse_reg set_registers_next.disable set_registers_next.send_spo_data set_registers_next.send_mode_data set_registers_next.send_fifo_data set_registers_next.send_fifo_reg set_registers_next.disable_after_reset set_registers_next.send_reset_data set_registers_next.send_reset_reg 
+set_registers_next.send_reset_reg 0 0 0 0 0 0 0 0 0 0 0 0 
+set_registers_next.send_reset_data 0 0 0 0 0 0 0 0 0 0 1 1 
+set_registers_next.disable_after_reset 0 0 0 0 0 0 0 0 0 1 0 1 
+set_registers_next.send_fifo_reg 0 0 0 0 0 0 0 0 1 0 0 1 
+set_registers_next.send_fifo_data 0 0 0 0 0 0 0 1 0 0 0 1 
+set_registers_next.send_mode_data 0 0 0 0 0 0 1 0 0 0 0 1 
+set_registers_next.send_spo_data 0 0 0 0 0 1 0 0 0 0 0 1 
+set_registers_next.disable 0 0 0 0 1 0 0 0 0 0 0 1 
+set_registers_next.send_led_pulse_reg 0 0 0 1 0 0 0 0 0 0 0 1 
+set_registers_next.send_led_pulse_data1 0 0 1 0 0 0 0 0 0 0 0 1 
+set_registers_next.send_led_pulse_data2 0 1 0 0 0 0 0 0 0 0 0 1 
+set_registers_next.finished 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |top_level|MAX30102_driver:driver|state
+Name state.get_data state.polling state.set_registers 
+state.set_registers 0 0 0 
+state.polling 0 1 1 
+state.get_data 1 0 1 
+
+State Machine - |top_level|i2c_master:i2c|state
+Name state.stop state.mstr_ack state.slv_ack2 state.rd state.wr state.slv_ack1 state.command state.start state.ready 
+state.ready 0 0 0 0 0 0 0 0 0 
+state.start 0 0 0 0 0 0 0 1 1 
+state.command 0 0 0 0 0 0 1 0 1 
+state.slv_ack1 0 0 0 0 0 1 0 0 1 
+state.wr 0 0 0 0 1 0 0 0 1 
+state.rd 0 0 0 1 0 0 0 0 1 
+state.slv_ack2 0 0 1 0 0 0 0 0 1 
+state.mstr_ack 0 1 0 0 0 0 0 0 1 
+state.stop 1 0 0 0 0 0 0 0 1 
+
 State Machine - |top_level|Custom_qsys:u0|Custom_qsys_vga_subsystem:vga_subsystem|Custom_qsys_vga_subsystem_vga_pixel_scaler:vga_pixel_scaler|altera_up_video_scaler_multiply_height:Multiply_Height|s_multiply_height
 Name s_multiply_height.STATE_0_GET_CURRENT_LINE s_multiply_height.STATE_2_OUTPUT_LAST_LINE s_multiply_height.STATE_1_LOOP_FIFO 
 s_multiply_height.STATE_0_GET_CURRENT_LINE 0 0 0 
@@ -95,52 +144,3 @@ DRsize.010 0 0 0 1 0 1
 DRsize.011 0 0 1 0 0 1 
 DRsize.100 0 1 0 0 0 1 
 DRsize.101 1 0 0 0 0 1 
-
-State Machine - |top_level|Custom_qsys:u0|DE2_115:heartrate_variability|i2c_controller:controller|get_data_next
-Name get_data_next.output_data get_data_next.disable get_data_next.read_data get_data_next.wait_for_data get_data_next.send_read_request get_data_next.write_fifo_data_reg 
-get_data_next.write_fifo_data_reg 0 0 0 0 0 0 
-get_data_next.send_read_request 0 0 0 0 1 1 
-get_data_next.wait_for_data 0 0 0 1 0 1 
-get_data_next.read_data 0 0 1 0 0 1 
-get_data_next.disable 0 1 0 0 0 1 
-get_data_next.output_data 1 0 0 0 0 1 
-
-State Machine - |top_level|Custom_qsys:u0|DE2_115:heartrate_variability|i2c_controller:controller|polling_next
-Name polling_next.check_available polling_next.disable polling_next.read_wr_ptr_data polling_next.send_wr_ptr_address 
-polling_next.send_wr_ptr_address 0 0 0 0 
-polling_next.read_wr_ptr_data 0 0 1 1 
-polling_next.disable 0 1 0 1 
-polling_next.check_available 1 0 0 1 
-
-State Machine - |top_level|Custom_qsys:u0|DE2_115:heartrate_variability|i2c_controller:controller|set_registers_next
-Name set_registers_next.finished set_registers_next.send_led_pulse_data2 set_registers_next.send_led_pulse_data1 set_registers_next.send_led_pulse_reg set_registers_next.disable set_registers_next.send_spo_data set_registers_next.send_mode_data set_registers_next.send_fifo_data set_registers_next.send_fifo_reg set_registers_next.disable_after_reset set_registers_next.send_reset_data set_registers_next.send_reset_reg 
-set_registers_next.send_reset_reg 0 0 0 0 0 0 0 0 0 0 0 0 
-set_registers_next.send_reset_data 0 0 0 0 0 0 0 0 0 0 1 1 
-set_registers_next.disable_after_reset 0 0 0 0 0 0 0 0 0 1 0 1 
-set_registers_next.send_fifo_reg 0 0 0 0 0 0 0 0 1 0 0 1 
-set_registers_next.send_fifo_data 0 0 0 0 0 0 0 1 0 0 0 1 
-set_registers_next.send_mode_data 0 0 0 0 0 0 1 0 0 0 0 1 
-set_registers_next.send_spo_data 0 0 0 0 0 1 0 0 0 0 0 1 
-set_registers_next.disable 0 0 0 0 1 0 0 0 0 0 0 1 
-set_registers_next.send_led_pulse_reg 0 0 0 1 0 0 0 0 0 0 0 1 
-set_registers_next.send_led_pulse_data1 0 0 1 0 0 0 0 0 0 0 0 1 
-set_registers_next.send_led_pulse_data2 0 1 0 0 0 0 0 0 0 0 0 1 
-set_registers_next.finished 1 0 0 0 0 0 0 0 0 0 0 1 
-
-State Machine - |top_level|Custom_qsys:u0|DE2_115:heartrate_variability|i2c_controller:controller|state
-Name state.get_data state.polling state.set_registers 
-state.set_registers 0 0 0 
-state.polling 0 1 1 
-state.get_data 1 0 1 
-
-State Machine - |top_level|Custom_qsys:u0|DE2_115:heartrate_variability|i2c_master:i2c|state
-Name state.stop state.mstr_ack state.slv_ack2 state.rd state.wr state.slv_ack1 state.command state.start state.ready 
-state.ready 0 0 0 0 0 0 0 0 0 
-state.start 0 0 0 0 0 0 0 1 1 
-state.command 0 0 0 0 0 0 1 0 1 
-state.slv_ack1 0 0 0 0 0 1 0 0 1 
-state.wr 0 0 0 0 1 0 0 0 1 
-state.rd 0 0 0 1 0 0 0 0 1 
-state.slv_ack2 0 0 1 0 0 0 0 0 1 
-state.mstr_ack 0 1 0 0 0 0 0 0 1 
-state.stop 1 0 0 0 0 0 0 0 1 

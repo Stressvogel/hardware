@@ -2,6 +2,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
+-- moving_average_calculator calculates the moving average of x of points based on data_size
 entity moving_average_calculator is
 	generic(data_size : integer := 61);
 	port (clk : in std_logic;

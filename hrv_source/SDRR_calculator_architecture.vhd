@@ -8,7 +8,7 @@
 --		 );
 --end entity;
 
-
+-- Calculates the SDRR value based on RR time
 architecture structural of SDRR_calculator is
 	component SDRR2_calculator is
 		generic (use_samples : integer := 60);

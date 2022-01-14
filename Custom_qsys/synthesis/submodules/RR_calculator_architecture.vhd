@@ -8,6 +8,7 @@
 --		  );
 --end entity; 
 
+-- calculates the RR time based on heartrate signals
 architecture structural of RR_calculator is 
 
 	component peak_detector is
